@@ -58,7 +58,7 @@ export default function BedBugControlPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/bed-bug-eradication.png"
                 alt="Bed bug treatment process"

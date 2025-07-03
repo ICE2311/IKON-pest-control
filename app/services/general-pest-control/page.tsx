@@ -63,7 +63,7 @@ export default function GeneralPestControlPage() {
                 </a>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/general-pest-control.png"
                 alt="General pest control treatment"

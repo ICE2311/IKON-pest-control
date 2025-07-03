@@ -58,7 +58,7 @@ export default function RodentManagementPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/rodent-management.png"
                 alt="Rodent management and control"

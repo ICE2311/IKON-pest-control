@@ -58,7 +58,7 @@ export default function TermiteTreatmentPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/termite-treatment.png"
                 alt="Termite treatment process"

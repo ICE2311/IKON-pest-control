@@ -48,7 +48,7 @@ export default function HerbalPestControlPage() {
                 <Button size="lg" variant="outline">Get Free Quote</Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/herbal-pest-control.png"
                 alt="Herbal pest control treatment"

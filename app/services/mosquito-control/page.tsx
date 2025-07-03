@@ -58,7 +58,7 @@ export default function MosquitoControlPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/mosquito-control.png"
                 alt="Mosquito control treatment"

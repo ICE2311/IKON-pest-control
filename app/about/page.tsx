@@ -88,7 +88,7 @@ export default function AboutPage() {
                 <a href="#team"><Button variant="outline">Meet Our Team</Button></a>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative md:flex justify-center">
               <Image
                 src="/team.png"
                 alt="PestGuard Pro team"
