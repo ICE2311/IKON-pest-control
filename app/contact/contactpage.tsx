@@ -158,7 +158,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-green-600" />
                     <div>
                       <p className="font-semibold text-gray-900">Email</p>
-                      <p className="text-gray-600">info@pestguard.com</p>
+                      <p className="text-gray-600">info@ikonpest.com</p>
                     </div>
                   </div>
                 </CardContent>
