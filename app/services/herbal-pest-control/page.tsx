@@ -5,6 +5,11 @@ import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft } from "lucide-react
 import Image from "next/image"
 import Link from "next/link"
 
+export const metadata = {
+  title: 'Herbal Pest Control - IKON',
+  description: '100% eco-friendly pest control using plant-based herbal extracts',
+};
+
 export default function HerbalPestControlPage() {
   return (
     <div className="min-h-screen bg-gray-50">

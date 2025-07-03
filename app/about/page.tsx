@@ -5,6 +5,11 @@ import { Shield, Users, Award, Star, Clock } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+export const metadata = {
+  title: 'About - IKON',
+  description: 'Learn more about IKON Pest Control Services, our team and our mission.',
+};
+
 export default function AboutPage() {
   const teamMembers = [
     {

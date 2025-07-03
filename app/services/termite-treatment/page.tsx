@@ -5,6 +5,11 @@ import { CheckCircle, Shield, Phone, ArrowLeft, Home, Building } from "lucide-re
 import Image from "next/image"
 import Link from "next/link"
 
+export const metadata = {
+  title: 'Termite Treatment - IKON',
+  description: 'Effective termite treatment using heat and chemical methods',
+};
+
 export default function TermiteTreatmentPage() {
   return (
     <div className="min-h-screen bg-gray-50">

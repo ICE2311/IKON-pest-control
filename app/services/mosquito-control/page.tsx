@@ -5,6 +5,11 @@ import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft } from "lucide-react
 import Image from "next/image"
 import Link from "next/link"
 
+export const metadata = {
+  title: 'Mosquito Control - IKON',
+  description: 'Effective mosquito control using fogging and spraying',
+};
+
 export default function MosquitoControlPage() {
   return (
     <div className="min-h-screen bg-gray-50">

@@ -5,6 +5,11 @@ import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft, Thermometer, Zap } 
 import Image from "next/image"
 import Link from "next/link"
 
+export const metadata = {
+  title: 'Bed Bug Eradication - IKON',
+  description: 'Effective heat and chemical treatment to eliminate bed bugs',
+};
+
 export default function BedBugControlPage() {
   return (
     <div className="min-h-screen bg-gray-50">

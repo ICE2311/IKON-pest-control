@@ -5,6 +5,11 @@ import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft, Target, Zap } from 
 import Image from "next/image"
 import Link from "next/link"
 
+export const metadata = {
+  title: 'Rodent Management - IKON',
+  description: 'Effective rodent control using trapping and baiting methods',
+};
+
 export default function RodentManagementPage() {
   return (
     <div className="min-h-screen bg-gray-50">

@@ -3,6 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, X, Phone, MessageCircle, Link } from "lucide-react"
 
+export const metadata = {
+  title: 'Pricing - IKON',
+  description: 'Pricing for IKON Pest Control Services. Get a quote for your pest control needs.',
+};
+
 export default function PricingPage() {
 
   const oneTimeServices = [
