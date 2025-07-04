@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -11,12 +12,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-green-600 text-white p-2 rounded-lg">
-                <span className="font-bold text-lg">🛡️</span>
-              </div>
-              <span className="text-xl font-bold">IKON Pest Control</span>
-            </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
+              <span className="text-xl font-bold text-white">IKON Pest Control</span>
+            </Link>
             <p className="text-gray-400 mb-4">
               Professional pest management solutions since 2005. Serving Mira Road, Bhayandar, and Thane with WHO &
               HACCP approved treatments.
