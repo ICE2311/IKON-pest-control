@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "IKON Pest Control Services - Professional Pest Management Solutions",
   description:
     "IKON Pest Control Services - Over 15+ years of professional pest management in Mira Road, Bhayandar, Thane. WHO & HACCP approved chemicals, 24/7 service, 4.8★ Google rating.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -23,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main>{children}</main>
+        <main>{children}<SpeedInsights /></main>
         <Footer />
       </body>
     </html>
