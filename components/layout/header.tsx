@@ -173,13 +173,25 @@ export default function Header() {
                 {navigation.map((item) =>
                   item.submenu ? (
                     <div key={item.name}>
-                      <span className="text-gray-700 font-semibold">{item.name}</span>
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`font-medium transition-colors ${pathname.startsWith(item.href)
+                          ? "text-green-600 font-semibold"
+                          : "text-gray-600 hover:text-green-600"
+                          }`}
+                      >
+                        {item.name}
+                      </Link>
                       <div className="ml-4 mt-2 flex flex-col space-y-2">
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.title}
                             href={subItem.href}
-                            className="text-gray-600 hover:text-green-600 text-sm"
+                            className={`flex items-center font-medium transition-colors ${pathname === subItem.href
+                              ? "text-green-600 font-semibold"
+                              : "text-gray-600 hover:text-green-600"
+                              }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {subItem.title}
@@ -191,7 +203,10 @@ export default function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="text-gray-600 hover:text-green-600 font-medium"
+                      className={`font-medium transition-colors ${pathname === item.href
+                        ? "text-green-600 font-semibold"
+                        : "text-gray-600 hover:text-green-600"
+                        }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}

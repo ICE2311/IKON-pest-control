@@ -73,7 +73,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 Founded in 2005, PestGuard Pro is a family-owned business dedicated to protecting homes and businesses
                 from unwanted pests using safe, effective, and environmentally responsible methods.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 ">
                 <a href="/services"><Button className="bg-green-600 hover:bg-green-700">Learn About Our Services</Button></a>
                 <a href="#team"><Button variant="outline">Meet Our Team</Button></a>
               </div>

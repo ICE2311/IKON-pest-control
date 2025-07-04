@@ -29,7 +29,7 @@ export default function HomePage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post('/api/send-mail', formData); // Adjust endpoint as needed
+      await axios.post('/api/send-mail', formData);
       alert("Your request has been submitted!");
     } catch (error) {
       console.error("Error sending form:", error);
@@ -41,7 +41,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <TimerPopup />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-5 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -70,7 +70,7 @@ export default function HomePage() {
                   </Button>
                 </a>
               </div>
-              <div className="flex items-center gap-6 text-sm text-gray-600">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-600" />
                   WHO Approved Chemicals

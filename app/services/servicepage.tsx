@@ -94,14 +94,14 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-white py-16">
+      <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Pest Control Services</h1>
             <p className="text-xl text-gray-600 mb-8">
               Tailored solutions for every infestation, delivered by licensed professionals with guaranteed results
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
+            <div className="flex justify-center flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-green-600" />
                 Licensed & Insured
