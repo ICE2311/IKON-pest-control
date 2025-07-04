@@ -90,7 +90,7 @@ export default function AboutPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/team.png"
+                src="/team.webp"
                 alt="PestGuard Pro team"
                 width={500}
                 height={400}

@@ -60,7 +60,7 @@ export default function TermiteTreatmentPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/termite-treatment.png"
+                src="/termite-treatment.webp"
                 alt="Termite treatment process"
                 width={500}
                 height={400}

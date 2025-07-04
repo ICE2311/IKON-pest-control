@@ -87,7 +87,7 @@ export default function HomePage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/unrecognizable-person.jpg"
+                src="/unrecognizable-person.webp"
                 alt="IKON Pest Control technician at work"
                 width={600}
                 height={500}

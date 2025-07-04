@@ -60,7 +60,7 @@ export default function BedBugControlPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/bed-bug-eradication.png"
+                src="/bed-bug-eradication.webp"
                 alt="Bed bug treatment process"
                 width={500}
                 height={400}

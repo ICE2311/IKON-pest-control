@@ -65,7 +65,7 @@ export default function GeneralPestControlPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/general-pest-control.png"
+                src="/general-pest-control.webp"
                 alt="General pest control treatment"
                 width={500}
                 height={400}

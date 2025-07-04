@@ -19,7 +19,7 @@ export default function ServicesPage() {
         "Odorless chemicals available",
         "Quarterly maintenance plans"
       ],
-      image: "/general-pest-control.png",
+      image: "/general-pest-control.webp",
       href: "/services/general-pest-control",
       popular: true
     },
@@ -32,7 +32,7 @@ export default function ServicesPage() {
         "Annual maintenance service",
         "Up to 5-year warranty"
       ],
-      image: "termite-treatment.png",
+      image: "termite-treatment.webp",
       href: "/services/termite-treatment",
       popular: true
     },
@@ -45,7 +45,7 @@ export default function ServicesPage() {
         "Mattress & furniture coverage",
         "Follow-up inspection & treatment"
       ],
-      image: "/bed-bug-eradication.png",
+      image: "/bed-bug-eradication.webp",
       href: "/services/bed-bug-eradication",
       popular: false
     },
@@ -58,7 +58,7 @@ export default function ServicesPage() {
         "Odor control & sanitization",
         "Ongoing monitoring"
       ],
-      image: "/rodent-management.png",
+      image: "/rodent-management.webp",
       href: "/services/rodent-management",
       popular: false
     },
@@ -71,7 +71,7 @@ export default function ServicesPage() {
         "Monthly spraying service",
         "Breeding site inspection"
       ],
-      image: "/mosquito-control.png",
+      image: "/mosquito-control.webp",
       href: "/services/mosquito-control",
       popular: false
     },
@@ -84,7 +84,7 @@ export default function ServicesPage() {
         "No fumes or residue",
         "Custom treatment plans"
       ],
-      image: "/herbal-pest-control.png",
+      image: "/herbal-pest-control.webp",
       href: "/services/herbal-pest-control",
       popular: false
     }

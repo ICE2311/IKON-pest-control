@@ -60,7 +60,7 @@ export default function MosquitoControlPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/mosquito-control.png"
+                src="/mosquito-control.webp"
                 alt="Mosquito control treatment"
                 width={500}
                 height={400}

@@ -60,7 +60,7 @@ export default function RodentManagementPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/rodent-management.png"
+                src="/rodent-management.webp"
                 alt="Rodent management and control"
                 width={500}
                 height={400}

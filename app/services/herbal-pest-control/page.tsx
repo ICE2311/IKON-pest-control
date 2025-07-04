@@ -50,7 +50,7 @@ export default function HerbalPestControlPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/herbal-pest-control.png"
+                src="/herbal-pest-control.webp"
                 alt="Herbal pest control treatment"
                 width={500}
                 height={400}
