@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronDown, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const pricing = {
   "One Time": {
@@ -65,124 +65,154 @@ export default function QuoteCard() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async () => {
+  const cost = useMemo(() => pricing[frequency][flatType], [frequency, flatType]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!/^\d{10}$/.test(phone)) {
+      setMessage("❌ Please enter a valid 10-digit phone number.");
+      return;
+    }
+
     setLoading(true);
+    setMessage("");
 
-    const res = await fetch("/api/send-quote", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ productType, flatType, frequency, comments, phone }),
-    });
+    try {
+      const res = await fetch("/api/send-quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          productType,
+          flatType,
+          frequency,
+          comments,
+          phone
+        })
+      });
 
-    const result = await res.json();
-    setLoading(false);
+      const result = await res.json();
 
-    if (result.success) {
-      alert("✅ Quote request sent!");
-    } else {
-      alert("❌ Failed to send. Try again.");
+      if (result.success) {
+        setMessage("✅ Quote request sent!");
+      } else {
+        setMessage("❌ Failed to send. Please try again.");
+      }
+    } catch (error) {
+      setMessage("❌ Network error. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
-
-  const cost = useMemo(() => pricing[frequency][flatType], [frequency, flatType]);
 
   return (
     <Card className="p-6 bg-green-50 border-green-200">
       <CardContent className="p-0 space-y-6">
         <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
 
-        {/* Product Type */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
-          <div className="relative">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Product Type */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
             <select
               className="w-full p-2 rounded border text-black"
               value={productType}
               onChange={(e) => setProductType(e.target.value)}
             >
-              {productTypes.map(pt => (
+              {productTypes.map((pt) => (
                 <option key={pt}>{pt}</option>
               ))}
             </select>
           </div>
-        </div>
 
-        {/* Flat Type */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
-          <div className="relative">
+          {/* Flat Type */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
             <select
               className="w-full p-2 rounded border text-black"
               value={flatType}
               onChange={(e) => setFlatType(e.target.value as Flat)}
             >
-              {flatTypes.map(ft => (
+              {flatTypes.map((ft) => (
                 <option key={ft}>{ft}</option>
               ))}
             </select>
           </div>
-        </div>
 
-        {/* Frequency */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
-          <div className="relative">
+          {/* Frequency */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
             <select
               className="w-full p-2 rounded border text-black"
               value={frequency}
               onChange={(e) => setFrequency(e.target.value as Freq)}
             >
-              {frequencies.map(fr => (
+              {frequencies.map((fr) => (
                 <option key={fr}>{fr}</option>
               ))}
             </select>
           </div>
-        </div>
 
-        {/* Phone Number */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
-          <input type="tel" placeholder="Phone Number" className="w-full p-2 rounded border text-black" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-        </div>
+          {/* Phone Number */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="w-full p-2 rounded border text-black"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+          </div>
 
-        <div className="text-center">
-          <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-          <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
-        </div>
+          {/* Cost Summary */}
+          <div className="text-center">
+            <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
+            <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+          </div>
 
-        {/* Comments */}
-        <textarea
-          className="w-full p-2 rounded border text-black"
-          rows={3}
-          placeholder="Additional Comments"
-          value={comments}
-          onChange={(e) => setComments(e.target.value)}
-        />
+          {/* Comments */}
+          <textarea
+            className="w-full p-2 rounded border text-black"
+            rows={3}
+            placeholder="Additional Comments"
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
+          />
 
-        {/* Buttons */}
-        <div className="flex flex-col gap-2">
-          <Button
-            onClick={handleSubmit}
-            className="w-full bg-green-600 hover:bg-green-700 text-white"
-            disabled={loading}
-          >
-            {loading ? "Sending..." : "Get Quote"}
-          </Button>
-          <Button variant="outline" asChild className="w-full bg-transparent">
-            <a href="tel:8448520507">
-              <Phone className="mr-2 h-4 w-4" />
-              Call Now: 84485 20507
-            </a>
-          </Button>
-        </div>
+          {/* Feedback Message */}
+          {message && (
+            <p className={`text-sm ${message.startsWith("✅") ? "text-green-600" : "text-red-600"}`}>
+              {message}
+            </p>
+          )}
 
-        {/* Terms */}
-        <p className="text-xs text-gray-600 mt-2">
-          18% GST will be applicable on total service charges. <br />
-          <span className="underline cursor-pointer">*Terms & Conditions apply</span>
-        </p>
+          {/* Buttons */}
+          <div className="flex flex-col gap-2">
+            <Button
+              type="submit"
+              className="w-full bg-green-600 hover:bg-green-700 text-white"
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Get Quote"}
+            </Button>
+            <Button variant="outline" asChild className="w-full bg-transparent">
+              <a href="tel:8448520507">
+                <Phone className="mr-2 h-4 w-4" />
+                Call Now: 84485 20507
+              </a>
+            </Button>
+          </div>
+
+          {/* Terms */}
+          <p className="text-xs text-gray-600 mt-2">
+            18% GST will be applicable on total service charges. <br />
+            <span className="underline cursor-pointer">*Terms & Conditions apply</span>
+          </p>
+        </form>
       </CardContent>
     </Card>
   );
