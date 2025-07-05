@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft, Thermometer, Zap } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import QuoteCard from "@/components/quote-card"
 
 export const metadata = {
   title: 'Bed Bug Eradication - IKON',
@@ -33,7 +34,7 @@ export default function BedBugControlPage() {
       {/* Header */}
       <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <Link
                 href="/services"
@@ -58,15 +59,8 @@ export default function BedBugControlPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative md:flex justify-center">
-              <Image
-                src="/bed-bug-eradication.webp"
-                alt="Bed bug treatment process"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+            {/* Quick Contact */}
+            <QuoteCard />
           </div>
         </div>
       </section>
@@ -308,41 +302,6 @@ export default function BedBugControlPage() {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              {/* Emergency Contact */}
-              <Card className="p-6 bg-red-50 border-red-200">
-                <CardContent className="p-0">
-                  <h3 className="font-semibold text-gray-900 mb-4">Emergency Bed Bug Service</h3>
-                  <div className="space-y-4">
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-red-600">Same Day Service</p>
-                      <p className="text-sm text-gray-600">Available 24/7 for urgent cases</p>
-                    </div>
-                    <Button
-                      asChild
-                      className="w-full bg-red-600 hover:bg-red-700 text-white"
-                    >
-                      <a href="tel:8448520507">
-                        <Phone className="mr-2 h-4 w-4" />
-                        Emergency: 84485 20507
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      asChild
-                      className="w-full bg-transparent border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
-                    >
-                      <a
-                        href="http://wa.me/918448520507"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        WhatsApp Emergency
-                      </a>
-                    </Button>
-
-                  </div>
-                </CardContent>
-              </Card>
 
               {/* Treatment Pricing */}
               <Card className="p-6">

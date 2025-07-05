@@ -33,7 +33,7 @@ export default function MosquitoControlPage() {
       {/* Header */}
       <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <Link
                 href="/services"

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft, Target, Zap } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import QuoteCard from "@/components/quote-card"
 
 export const metadata = {
   title: 'Rodent Management - IKON',
@@ -33,7 +34,7 @@ export default function RodentManagementPage() {
       {/* Header */}
       <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <Link
                 href="/services"
@@ -58,15 +59,8 @@ export default function RodentManagementPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative md:flex justify-center">
-              <Image
-                src="/rodent-management.webp"
-                alt="Rodent management and control"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+            {/* Quick Contact */}
+            <QuoteCard />
           </div>
         </div>
       </section>
@@ -328,29 +322,6 @@ export default function RodentManagementPage() {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              {/* Quick Contact */}
-              <Card className="p-6 bg-green-50 border-green-200">
-                <CardContent className="p-0">
-                  <h3 className="font-semibold text-gray-900 mb-4">Get Instant Quote</h3>
-                  <div className="space-y-4">
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-green-600">₹2,000 - ₹5,000</p>
-                      <p className="text-sm text-gray-600">Starting price for Residentials</p>
-                    </div>
-                    <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white" >
-                      <a href="tel:8448520507">
-                        <Phone className="mr-2 h-4 w-4" />
-                        Call Now: 84485 20507
-                      </a>
-                    </Button>
-                    <Button variant="outline" asChild className="w-full bg-transparent">
-                      <a href="http://wa.me/918448520507" target="_blank" rel="noopener noreferrer">
-                        WhatsApp Quote
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
 
               {/* Service Features */}
               <Card className="p-6">
