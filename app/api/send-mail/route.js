@@ -17,7 +17,7 @@ export async function POST(request) {
   try {
     await transporter.sendMail({
       from: `"PestGuard Contact" <${process.env.SMTP_USER}>`,
-      to: "bluepc.ice@gmail.com",
+      to: "ikonpestcontrol@gmail.com",
       subject: "New Consultation Request",
       text: `
         Full Name: ${fullName}

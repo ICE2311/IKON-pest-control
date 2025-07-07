@@ -140,8 +140,8 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5 text-green-600" />
                     <div>
                       <p className="font-semibold text-gray-900">Call Us Now</p>
-                      <a href="tel:8448520507">
-                        <p className="text-green-600 font-bold text-lg">84485 20507</p>
+                      <a href="tel:8830495135">
+                        <p className="text-green-600 font-bold text-lg">88304 95135</p>
                       </a>
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                     <MessageCircle className="h-5 w-5 text-green-600" />
                     <div>
                       <p className="font-semibold text-gray-900">WhatsApp</p>
-                      <a href="https://wa.me/+918448520507" target="_blank" rel="noopener noreferrer">
+                      <a href="https://wa.me/+918830495135" target="_blank" rel="noopener noreferrer">
                         <p className="text-gray-600">84485 20507</p>
                       </a>
                     </div>
@@ -158,7 +158,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-green-600" />
                     <div>
                       <p className="font-semibold text-gray-900">Email</p>
-                      <p className="text-gray-600">info@ikonpest.com</p>
+                      <p className="text-gray-600">ikonpestcontrol@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>
@@ -175,15 +175,11 @@ export default function ContactPage() {
                 <CardContent className="p-0 space-y-2">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Monday - Friday</span>
-                    <span className="font-semibold">7:00 AM - 7:00 PM</span>
+                    <span className="font-semibold">24/7</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="font-semibold">8:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="font-semibold">Emergency Only</span>
+                    <span className="text-gray-600">Saturday - Sunday</span>
+                    <span className="font-semibold">24/7</span>
                   </div>
                   <div className="pt-2 border-t">
                     <Badge className="bg-red-100 text-red-800">24/7 Emergency Service Available</Badge>
@@ -203,11 +199,11 @@ export default function ContactPage() {
                   <div className="space-y-2 mb-4">
                     <p className="font-semibold text-gray-900">PestGuard Headquarters</p>
                     <p className="text-gray-600">
-                      E, Bhairav Darshan, Shop no.7, Cabin Cross Rd,
+                      Bhairav Darshan, Shop no.7, opposite Pious buds School,
                       <br />
-                      opposite Pious buds School, Bhayandar, Pooja Nagar
+                      Pooja Nagar, Cabin Cross Rd, Bhayandar (E)
                       <br />
-                      Thane, Maharashtra 400604
+                      Thane, Maharashtra 401105
                     </p>
                     <p className="text-sm text-gray-500">Free parking available</p>
                   </div>
@@ -248,7 +244,7 @@ export default function ContactPage() {
                       </div>
                     ))}
                   </div>
-                  <a href="/contact">
+                  <a href="tel:8830495135">
                     <Button variant="outline" className="w-full mt-4 bg-transparent">
                       Check Service Availability
                     </Button>
@@ -312,13 +308,13 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Emergency Pest Control?</h2>
             <p className="text-gray-600 mb-6">We provide 24/7 emergency pest control services for urgent situations</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8448520507">
+              <a href="tel:8830495135">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700">
                   <Phone className="mr-2 h-5 w-5" />
-                  Emergency Hotline: 84485 20507
+                  Emergency Hotline: 88304 95135
                 </Button>
               </a>
-              <a href="http://wa.me/918448520507">
+              <a href="http://wa.me/918830495135">
                 <Button
                   size="lg"
                   variant="outline"

@@ -4,104 +4,88 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone } from "lucide-react";
 
+// Full pricing data with 3 frequencies
 const pricing = {
   "One Time": {
-    "1 RK": "900",
-    "1 BHK": "1200",
-    "2 BHK": "1500",
-    "3 BHK": "1800",
-    "4 BHK": "2100",
-    "5 BHK": "2400",
-    "Villa/Other": "3000+"
+    "General Pest Control": { RK: 1850, "1BHK": 1850, "2BHK": 2250, "3BHK": 2650, "4BHK": 3250 },
+    "Termite Treatment": { RK: 2150, "1BHK": 2150, "2BHK": 2550, "3BHK": 2950, "4BHK": 2950 },
+    "Bed Bug Eradication": { RK: 1950, "1BHK": 1950, "2BHK": 2350, "3BHK": 2750, "4BHK": 3350 },
+    "Rodent Management": { RK: 1750, "1BHK": 1750, "2BHK": 2100, "3BHK": 2500, "4BHK": 3000 },
+    "Mosquito Control": { RK: 1600, "1BHK": 1600, "2BHK": 1950, "3BHK": 2300, "4BHK": 2800 },
+    "Herbal Pest Control": { RK: 2000, "1BHK": 2000, "2BHK": 2400, "3BHK": 2800, "4BHK": 3400 }
   },
   "1 Year AMC": {
-    "1 RK": "2500",
-    "1 BHK": "3000",
-    "2 BHK": "3800",
-    "3 BHK": "4500",
-    "4 BHK": "5200",
-    "5 BHK": "6000",
-    "Villa/Other": "7500+"
+    "General Pest Control": { RK: 4625, "1BHK": 4625, "2BHK": 5625, "3BHK": 6625, "4BHK": 8125 },
+    "Termite Treatment": { RK: 5375, "1BHK": 5375, "2BHK": 6375, "3BHK": 7375, "4BHK": 7375 },
+    "Bed Bug Eradication": { RK: 4875, "1BHK": 4875, "2BHK": 5875, "3BHK": 6875, "4BHK": 8375 },
+    "Rodent Management": { RK: 4375, "1BHK": 4375, "2BHK": 5250, "3BHK": 6250, "4BHK": 7500 },
+    "Mosquito Control": { RK: 4000, "1BHK": 4000, "2BHK": 4875, "3BHK": 5750, "4BHK": 7000 },
+    "Herbal Pest Control": { RK: 5000, "1BHK": 5000, "2BHK": 6000, "3BHK": 7000, "4BHK": 8500 }
   },
   "2 Year AMC": {
-    "1 RK": "4500",
-    "1 BHK": "5500",
-    "2 BHK": "7000",
-    "3 BHK": "8500",
-    "4 BHK": "10000",
-    "5 BHK": "12000",
-    "Villa/Other": "15000+"
+    "General Pest Control": { RK: 7400, "1BHK": 7400, "2BHK": 9000, "3BHK": 10600, "4BHK": 13000 },
+    "Termite Treatment": { RK: 8600, "1BHK": 8600, "2BHK": 10200, "3BHK": 11800, "4BHK": 11800 },
+    "Bed Bug Eradication": { RK: 7800, "1BHK": 7800, "2BHK": 9400, "3BHK": 11000, "4BHK": 13400 },
+    "Rodent Management": { RK: 7000, "1BHK": 7000, "2BHK": 8400, "3BHK": 10000, "4BHK": 12000 },
+    "Mosquito Control": { RK: 6400, "1BHK": 6400, "2BHK": 7800, "3BHK": 9200, "4BHK": 11200 },
+    "Herbal Pest Control": { RK: 8000, "1BHK": 8000, "2BHK": 9600, "3BHK": 11200, "4BHK": 13600 }
   }
 } as const;
 
 type Freq = keyof typeof pricing;
-type Flat = keyof typeof pricing["One Time"];
+type ProductType = keyof typeof pricing["One Time"];
+type FlatType = keyof typeof pricing["One Time"]["General Pest Control"];
 
 export default function QuoteCard() {
-  const productTypes = [
-    "Cockroaches",
-    "Termites",
-    "Bed Bugs",
-    "Mosquitoes",
-    "Lizard & Spider",
-    "Rats & Rodent"
-  ];
-  const frequencies = ["One Time", "1 Year AMC", "2 Year AMC"] as Freq[];
-  const flatTypes = [
-    "1 RK",
-    "1 BHK",
-    "2 BHK",
-    "3 BHK",
-    "4 BHK",
-    "5 BHK",
-    "Villa/Other"
-  ] as Flat[];
+  const productTypes = Object.keys(pricing["One Time"]) as ProductType[];
+  const frequencies = Object.keys(pricing) as Freq[];
+  const flatTypes = ["RK", "1BHK", "2BHK", "3BHK", "4BHK"] as FlatType[];
 
-  const [productType, setProductType] = useState(productTypes[0]);
+  const [productType, setProductType] = useState<ProductType>(productTypes[0]);
   const [frequency, setFrequency] = useState<Freq>("One Time");
-  const [flatType, setFlatType] = useState<Flat>("1 RK");
+  const [flatType, setFlatType] = useState<FlatType>("RK");
   const [comments, setComments] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  const cost = useMemo(() => pricing[frequency][flatType], [frequency, flatType]);
+  const cost = useMemo(() => pricing[frequency][productType][flatType], [frequency, productType, flatType]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!/^\d{10}$/.test(phone)) {
-      setMessage("❌ Please enter a valid 10-digit phone number.");
+      alert("❌ Please enter a valid 10-digit phone number.");
       return;
     }
 
     setLoading(true);
-    setMessage("");
 
     try {
       const res = await fetch("/api/send-quote", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           productType,
           flatType,
           frequency,
           comments,
-          phone
-        })
+          phone,
+          cost,
+        }),
       });
 
       const result = await res.json();
 
       if (result.success) {
-        setMessage("✅ Quote request sent!");
+        alert("✅ Quote request sent!");
       } else {
-        setMessage("❌ Failed to send. Please try again.");
+        alert("❌ Failed to send. Please try again.");
       }
-    } catch (error) {
-      setMessage("❌ Network error. Please try again later.");
+    } catch {
+      alert("❌ Network error. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -113,13 +97,12 @@ export default function QuoteCard() {
         <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Product Type */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
             <select
               className="w-full p-2 rounded border text-black"
               value={productType}
-              onChange={(e) => setProductType(e.target.value)}
+              onChange={(e) => setProductType(e.target.value as ProductType)}
             >
               {productTypes.map((pt) => (
                 <option key={pt}>{pt}</option>
@@ -127,13 +110,12 @@ export default function QuoteCard() {
             </select>
           </div>
 
-          {/* Flat Type */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
             <select
               className="w-full p-2 rounded border text-black"
               value={flatType}
-              onChange={(e) => setFlatType(e.target.value as Flat)}
+              onChange={(e) => setFlatType(e.target.value as FlatType)}
             >
               {flatTypes.map((ft) => (
                 <option key={ft}>{ft}</option>
@@ -141,7 +123,6 @@ export default function QuoteCard() {
             </select>
           </div>
 
-          {/* Frequency */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
             <select
@@ -155,7 +136,6 @@ export default function QuoteCard() {
             </select>
           </div>
 
-          {/* Phone Number */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
             <input
@@ -168,13 +148,11 @@ export default function QuoteCard() {
             />
           </div>
 
-          {/* Cost Summary */}
           <div className="text-center">
             <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
             <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
           </div>
 
-          {/* Comments */}
           <textarea
             className="w-full p-2 rounded border text-black"
             rows={3}
@@ -183,14 +161,6 @@ export default function QuoteCard() {
             onChange={(e) => setComments(e.target.value)}
           />
 
-          {/* Feedback Message */}
-          {message && (
-            <p className={`text-sm ${message.startsWith("✅") ? "text-green-600" : "text-red-600"}`}>
-              {message}
-            </p>
-          )}
-
-          {/* Buttons */}
           <div className="flex flex-col gap-2">
             <Button
               type="submit"
@@ -200,14 +170,13 @@ export default function QuoteCard() {
               {loading ? "Sending..." : "Get Quote"}
             </Button>
             <Button variant="outline" asChild className="w-full bg-transparent">
-              <a href="tel:8448520507">
+              <a href="tel:8830495135">
                 <Phone className="mr-2 h-4 w-4" />
-                Call Now: 84485 20507
+                Call Now: 88304 95135
               </a>
             </Button>
           </div>
 
-          {/* Terms */}
           <p className="text-xs text-gray-600 mt-2">
             18% GST will be applicable on total service charges. <br />
             <span className="underline cursor-pointer">*Terms & Conditions apply</span>

@@ -148,10 +148,10 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:8448520507" className="text-green-600 font-semibold md:hidden lg:inline">
-              84485 20507
+            <a href="tel:8830495135" className="text-green-600 font-semibold md:hidden lg:inline">
+              88304 95135
             </a>
-            <a href="tel:8448520507">
+            <a href="tel:8830495135">
               <Button className="bg-green-600 hover:bg-green-700">
                 <Phone className="mr-2 h-4 w-4" />
                 Free Inspection
@@ -214,8 +214,8 @@ export default function Header() {
                   )
                 )}
                 <div className="pt-4 border-t">
-                  <a href="tel:8448520507" className="block text-green-600 font-semibold mb-3">
-                    84485 20507
+                  <a href="tel:8830495135" className="block text-green-600 font-semibold mb-3">
+                    88304 95135
                   </a>
                   <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => { window.location.href = "tel:8448520507" }} >
                     <Phone className="mr-2 h-4 w-4" />

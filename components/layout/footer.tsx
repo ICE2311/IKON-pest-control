@@ -79,9 +79,9 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-green-600" />
-                <a href="tel:8448520507">
+                <a href="tel:8830495135">
                   <div>
-                    <p className="text-white font-semibold">84485 20507</p>
+                    <p className="text-white font-semibold">88304 95135</p>
                     <p className="text-gray-400 text-sm">24/7 Service Available</p>
                   </div>
                 </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <Mail className="h-5 w-5 text-green-600" />
                 <a href="mailto:OjHtT@example.com">
                   <div>
-                    <p className="text-white">addmail.com</p>
+                    <p className="text-white">ikonpestcontrol@gmail.com</p>
                   </div>
                 </a>
               </div>

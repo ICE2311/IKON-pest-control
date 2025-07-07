@@ -58,10 +58,10 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:8448520507">
+                <a href="tel:8830495135">
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
                     <Phone className="mr-2 h-5 w-5" />
-                    Call 84485 20507
+                    Call 88304 95135
                   </Button>
                 </a>
                 <a href="/contact">
@@ -205,7 +205,7 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <a href="tel:8448520507">
+              <a href="tel:8830495135">
                 <Button className="bg-green-600 hover:bg-green-700">Check Service Availability</Button>
               </a>
             </div>

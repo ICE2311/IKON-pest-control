@@ -194,7 +194,7 @@ export default function PricingPage() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
             >
-              <a href="tel:8448520507">
+              <a href="tel:8830495135">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Talk to Our Experts
               </a>

@@ -236,8 +236,8 @@ export default function ServicesPage() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
             >
-              <a href="tel:8448520507">
-                Call 84485 20507
+              <a href="tel:8830495135">
+                Call 88304 95135
               </a>
             </Button>
           </div>
