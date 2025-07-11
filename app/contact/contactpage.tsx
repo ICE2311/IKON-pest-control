@@ -115,7 +115,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button className="w-full bg-green-600 hover:bg-green-700" size="lg">
+                  <Button className="w-full bg-green-600 text-xl hover:bg-green-700" size="lg">
                     <Phone className="mr-2 h-5 w-5" />
                     Book Free Inspection
                   </Button>
@@ -245,7 +245,7 @@ export default function ContactPage() {
                     ))}
                   </div>
                   <a href="tel:8830495135">
-                    <Button variant="outline" className="w-full mt-4 bg-transparent">
+                    <Button variant="outline" className="w-full text-xl mt-4 bg-transparent">
                       Check Service Availability
                     </Button>
                   </a>
@@ -309,16 +309,16 @@ export default function ContactPage() {
             <p className="text-gray-600 mb-6">We provide 24/7 emergency pest control services for urgent situations</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:8830495135">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700">
+                <Button size="lg" className="bg-red-600 text-xl hover:bg-red-700">
                   <Phone className="mr-2 h-5 w-5" />
-                  Emergency Hotline: 88304 95135
+                  Emergency: 88304 95135
                 </Button>
               </a>
               <a href="http://wa.me/918830495135">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white bg-transparent"
+                  className="border-red-600 text-xl text-red-600 hover:bg-red-600 hover:text-white bg-transparent"
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Emergency WhatsApp

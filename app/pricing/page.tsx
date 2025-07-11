@@ -145,9 +145,8 @@ export default function PricingPage() {
 
                   {/* Spacer pushes button to the bottom */}
                   <div className="flex-grow" />
-
                   <a href="/contact">
-                    <Button variant="outline" size="sm" className="w-full bg-transparent">
+                    <Button variant="outline" size="sm" className="w-full bg-transparent ">
                       Get Quote
                     </Button>
                   </a>
@@ -229,7 +228,7 @@ export default function PricingPage() {
             Book a free inspection to get an accurate quote for your specific pest control needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button asChild size="lg" className="bg-white text-xl text-green-600 hover:bg-gray-100">
               <a href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Book Free Inspection
@@ -239,7 +238,7 @@ export default function PricingPage() {
               size="lg"
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
+              className="border-white text-white text-xl hover:bg-white hover:text-green-600 bg-transparent"
             >
               <a href="tel:8830495135">
                 <MessageCircle className="mr-2 h-5 w-5" />

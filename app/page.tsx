@@ -59,13 +59,13 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:8830495135">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-xl px-8 py-3">
                     <Phone className="mr-2 h-5 w-5" />
                     Call 88304 95135
                   </Button>
                 </a>
                 <a href="/contact">
-                  <Button size="lg" variant="outline" className="px-8 py-3 bg-transparent">
+                  <Button size="lg" variant="outline" className="px-8 text-xl py-3 bg-transparent">
                     Get Free Quote
                   </Button>
                 </a>
@@ -81,7 +81,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  4.8★ Google Rating
+                  4.8 Google Rating
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
                 ))}
               </div>
               <a href="tel:8830495135">
-                <Button className="bg-green-600 hover:bg-green-700">Check Service Availability</Button>
+                <Button className="bg-green-600 text-xl hover:bg-green-700">Check Service Availability</Button>
               </a>
             </div>
             <div className="bg-gray-200 rounded-lg h-80 overflow-hidden">

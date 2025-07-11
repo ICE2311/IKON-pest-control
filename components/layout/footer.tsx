@@ -16,7 +16,7 @@ export default function Footer() {
               <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
               <span className="text-xl font-bold text-white">IKON Pest Control</span>
             </Link>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 mb-4 py-2">
               Professional pest management solutions since 2005. Serving Mira Road, Bhayandar, and Thane with WHO &
               HACCP approved treatments.
             </p>
@@ -55,10 +55,10 @@ export default function Footer() {
               {[
                 "General Pest Control",
                 "Termite Treatment",
-                "Bed Bug Eradication",
+                "Bed Bug Treatment",
                 "Rodent Management",
                 "Mosquito Control",
-                "Herbal pest Control",
+                "Wood Borer Treatment",
               ].map((service) => {
                 const url = `/services/${service.toLowerCase().replace(/\s+/g, "-")}`;
                 return (
@@ -81,7 +81,7 @@ export default function Footer() {
                 <Phone className="h-5 w-5 text-green-600" />
                 <a href="tel:8830495135">
                   <div>
-                    <p className="text-white font-semibold">88304 95135</p>
+                    <p className="text-white text-xl font-semibold">88304 95135</p>
                     <p className="text-gray-400 text-sm">24/7 Service Available</p>
                   </div>
                 </a>

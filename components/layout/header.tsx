@@ -168,11 +168,11 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:8830495135" className="text-green-600 font-semibold md:hidden lg:inline">
+            <a href="tel:8830495135" className="text-green-600 text-xl font-semibold md:hidden lg:inline">
               88304 95135
             </a>
             <a href="tel:8830495135">
-              <Button className="bg-green-600 hover:bg-green-700">
+              <Button className="bg-green-600 text-xl hover:bg-green-700">
                 <Phone className="mr-2 h-4 w-4" />
                 Free Inspection
               </Button>

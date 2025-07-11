@@ -18,21 +18,7 @@ export default function AboutPage() {
       experience: "15+ years",
       certifications: ["Licensed Pest Control Operator", "Termite Specialist"],
       image: "/placeholder-user.jpg",
-    },
-    {
-      name: "Roshan Singh",
-      role: "Operations Manager",
-      experience: "10+ years",
-      certifications: ["Business Operations", "Customer Service Excellence"],
-      image: "/placeholder-user.jpg",
-    },
-    {
-      name: "Roshan Singh",
-      role: "Senior Technician",
-      experience: "8+ years",
-      certifications: ["Certified Pest Control Technician", "Safety Specialist"],
-      image: "/placeholder-user.jpg",
-    },
+    }
   ]
 
   const certifications = [
@@ -118,12 +104,12 @@ export default function AboutPage() {
       <section id="team" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Expert Team</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Founder</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our experienced professionals are committed to providing the highest quality pest control services
+              Roshan Singh is the founder and lead technician at Ikon Pest Control. With over 15 years of experience in pest control, he is passionate about protecting homes and businesses from unwanted pests.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="flex justify-center max-w-3xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card key={index} className="text-center p-6">
                 <CardContent className="p-0">
@@ -165,7 +151,7 @@ export default function AboutPage() {
             {certifications.map((cert, index) => (
               <Card key={index} className="p-6 text-center">
                 <CardContent className="p-0">
-                  <Shield className="h-8 w-8 text-green-600 mx-auto mb-3" />
+                  <Award className="h-8 w-8 text-green-600 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-900 mb-2">{cert.name}</h3>
                   <p className="text-gray-600 text-sm">{cert.number || cert.rating}</p>
                 </CardContent>
@@ -244,12 +230,12 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-green-600 text-xl hover:bg-green-700">
                 Schedule Free Inspection
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="text-xl">
                 Learn About Our Services
               </Button>
             </Link>

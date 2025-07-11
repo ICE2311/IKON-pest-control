@@ -118,13 +118,13 @@ export default function HoneyBeeRemovalPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
+                                    <Button size="lg" className="bg-amber-600 text-xl hover:bg-amber-700">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline">
+                                    <Button size="lg" variant="outline" className="text-xl">
                                         Free Inspection
                                     </Button>
                                 </a>
@@ -182,7 +182,7 @@ export default function HoneyBeeRemovalPage() {
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
                                         </Button>
-                                        <Button variant="outline" asChild className="w-full bg-transparent">
+                                        <Button variant="outline" asChild className="w-full text-xl bg-transparent">
                                             <a href="tel:8830495135">
                                                 <Phone className="mr-2 h-4 w-4" />
                                                 Call Now: 88304 95135
@@ -253,7 +253,7 @@ export default function HoneyBeeRemovalPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-amber-600 text-white hover:bg-amber-800">
+                                    <Button size="lg" asChild className="bg-amber-600 text-white text-xl hover:bg-amber-800">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -263,7 +263,7 @@ export default function HoneyBeeRemovalPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-amber-600 text-amber-600 hover:bg-gray-100 hover:text-amber-600 bg-transparent"
+                                        className="border-amber-600 text-xl text-amber-600 hover:bg-gray-100 hover:text-amber-600 bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -308,7 +308,7 @@ export default function HoneyBeeRemovalPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-amber-600 text-white hover:bg-amber-800">
+                                    <Button size="lg" asChild className="bg-amber-600 text-xl text-white hover:bg-amber-800">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -318,7 +318,7 @@ export default function HoneyBeeRemovalPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-amber-600 text-amber-600 hover:bg-gray-100 hover:text-amber-600 bg-transparent"
+                                        className="border-amber-600 text-amber-600 text-xl hover:bg-gray-100 hover:text-amber-600 bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -538,7 +538,7 @@ export default function HoneyBeeRemovalPage() {
                                     <p className="text-sm text-gray-700">
                                         Available 24/7 for dangerous situations and allergic reactions.
                                     </p>
-                                    <Button asChild className="w-full bg-amber-600 hover:bg-amber-700 text-white mt-2">
+                                    <Button asChild className="w-full bg-amber-600 text-xl hover:bg-amber-700 text-white mt-2">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-4 w-4" />
                                             Call Now: 88304 95135
@@ -563,7 +563,7 @@ export default function HoneyBeeRemovalPage() {
                         Contact us for humane solutions to your bee and wasp problems.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-amber-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-xl text-amber-600 hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -573,7 +573,7 @@ export default function HoneyBeeRemovalPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white hover:bg-white hover:text-amber-600 bg-transparent"
+                            className="border-white text-xl text-white hover:bg-white hover:text-amber-600 bg-transparent"
                         >
                             <a href="/contact">
                                 Get Free Inspection

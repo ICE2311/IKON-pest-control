@@ -338,7 +338,7 @@ export default function ServicesPage() {
             plan
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-green-600 hover:bg-gray-100">
+            <Button size="lg" asChild className="bg-white text-green-600 text-xl hover:bg-gray-100">
               <a href="/contact">
                 Schedule Free Inspection
               </a>
@@ -347,7 +347,7 @@ export default function ServicesPage() {
               size="lg"
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-green-600 text-xl bg-transparent"
             >
               <a href="tel:8830495135">
                 Call 88304 95135
