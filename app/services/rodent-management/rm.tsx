@@ -137,10 +137,9 @@ export default function RodentManagementPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-
                                     <Button size="lg" className="bg-green-600 hover:bg-green-700">
                                         <Phone className="mr-2 h-5 w-5" />
-                                        Call 8830495135
+                                        Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">

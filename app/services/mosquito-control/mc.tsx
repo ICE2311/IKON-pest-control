@@ -138,13 +138,17 @@ export default function MosquitoControlPage() {
                                 mosquito-borne illnesses. Safe, fast-acting treatment for both indoor and outdoor areas.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                                    <Phone className="mr-2 h-5 w-5" />
-                                    Call 84485 20507
-                                </Button>
-                                <Button size="lg" variant="outline">
-                                    Get Free Quote
-                                </Button>
+                                <a href="tel:8830495135">
+                                    <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                                        <Phone className="mr-2 h-5 w-5" />
+                                        Call 88304 95135
+                                    </Button>
+                                </a>
+                                <a href="/contact">
+                                    <Button size="lg" variant="outline">
+                                        Get Free Quote
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                         <Card className="p-6 bg-green-50 border-green-200">
