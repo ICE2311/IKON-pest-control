@@ -8,36 +8,42 @@ import { useMemo, useState } from "react"
 
 const pricing = {
     "One Time": {
-        "Herbal Pest Control": { RK: 2000, "1BHK": 2000, "2BHK": 2400, "3BHK": 2800, "4BHK": 3400 },
-        "General Pest Control": { RK: 1850, "1BHK": 1850, "2BHK": 2250, "3BHK": 2650, "4BHK": 3250 },
+        "Ticks Treatment": { RK: 1900, "1BHK": 1900, "2BHK": 2300, "3BHK": 2700, "4BHK": 3200 },
+        "General Disinfectant": { RK: 1850, "1BHK": 1850, "2BHK": 2250, "3BHK": 2650, "4BHK": 3250 },
         "Termite Treatment": { RK: 2150, "1BHK": 2150, "2BHK": 2550, "3BHK": 2950, "4BHK": 2950 },
-        "Bed Bug Eradication": { RK: 1950, "1BHK": 1950, "2BHK": 2350, "3BHK": 2750, "4BHK": 3350 },
-        "Rodent Management": { RK: 1750, "1BHK": 1750, "2BHK": 2100, "3BHK": 2500, "4BHK": 3000 },
-        "Mosquito Control": { RK: 1600, "1BHK": 1600, "2BHK": 1950, "3BHK": 2300, "4BHK": 2800 },
+        "Bed Bug Treatment": { RK: 1950, "1BHK": 1950, "2BHK": 2350, "3BHK": 2750, "4BHK": 3350 },
+        "Wood Borer Treatment": { RK: 1800, "1BHK": 1800, "2BHK": 2200, "3BHK": 2600, "4BHK": 3100 },
+        "Rat Control": { RK: 1750, "1BHK": 1750, "2BHK": 2100, "3BHK": 2500, "4BHK": 3000 },
+        "Honey Bee Removal": { RK: 2000, "1BHK": 2000, "2BHK": 2400, "3BHK": 2800, "4BHK": 3300 },
+        "Mosquito Fogging": { RK: 1600, "1BHK": 1600, "2BHK": 1950, "3BHK": 2300, "4BHK": 2800 }
     },
-    "1 Year AMC": {
-        "General Pest Control": { RK: 4625, "1BHK": 4625, "2BHK": 5625, "3BHK": 6625, "4BHK": 8125 },
+    "1 Year AMC (12 months - 3 times)": {
+        "General Disinfectant": { RK: 4625, "1BHK": 4625, "2BHK": 5625, "3BHK": 6625, "4BHK": 8125 },
         "Termite Treatment": { RK: 5375, "1BHK": 5375, "2BHK": 6375, "3BHK": 7375, "4BHK": 7375 },
-        "Bed Bug Eradication": { RK: 4875, "1BHK": 4875, "2BHK": 5875, "3BHK": 6875, "4BHK": 8375 },
-        "Rodent Management": { RK: 4375, "1BHK": 4375, "2BHK": 5250, "3BHK": 6250, "4BHK": 7500 },
-        "Mosquito Control": { RK: 4000, "1BHK": 4000, "2BHK": 4875, "3BHK": 5750, "4BHK": 7000 },
-        "Herbal Pest Control": { RK: 5000, "1BHK": 5000, "2BHK": 6000, "3BHK": 7000, "4BHK": 8500 }
+        "Bed Bug Treatment": { RK: 4875, "1BHK": 4875, "2BHK": 5875, "3BHK": 6875, "4BHK": 8375 },
+        "Wood Borer Treatment": { RK: 4450, "1BHK": 4450, "2BHK": 5450, "3BHK": 6450, "4BHK": 7750 },
+        "Rat Control": { RK: 4375, "1BHK": 4375, "2BHK": 5250, "3BHK": 6250, "4BHK": 7500 },
+        "Ticks Treatment": { RK: 4700, "1BHK": 4700, "2BHK": 5700, "3BHK": 6700, "4BHK": 8100 },
+        "Honey Bee Removal": { RK: 5000, "1BHK": 5000, "2BHK": 6000, "3BHK": 7000, "4BHK": 8500 },
+        "Mosquito Fogging": { RK: 4000, "1BHK": 4000, "2BHK": 4875, "3BHK": 5750, "4BHK": 7000 }
     },
-    "2 Year AMC": {
-        "General Pest Control": { RK: 7400, "1BHK": 7400, "2BHK": 9000, "3BHK": 10600, "4BHK": 13000 },
+    "2 Year AMC (24 months - 6 times)": {
+        "General Disinfectant": { RK: 7400, "1BHK": 7400, "2BHK": 9000, "3BHK": 10600, "4BHK": 13000 },
         "Termite Treatment": { RK: 8600, "1BHK": 8600, "2BHK": 10200, "3BHK": 11800, "4BHK": 11800 },
-        "Bed Bug Eradication": { RK: 7800, "1BHK": 7800, "2BHK": 9400, "3BHK": 11000, "4BHK": 13400 },
-        "Rodent Management": { RK: 7000, "1BHK": 7000, "2BHK": 8400, "3BHK": 10000, "4BHK": 12000 },
-        "Mosquito Control": { RK: 6400, "1BHK": 6400, "2BHK": 7800, "3BHK": 9200, "4BHK": 11200 },
-        "Herbal Pest Control": { RK: 8000, "1BHK": 8000, "2BHK": 9600, "3BHK": 11200, "4BHK": 13600 }
+        "Bed Bug Treatment": { RK: 7800, "1BHK": 7800, "2BHK": 9400, "3BHK": 11000, "4BHK": 13400 },
+        "Wood Borer Treatment": { RK: 7200, "1BHK": 7200, "2BHK": 8800, "3BHK": 10400, "4BHK": 12700 },
+        "Rat Control": { RK: 7000, "1BHK": 7000, "2BHK": 8400, "3BHK": 10000, "4BHK": 12000 },
+        "Ticks Treatment": { RK: 7600, "1BHK": 7600, "2BHK": 9200, "3BHK": 10800, "4BHK": 13000 },
+        "Honey Bee Removal": { RK: 8000, "1BHK": 8000, "2BHK": 9600, "3BHK": 11200, "4BHK": 13600 },
+        "Mosquito Fogging": { RK: 6400, "1BHK": 6400, "2BHK": 7800, "3BHK": 9200, "4BHK": 11200 }
     }
 } as const;
 
 type Freq = keyof typeof pricing;
 type ProductType = keyof typeof pricing["One Time"];
-type FlatType = keyof typeof pricing["One Time"]["General Pest Control"];
+type FlatType = keyof typeof pricing["One Time"]["General Disinfectant"];
 
-export default function HerbalPestControlPage() {
+export default function TickTreatmentPage() {
 
     const productTypes = Object.keys(pricing["One Time"]) as ProductType[];
     const frequencies = Object.keys(pricing) as Freq[];
@@ -93,17 +99,22 @@ export default function HerbalPestControlPage() {
         }
     };
 
+
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Breadcrumb */}
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-green-600">Home</Link>
+                        <Link href="/" className="hover:text-green-600">
+                            Home
+                        </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-green-600">Services</Link>
+                        <Link href="/services" className="hover:text-green-600">
+                            Services
+                        </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Herbal Pest Control</span>
+                        <span className="text-gray-900">Tick Treatment</span>
                     </div>
                 </div>
             </section>
@@ -112,35 +123,41 @@ export default function HerbalPestControlPage() {
             <section className="bg-white lg:py-16 py-5">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-12 ">
-                        <div>
-                            <Link href="/services" className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4">
+                        <div className="mt-0">
+                            <Link
+                                href="/services"
+                                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
+                            >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-green-100 text-green-800 mb-4">Eco-Friendly Option</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Herbal Pest Control</h1>
+                            <Badge className="bg-red-100 text-red-800 mb-4">Health Hazard</Badge>
+                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Professional Tick Treatment</h1>
                             <p className="text-xl text-gray-600 mb-6">
-                                100% eco-friendly pest control using plant-based herbal extracts. Safe for kids, pets, elderly, and the environment. Ideal for homes, schools, and health-sensitive spaces.
+                                Comprehensive tick elimination service to protect your family and pets from these dangerous parasites. Our treatment eradicates ticks at all life stages and prevents reinfestation.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="tel:8830495135">
+                                <a href="tel:8830495135" className="hover:text-green-600">
                                     <Button size="lg" className="bg-green-600 hover:bg-green-700">
                                         <Phone className="mr-2 h-5 w-5" />
-                                        Call 8830 495135
+                                        Call 8830495135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline">Get Free Quote</Button>
+                                    <Button size="lg" variant="outline">
+                                        Get Free Quote
+                                    </Button>
                                 </a>
                             </div>
                         </div>
+                        {/* Quick Contact */}
                         <Card className="p-6 bg-green-50 border-green-200">
                             <CardContent className="p-0 space-y-6">
                                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Treatment Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -153,14 +170,14 @@ export default function HerbalPestControlPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Property Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={flatType}
                                             onChange={(e) => setFlatType(e.target.value as FlatType)}
                                         >
-                                            {flatTypes.map((ft) => (
-                                                <option key={ft}>{ft}</option>
+                                            {flatTypes.map((pt) => (
+                                                <option key={pt}>{pt}</option>
                                             ))}
                                         </select>
                                     </div>
@@ -198,7 +215,7 @@ export default function HerbalPestControlPage() {
                                     <textarea
                                         className="w-full p-2 rounded border text-black"
                                         rows={3}
-                                        placeholder="Additional Comments"
+                                        placeholder="Additional details (pets, infestation severity, etc.)"
                                         value={comments}
                                         onChange={(e) => setComments(e.target.value)}
                                     />
@@ -239,42 +256,44 @@ export default function HerbalPestControlPage() {
                             {/* What We Treat */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Pests We Control (Herbally)</CardTitle>
+                                    <CardTitle className="text-2xl">Tick Species We Eliminate</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Crawling Insects</h3>
+                                            <h3 className="font-semibold text-gray-900 mb-3">Common Tick Species</h3>
                                             <ul className="space-y-2">
                                                 {[
-                                                    "Cockroaches",
-                                                    "Ants (all types)",
-                                                    "Spiders",
-                                                    "Silverfish",
-                                                    "House crickets",
+                                                    "Brown Dog Tick (Rhipicephalus sanguineus)",
+                                                    "American Dog Tick (Dermacentor variabilis)",
+                                                    "Lone Star Tick (Amblyomma americanum)",
+                                                    "Deer Tick (Ixodes scapularis)",
+                                                    "Asian Longhorned Tick (Haemaphysalis longicornis)",
                                                 ].map((pest, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-green-600" />
+                                                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
                                                         {pest}
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Flying & Hidden Pests</h3>
+                                            <h3 className="font-semibold text-gray-900 mb-3">Signs of Infestation</h3>
                                             <ul className="space-y-2">
                                                 {[
-                                                    "Mosquitoes",
-                                                    "Fruit flies & drain flies",
-                                                    "Lizards (deterrence only)",
-                                                    "Moths & carpet beetles",
-                                                    "Mild infestations of bed bugs",
-                                                ].map((pest, index) => (
-                                                    <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-green-600" />
-                                                        {pest}
-                                                    </li>
-                                                ))}
+                                                    "Visible ticks on pets/family members",
+                                                    "Ticks in pet bedding/furniture",
+                                                    "Small dark specks on walls/floors",
+                                                    "Unusual pet scratching/licking",
+                                                    "Tick eggs in cracks/crevices"
+                                                ].map(
+                                                    (sign, index) => (
+                                                        <li key={index} className="flex items-center gap-2 text-sm">
+                                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                            {sign}
+                                                        </li>
+                                                    ),
+                                                )}
                                             </ul>
                                         </div>
                                     </div>
@@ -284,43 +303,49 @@ export default function HerbalPestControlPage() {
                             {/* Treatment Process */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Our Herbal Treatment Process</CardTitle>
+                                    <CardTitle className="text-2xl">Our Tick Elimination Process</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="space-y-6">
                                         {[
                                             {
                                                 step: "1",
-                                                title: "Site Inspection",
+                                                title: "Comprehensive Inspection",
                                                 description:
-                                                    "A technician visits your property to identify pest activity and recommend a suitable herbal formula.",
+                                                    "Thorough examination of your property to identify tick hotspots, breeding areas, and infestation severity.",
                                             },
                                             {
                                                 step: "2",
-                                                title: "Herbal Spray Application",
+                                                title: "Residual Spray Treatment",
                                                 description:
-                                                    "Plant-based repellents are applied using low-pressure sprayers in kitchens, bathrooms, baseboards, and pest hotspots.",
+                                                    "Application of long-lasting acaricides to all tick habitats including baseboards, carpets, pet areas, and outdoor perimeters.",
                                             },
                                             {
                                                 step: "3",
-                                                title: "Non-toxic Gel Baiting",
+                                                title: "Crack & Crevice Treatment",
                                                 description:
-                                                    "For cockroaches and ants, herbal gel bait is applied near nests and food sources, attracting pests naturally.",
+                                                    "Targeted treatment of hidden areas where ticks hide and lay eggs using specialized equipment.",
                                             },
                                             {
                                                 step: "4",
-                                                title: "Monitoring & Advice",
+                                                title: "Pet-Safe Treatment",
                                                 description:
-                                                    "We offer follow-up suggestions to maintain a chemical-free home, along with optional re-treatments if needed.",
+                                                    "Special attention to pet areas with pet-friendly products that continue killing ticks for weeks.",
                                             },
-                                        ].map((step, index) => (
+                                            {
+                                                step: "5",
+                                                title: "Follow-up & Prevention",
+                                                description:
+                                                    "Recommendations for preventing reinfestation and optional follow-up treatments.",
+                                            },
+                                        ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
                                                 <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
-                                                    {step.step}
+                                                    {process.step}
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
-                                                    <p className="text-gray-600 text-sm">{step.description}</p>
+                                                    <h3 className="font-semibold text-gray-900 mb-2">{process.title}</h3>
+                                                    <p className="text-gray-600 text-sm">{process.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -331,22 +356,22 @@ export default function HerbalPestControlPage() {
                             {/* Benefits */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Why Choose Herbal Pest Control?</CardTitle>
+                                    <CardTitle className="text-2xl">Why Choose Our Tick Treatment?</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         {[
-                                            "100% herbal plant-based products",
-                                            "No chemicals or synthetic toxins",
-                                            "Safe for infants, elderly, pets",
-                                            "Ideal for kitchens and food areas",
-                                            "Mild pleasant herbal aroma",
-                                            "Non-staining and residue-free",
-                                            "Eco-conscious and biodegradable",
-                                            "Perfect for allergy-prone individuals",
+                                            "Kills ticks at all life stages",
+                                            "Long-lasting residual protection (3-6 months)",
+                                            "Pet-safe treatment options",
+                                            "CDC-approved chemicals",
+                                            "Targets hidden breeding sites",
+                                            "Reduces disease transmission risk",
+                                            "Eco-friendly options available",
+                                            "Guaranteed results",
                                         ].map((benefit, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <CheckCircle className="h-5 w-5 text-green-600" />
+                                                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
                                                 <span className="text-gray-700">{benefit}</span>
                                             </div>
                                         ))}
@@ -357,28 +382,27 @@ export default function HerbalPestControlPage() {
 
                         {/* Sidebar */}
                         <div className="space-y-6">
-
-                            {/* Service Highlights */}
+                            {/* Service Features */}
                             <Card className="p-6">
                                 <CardHeader className="p-0 mb-4">
-                                    <CardTitle className="text-lg">Service Highlights</CardTitle>
+                                    <CardTitle className="text-lg">Treatment Highlights</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-3">
                                     <div className="flex items-center gap-3">
                                         <Shield className="h-5 w-5 text-green-600" />
-                                        <span className="text-sm">100% Herbal Formula</span>
+                                        <span className="text-sm">Kills Eggs, Larvae & Adults</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <Clock className="h-5 w-5 text-green-600" />
-                                        <span className="text-sm">Same Day Service</span>
+                                        <span className="text-sm">Emergency Same-Day Service</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <Star className="h-5 w-5 text-green-600" />
-                                        <span className="text-sm">No Side Effects</span>
+                                        <span className="text-sm">3-6 Months Protection</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <CheckCircle className="h-5 w-5 text-green-600" />
-                                        <span className="text-sm">Family & Pet Safe</span>
+                                        <span className="text-sm">Safe for Pets When Dry</span>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -386,9 +410,9 @@ export default function HerbalPestControlPage() {
                             {/* AMC Option */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Annual Maintenance Contract</h3>
+                                    <h3 className="font-semibold text-gray-900 mb-2">Tick Protection AMC</h3>
                                     <p className="text-sm text-gray-600 mb-4">
-                                        Opt for herbal AMC and stay protected throughout the year with quarterly green treatments.
+                                        Regular treatments ensure year-round protection against ticks and tick-borne diseases. Save up to 30% with AMC plans.
                                     </p>
                                     <Button
                                         variant="outline"
@@ -396,6 +420,35 @@ export default function HerbalPestControlPage() {
                                     >
                                         Learn About AMC
                                     </Button>
+                                </CardContent>
+                            </Card>
+
+                            {/* Prevention Tips */}
+                            <Card className="p-6 bg-amber-50 border-amber-200">
+                                <CardContent className="p-0">
+                                    <h3 className="font-semibold text-gray-900 mb-2">Tick Prevention Tips</h3>
+                                    <ul className="text-sm text-gray-600 space-y-2">
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Regularly treat pets with vet-approved tick prevention</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Wash pet bedding weekly in hot water</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Vacuum carpets and furniture frequently</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Keep lawns trimmed and clear brush</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Inspect family/pets after outdoor activities</span>
+                                        </li>
+                                    </ul>
                                 </CardContent>
                             </Card>
                         </div>
@@ -411,20 +464,29 @@ export default function HerbalPestControlPage() {
                         <div className="space-y-6">
                             {[
                                 {
-                                    question: "Is herbal pest control as effective as chemical treatment?",
-                                    answer: "Herbal pest control is effective for mild to moderate infestations. For severe cases, we may recommend a hybrid approach.",
+                                    question: "How soon can you treat my tick problem?",
+                                    answer:
+                                        "We offer same-day emergency services for severe infestations. Normally we can schedule treatment within 24 hours of your call.",
                                 },
                                 {
-                                    question: "Is it safe for infants and pets?",
-                                    answer: "Yes, the herbal products we use are completely safe for babies, pets, and the elderly.",
+                                    question: "Is the treatment safe for my pets?",
+                                    answer:
+                                        "Yes, we use pet-safe products. Pets should be kept away during treatment and can return once the solution has dried (typically 2-3 hours).",
                                 },
                                 {
-                                    question: "Will there be any smell?",
-                                    answer: "Our herbal spray has a light, pleasant aroma from essential oils and plant extracts. No harsh chemical smells.",
+                                    question: "How long does the treatment take to work?",
+                                    answer:
+                                        "Adult ticks are killed on contact. The residual effect continues killing newly hatched ticks for 3-6 months depending on the product used.",
                                 },
                                 {
-                                    question: "How long does the effect last?",
-                                    answer: "Protection typically lasts for 2–3 weeks. AMC plans ensure year-round protection.",
+                                    question: "Do I need to prepare my home before treatment?",
+                                    answer:
+                                        "We recommend vacuuming thoroughly, washing pet bedding, and clearing clutter to maximize treatment effectiveness.",
+                                },
+                                {
+                                    question: "Can ticks come back after treatment?",
+                                    answer:
+                                        "While our treatment provides long-lasting protection, ticks can be reintroduced by pets or wildlife. Our AMC plans provide ongoing protection.",
                                 },
                             ].map((faq, index) => (
                                 <Card key={index} className="p-6">
@@ -442,9 +504,9 @@ export default function HerbalPestControlPage() {
             {/* CTA Section */}
             <section className="py-16 bg-green-600">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Want a Chemical-Free Pest Solution?</h2>
+                    <h2 className="text-3xl font-bold text-white mb-4">Eliminate Dangerous Ticks Today</h2>
                     <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-                        Choose our herbal pest control service and enjoy a safer, greener way to stay pest-free.
+                        Protect your family and pets from tick-borne diseases with our professional tick eradication service.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg" asChild className="bg-white text-green-600 hover:bg-gray-100">

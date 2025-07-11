@@ -11,34 +11,34 @@ export default function ServicesPage() {
   const router = useRouter();
   const services = [
     {
-      title: "General Pest Control",
-      description: "Covers common household pests like cockroaches, ants, and lizards",
+      title: "General Disinfectant Treatment",
+      description: "Effective disinfectant treatment targeting cockroaches, lizards, spiders, silverfish, and other pests.",
       features: [
-        "Cockroach, ant & lizard treatment",
-        "Indoor & outdoor spraying",
-        "Odorless chemicals available",
-        "Quarterly maintenance plans"
+        "Cockroach, lizard, and spider treatment",
+        "Disinfectant for multiple pests",
+        "Odorless and eco-friendly",
+        "Indoor & outdoor coverage"
       ],
       image: "/general-pest-control.webp",
       href: "/services/general-pest-control",
       popular: true
     },
     {
-      title: "Termite Treatment",
-      description: "Complete termite elimination with pre- & post-construction treatment",
+      title: "Termite Treatment (White Ant)",
+      description: "Comprehensive white ant treatment to prevent and eliminate termite infestations.",
       features: [
-        "Pre-construction soil treatment",
-        "Post-construction drilling & injection",
-        "Annual maintenance service",
+        "Effective elimination of white ants",
+        "Prevention of structural damage",
+        "Long-lasting protection",
         "Up to 5-year warranty"
       ],
-      image: "termite-treatment.webp",
+      image: "/termite-treatment.webp",
       href: "/services/termite-treatment",
       popular: true
     },
     {
-      title: "Bed Bug Eradication",
-      description: "Effective heat and chemical treatment to eliminate bed bugs",
+      title: "Bed Bugs Treatment",
+      description: "Targeted heat and chemical treatments to eradicate bed bugs in your home or business.",
       features: [
         "Heat treatment (non-toxic)",
         "Targeted chemical application",
@@ -46,50 +46,149 @@ export default function ServicesPage() {
         "Follow-up inspection & treatment"
       ],
       image: "/bed-bug-eradication.webp",
-      href: "/services/bed-bug-eradication",
+      href: "/services/bed-bug-treatment",
       popular: false
     },
     {
-      title: "Rodent Management",
-      description: "Humane and effective trapping and baiting for rodents",
+      title: "Wood Borer Treatment",
+      description: "Specialized treatment for wood-boring insects to protect your furniture and structures.",
       features: [
-        "Rodent proofing & sealing",
+        "Wood borer detection & elimination",
+        "Safe and effective chemicals",
+        "Prevention of wood damage",
+        "Customized treatment plans"
+      ],
+      image: "/wood-borer-treatment.webp",
+      href: "/services/wood-borer-treatment",
+      popular: false
+    },
+    {
+      title: "Rat Control – Trap, Poison, RotaBox, Gum Pad",
+      description: "Comprehensive rat control methods including traps, poison, and other techniques for effective management.",
+      features: [
         "Mechanical traps & bait stations",
-        "Odor control & sanitization",
-        "Ongoing monitoring"
+        "Humane removal methods",
+        "RotaBox and gum pad usage",
+        "Ongoing monitoring & prevention"
       ],
       image: "/rodent-management.webp",
       href: "/services/rodent-management",
       popular: false
     },
     {
-      title: "Mosquito Control",
-      description: "Fogging, spraying, and breeding site control to reduce mosquitoes",
+      title: "Ticks Treatment",
+      description: "Effective treatment to eradicate ticks and prevent them from returning.",
       features: [
-        "Outdoor fogging",
+        "Tick treatment for pets & home",
+        "Targeted pesticide application",
+        "Preventative measures for future infestations",
+        "Safe for pets & family"
+      ],
+      image: "/ticks-treatment.webp",
+      href: "/services/ticks-treatment",
+      popular: false
+    },
+    {
+      title: "Honey Bee Removal",
+      description: "Safe and humane removal of honey bee colonies from your property.",
+      features: [
+        "Bee colony removal",
+        "Non-lethal methods",
+        "Safe relocation of bees",
+        "Expert beekeepers on hand"
+      ],
+      image: "/honey-bee-removal.webp",
+      href: "/services/honey-bee-removal",
+      popular: false
+    },
+    {
+      title: "Pre-Construction Termite Treatment",
+      description: "Preventive termite treatment applied before construction to ensure long-term protection.",
+      features: [
+        "Pre-construction soil treatment",
+        "Effective barrier against termites",
+        "Long-lasting protection",
+        "No disruption to construction process"
+      ],
+      image: "/termite-treatment.webp",
+      href: "/services/termite-treatment",
+      popular: true
+    },
+    {
+      title: "Post-Construction Termite Treatment",
+      description: "Termite treatment applied after construction to eliminate and prevent termite infestations.",
+      features: [
+        "Post-construction drilling & injection",
+        "Effective termite elimination",
+        "Annual maintenance service",
+        "Up to 5-year warranty"
+      ],
+      image: "/termite-treatment.webp",
+      href: "/services/termite-treatment",
+      popular: true
+    },
+    {
+      title: "Mosquito Fogging – Commercial & Residential Areas",
+      description: "Mosquito fogging services for both commercial and residential areas to reduce mosquito populations.",
+      features: [
+        "Outdoor mosquito fogging",
         "Larvicide treatment",
-        "Monthly spraying service",
-        "Breeding site inspection"
+        "Monthly or one-time service",
+        "Breeding site inspections"
       ],
       image: "/mosquito-control.webp",
       href: "/services/mosquito-control",
       popular: false
-    },
-    {
-      title: "Herbal Pest Control",
-      description: "Eco-friendly and non-toxic solutions for a safer environment",
-      features: [
-        "100% herbal & biodegradable products",
-        "Safe for kids & pets",
-        "No fumes or residue",
-        "Custom treatment plans"
-      ],
-      image: "/herbal-pest-control.webp",
-      href: "/services/herbal-pest-control",
-      popular: false
     }
   ];
 
+  const addOns = [
+    {
+      name: "Pigeon Netting and Bird Spikes Installation",
+      price: "Starting at ₹200",
+      description: "Prevents bird nesting and roosting on buildings and structures"
+    },
+    {
+      name: "Balcony and Duct Netting for Homes/Societies",
+      price: "Quote",
+      description: "Custom bird netting solutions for balconies and ducts"
+    },
+    {
+      name: "Annual Maintenance Contracts (AMC)",
+      price: "Custom Plan",
+      description: "Year-round pest management for homes, societies, and offices"
+    },
+    {
+      name: "Industrial & Commercial Pest Management",
+      price: "On Inspection",
+      description: "Large-scale pest control solutions tailored for commercial properties"
+    },
+    {
+      name: "Bird Netting",
+      price: "Quote",
+      description: "Protects open areas from birds with high-quality netting solutions"
+    },
+    {
+      name: "Rat Zali Installation",
+      price: "Starting at ₹500",
+      description: "Stainless steel mesh barriers to prevent rodent entry through openings"
+    },
+    {
+      name: "Rat Guard",
+      price: "Starting at ₹300",
+      description: "Protects pipes and wiring from rats using metal sleeves or barriers"
+    },
+    {
+      name: "Home Cleaning",
+      price: "Custom Plan",
+      description: "Professional deep cleaning services for residential spaces"
+    },
+    {
+      name: "Sanitization Services",
+      price: "Starting at ₹999",
+      description: "Disinfection treatment for germs, viruses, and bacteria in homes/offices"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -124,18 +223,18 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="relative overflow-hidden hover:shadow-lg transition-shadow">
+              <Card key={index} className="relative flex flex-col overflow-hidden hover:shadow-lg transition-shadow">
                 {service.popular && (
                   <Badge className="absolute top-4 right-4 bg-green-600 text-white">Most Popular</Badge>
                 )}
-                <div className="relative h-48">
-                  <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+                <div className="relative h-48 md:h-64">
+                  <Image src={service.image ?? "/placeholder.svg"} alt={service.title} fill className="object-cover" />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                   <p className="text-gray-600">{service.description}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex flex-col flex-grow">
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
@@ -144,8 +243,12 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex gap-2">
-                    <Button className="flex-1 bg-green-600 hover:bg-green-700" onClick={() => router.push("/contact")}>Book Now</Button>
+                  {/* Spacer pushes the buttons down */}
+                  <div className="flex-grow" />
+                  <div className="flex gap-2 mt-4">
+                    <Button className="flex-1 bg-green-600 hover:bg-green-700" onClick={() => router.push("/contact")}>
+                      Book Now
+                    </Button>
                     <Button variant="outline" className="flex-1 bg-transparent" onClick={() => router.push(service.href)}>
                       Learn More
                     </Button>
@@ -166,21 +269,15 @@ export default function ServicesPage() {
                 <CardTitle className="text-2xl text-center">Residential Services</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <ul className="space-y-3">
-                  {[
-                    "Home pest inspections",
-                    "Interior & exterior treatments",
-                    "Preventive maintenance plans",
-                    "Emergency pest control",
-                    "Eco-friendly options",
-                    "Pet & child safe treatments",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="relative md:flex justify-center">
+                  <Image
+                    src="/residential.webp"
+                    alt="IKON Pest Control technician at work"
+                    width={600}
+                    height={500}
+                    className="rounded-lg shadow-2xl"
+                  />
+                </div>
                 <a href="/contact">
                   <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">Get Residential Quote</Button>
                 </a>
@@ -192,26 +289,42 @@ export default function ServicesPage() {
                 <CardTitle className="text-2xl text-center">Commercial Services</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <ul className="space-y-3">
-                  {[
-                    "Restaurant pest control",
-                    "Office building treatments",
-                    "Warehouse pest management",
-                    "Retail store services",
-                    "Healthcare facility pest control",
-                    "Compliance documentation",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="relative md:flex justify-center">
+                  <Image
+                    src="/commercial.webp"
+                    alt="IKON Pest Control technician at work"
+                    width={600}
+                    height={500}
+                    className="rounded-lg shadow-2xl"
+                  />
+                </div>
                 <a href="/contact">
                   <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">Get Commercial Quote</Button>
                 </a>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Add-On Services</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Enhance your pest control service with these additional options
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {addOns.map((addon, index) => (
+              <Card key={index} className="p-6 text-center">
+                <CardContent className="p-0">
+                  <h3 className="font-semibold text-gray-900 mb-2">{addon.name}</h3>
+                  <p className="text-2xl font-bold text-green-600 mb-2">{addon.price}</p>
+                  <p className="text-gray-600 text-sm">{addon.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

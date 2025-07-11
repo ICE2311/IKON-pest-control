@@ -2,49 +2,26 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Shield, Phone, ArrowLeft, Home, Building } from "lucide-react"
+import { CheckCircle, Shield, Phone, ArrowLeft, Home } from "lucide-react"
+import { Icon } from 'lucide-react';
+import { bee } from '@lucide/lab';
 import Link from "next/link"
 import { useMemo, useState } from "react"
 
 const pricing = {
     "One Time": {
-        "Termite Treatment": { RK: 2150, "1BHK": 2150, "2BHK": 2550, "3BHK": 2950, "4BHK": 2950 },
-        "General Disinfectant": { RK: 1850, "1BHK": 1850, "2BHK": 2250, "3BHK": 2650, "4BHK": 3250 },
-        "Bed Bug Treatment": { RK: 1950, "1BHK": 1950, "2BHK": 2350, "3BHK": 2750, "4BHK": 3350 },
-        "Wood Borer Treatment": { RK: 1800, "1BHK": 1800, "2BHK": 2200, "3BHK": 2600, "4BHK": 3100 },
-        "Rat Control": { RK: 1750, "1BHK": 1750, "2BHK": 2100, "3BHK": 2500, "4BHK": 3000 },
-        "Ticks Treatment": { RK: 1900, "1BHK": 1900, "2BHK": 2300, "3BHK": 2700, "4BHK": 3200 },
         "Honey Bee Removal": { RK: 2000, "1BHK": 2000, "2BHK": 2400, "3BHK": 2800, "4BHK": 3300 },
-        "Mosquito Fogging": { RK: 1600, "1BHK": 1600, "2BHK": 1950, "3BHK": 2300, "4BHK": 2800 }
-    },
-    "1 Year AMC (12 months - 3 times)": {
-        "General Disinfectant": { RK: 4625, "1BHK": 4625, "2BHK": 5625, "3BHK": 6625, "4BHK": 8125 },
-        "Termite Treatment": { RK: 5375, "1BHK": 5375, "2BHK": 6375, "3BHK": 7375, "4BHK": 7375 },
-        "Bed Bug Treatment": { RK: 4875, "1BHK": 4875, "2BHK": 5875, "3BHK": 6875, "4BHK": 8375 },
-        "Wood Borer Treatment": { RK: 4450, "1BHK": 4450, "2BHK": 5450, "3BHK": 6450, "4BHK": 7750 },
-        "Rat Control": { RK: 4375, "1BHK": 4375, "2BHK": 5250, "3BHK": 6250, "4BHK": 7500 },
-        "Ticks Treatment": { RK: 4700, "1BHK": 4700, "2BHK": 5700, "3BHK": 6700, "4BHK": 8100 },
-        "Honey Bee Removal": { RK: 5000, "1BHK": 5000, "2BHK": 6000, "3BHK": 7000, "4BHK": 8500 },
-        "Mosquito Fogging": { RK: 4000, "1BHK": 4000, "2BHK": 4875, "3BHK": 5750, "4BHK": 7000 }
-    },
-    "2 Year AMC (24 months - 6 times)": {
-        "General Disinfectant": { RK: 7400, "1BHK": 7400, "2BHK": 9000, "3BHK": 10600, "4BHK": 13000 },
-        "Termite Treatment": { RK: 8600, "1BHK": 8600, "2BHK": 10200, "3BHK": 11800, "4BHK": 11800 },
-        "Bed Bug Treatment": { RK: 7800, "1BHK": 7800, "2BHK": 9400, "3BHK": 11000, "4BHK": 13400 },
-        "Wood Borer Treatment": { RK: 7200, "1BHK": 7200, "2BHK": 8800, "3BHK": 10400, "4BHK": 12700 },
-        "Rat Control": { RK: 7000, "1BHK": 7000, "2BHK": 8400, "3BHK": 10000, "4BHK": 12000 },
-        "Ticks Treatment": { RK: 7600, "1BHK": 7600, "2BHK": 9200, "3BHK": 10800, "4BHK": 13000 },
-        "Honey Bee Removal": { RK: 8000, "1BHK": 8000, "2BHK": 9600, "3BHK": 11200, "4BHK": 13600 },
-        "Mosquito Fogging": { RK: 6400, "1BHK": 6400, "2BHK": 7800, "3BHK": 9200, "4BHK": 11200 }
+        "Wasp Removal": { RK: 1800, "1BHK": 1800, "2BHK": 2200, "3BHK": 2600, "4BHK": 3100 },
+        "Hornet Nest Removal": { RK: 2500, "1BHK": 2500, "2BHK": 2900, "3BHK": 3300, "4BHK": 3800 },
+        "Beehive Relocation": { RK: 3000, "1BHK": 3000, "2BHK": 3500, "3BHK": 4000, "4BHK": 4500 }
     }
 } as const;
 
 type Freq = keyof typeof pricing;
 type ProductType = keyof typeof pricing["One Time"];
-type FlatType = keyof typeof pricing["One Time"]["General Disinfectant"];
+type FlatType = keyof typeof pricing["One Time"]["Honey Bee Removal"];
 
-export default function TermiteTreatmentPage() {
-
+export default function HoneyBeeRemovalPage() {
     const productTypes = Object.keys(pricing["One Time"]) as ProductType[];
     const frequencies = Object.keys(pricing) as Freq[];
     const flatTypes = ["RK", "1BHK", "2BHK", "3BHK", "4BHK"] as FlatType[];
@@ -63,7 +40,7 @@ export default function TermiteTreatmentPage() {
         e.preventDefault();
 
         if (!/^\d{10}$/.test(phone)) {
-            alert("❌ Please enter a valid 10-digit phone number.");
+            alert("Please enter a valid 10-digit phone number.");
             return;
         }
 
@@ -88,12 +65,14 @@ export default function TermiteTreatmentPage() {
             const result = await res.json();
 
             if (result.success) {
-                alert("✅ Quote request sent!");
+                setMessage("Quote request sent successfully!");
+                setPhone("");
+                setComments("");
             } else {
-                alert("❌ Failed to send. Please try again.");
+                setMessage("Failed to send. Please try again.");
             }
         } catch {
-            alert("❌ Network error. Please try again later.");
+            setMessage("Network error. Please try again later.");
         } finally {
             setLoading(false);
         }
@@ -105,15 +84,15 @@ export default function TermiteTreatmentPage() {
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-green-600">
+                        <Link href="/" className="hover:text-amber-600">
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-green-600">
+                        <Link href="/services" className="hover:text-amber-600">
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Termite Treatment</span>
+                        <span className="text-gray-900">Honey Bee Removal</span>
                     </div>
                 </div>
             </section>
@@ -125,34 +104,35 @@ export default function TermiteTreatmentPage() {
                         <div>
                             <Link
                                 href="/services"
-                                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
+                                className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 mb-4"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-red-100 text-red-800 mb-4">Critical Protection</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Termite Treatment</h1>
+                            <Badge className="bg-amber-100 text-amber-800 mb-4">Eco-Friendly Service</Badge>
+                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Honey Bee Removal</h1>
                             <p className="text-xl text-gray-600 mb-6">
-                                Comprehensive termite control solutions for both pre-construction and post-construction properties.
-                                Protect your valuable investment from destructive termite damage with our proven treatment methods.
+                                Professional and humane bee removal services that prioritize both your safety and bee
+                                conservation. We relocate beehives to safe environments rather than exterminating
+                                these vital pollinators.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                                <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
                                     <Phone className="mr-2 h-5 w-5" />
                                     Call 84485 20507
                                 </Button>
                                 <Button size="lg" variant="outline">
-                                    Free Termite Inspection
+                                    Free Inspection
                                 </Button>
                             </div>
                         </div>
-                        <Card className="p-6 bg-green-50 border-green-200">
+                        <Card className="p-6 bg-amber-50 border-amber-200">
                             <CardContent className="p-0 space-y-6">
                                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -164,31 +144,6 @@ export default function TermiteTreatmentPage() {
                                         </select>
                                     </div>
 
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
-                                        <select
-                                            className="w-full p-2 rounded border text-black"
-                                            value={flatType}
-                                            onChange={(e) => setFlatType(e.target.value as FlatType)}
-                                        >
-                                            {flatTypes.map((ft) => (
-                                                <option key={ft}>{ft}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
-                                        <select
-                                            className="w-full p-2 rounded border text-black"
-                                            value={frequency}
-                                            onChange={(e) => setFrequency(e.target.value as Freq)}
-                                        >
-                                            {frequencies.map((fr) => (
-                                                <option key={fr}>{fr}</option>
-                                            ))}
-                                        </select>
-                                    </div>
 
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
@@ -203,8 +158,8 @@ export default function TermiteTreatmentPage() {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-                                        <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+                                        <p className="text-2xl font-bold text-amber-600">₹{cost.toLocaleString()}</p>
+                                        <p className="text-sm text-gray-600">{frequency} cost</p>
                                     </div>
 
                                     <textarea
@@ -218,7 +173,7 @@ export default function TermiteTreatmentPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-green-600 hover:bg-green-700 text-white"
+                                            className="w-full bg-amber-600 hover:bg-amber-700 text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -231,6 +186,12 @@ export default function TermiteTreatmentPage() {
                                         </Button>
                                     </div>
 
+                                    {message && (
+                                        <p className={`text-sm mt-2 ${message.includes("success") ? "text-green-600" : "text-red-600"}`}>
+                                            {message}
+                                        </p>
+                                    )}
+
                                     <p className="text-xs text-gray-600 mt-2">
                                         18% GST will be applicable on total service charges. <br />
                                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
@@ -242,51 +203,53 @@ export default function TermiteTreatmentPage() {
                 </div>
             </section>
 
-            {/* Treatment Types */}
+            {/* Service Types */}
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Termite Treatment Services</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Bee & Wasp Services</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            We offer both preventive and curative termite treatments using advanced methods and WHO-approved chemicals
+                            We offer comprehensive solutions for dealing with stinging insects while prioritizing
+                            ecological balance and human safety.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 mb-12">
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Building className="h-8 w-8 text-green-600" />
-                                    <CardTitle className="text-2xl">Pre-Construction Treatment</CardTitle>
+                                    <Icon iconNode={bee} className="h-8 w-8 text-amber-600" />
+                                    <CardTitle className="text-2xl">Honey Bee Removal</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
                                 <p className="text-gray-600 mb-6">
-                                    Preventive termite treatment applied during construction phase to create a chemical barrier that
-                                    prevents termite infestation for years to come.
+                                    Humane relocation of honey bee colonies to apiaries or protected environments,
+                                    preserving these important pollinators while removing them from your property.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Treatment Areas:</h4>
+                                    <h4 className="font-semibold text-gray-900">Our Approach:</h4>
                                     {[
-                                        "Foundation soil treatment",
-                                        "Plinth level treatment",
-                                        "Backfill soil treatment",
-                                        "Masonry treatment",
-                                        "Wooden framework treatment",
+                                        "Smoke-free bee removal techniques",
+                                        "Queen bee extraction",
+                                        "Complete hive removal",
+                                        "Wax and honey cleanup",
+                                        "Structural repairs if needed",
+                                        "Relocation to approved apiaries"
                                     ].map((area, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                            <CheckCircle className="h-4 w-4 text-amber-600 flex-shrink-0" />
                                             <span className="text-sm text-gray-700">{area}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-green-50 p-4 rounded-lg">
-                                    <p className="text-sm text-green-800">
-                                        <strong>Best Value:</strong> Most cost-effective when done during construction. Provides 5-10 years
-                                        of protection.
+                                <div className="bg-amber-50 p-4 rounded-lg">
+                                    <p className="text-sm text-amber-800">
+                                        <strong>Eco-Friendly:</strong> 100% of rescued bees are relocated to safe environments
+                                        where they can continue pollinating.
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-green-600 text-white hover:bg-green-800">
+                                    <Button size="lg" asChild className="bg-amber-600 text-white hover:bg-amber-800">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -296,7 +259,7 @@ export default function TermiteTreatmentPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-Green-600 text-green-600 hover:bg-gray-100 hover:text-green-600 bg-transparent"
+                                        className="border-amber-600 text-amber-600 hover:bg-gray-100 hover:text-amber-600 bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -309,38 +272,39 @@ export default function TermiteTreatmentPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Home className="h-8 w-8 text-green-600" />
-                                    <CardTitle className="text-2xl">Post-Construction Treatment</CardTitle>
+                                    <Shield className="h-8 w-8 text-amber-600" />
+                                    <CardTitle className="text-2xl">Wasp & Hornet Control</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
                                 <p className="text-gray-600 mb-6">
-                                    Curative treatment for buildings showing signs of termite infestation. We eliminate current
-                                    termites and create protective barriers.
+                                    Safe removal of aggressive wasp and hornet nests with eco-sensitive methods that
+                                    minimize environmental impact while ensuring your family's safety.
                                 </p>
                                 <div className="space-y-3 mb-6">
                                     <h4 className="font-semibold text-gray-900">Treatment Methods:</h4>
                                     {[
-                                        "Drilling & chemical injection",
-                                        "Soil treatment around foundation",
-                                        "Wood treatment for affected areas",
-                                        "Localized spot treatment",
-                                        "Monitoring & baiting systems",
+                                        "Low-toxicity aerosol applications",
+                                        "Ground nest treatments",
+                                        "Eaves and structure nest removal",
+                                        "Preventive barrier treatments",
+                                        "Natural repellent options",
+                                        "Night-time removal for safety"
                                     ].map((method, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                            <CheckCircle className="h-4 w-4 text-amber-600 flex-shrink-0" />
                                             <span className="text-sm text-gray-700">{method}</span>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="bg-blue-50 p-4 rounded-lg">
                                     <p className="text-sm text-blue-800">
-                                        <strong>Immediate Action:</strong> Quick response to active infestations. Includes damage assessment
-                                        and repair.
+                                        <strong>24/7 Emergency Service:</strong> Available for immediate response to
+                                        dangerous nest locations.
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-green-600 text-white hover:bg-green-800">
+                                    <Button size="lg" asChild className="bg-amber-600 text-white hover:bg-amber-800">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -350,7 +314,7 @@ export default function TermiteTreatmentPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-Green-600 text-green-600 hover:bg-gray-100 hover:text-green-600 bg-transparent"
+                                        className="border-amber-600 text-amber-600 hover:bg-gray-100 hover:text-amber-600 bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -369,10 +333,10 @@ export default function TermiteTreatmentPage() {
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-8">
-                            {/* Signs of Termite Infestation */}
+                            {/* Signs of Bee Infestation */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Signs You Need Termite Treatment</CardTitle>
+                                    <CardTitle className="text-2xl">Signs You Need Bee/Wasp Removal</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
@@ -380,11 +344,11 @@ export default function TermiteTreatmentPage() {
                                             <h3 className="font-semibold text-gray-900 mb-3">Visible Signs</h3>
                                             <ul className="space-y-2">
                                                 {[
-                                                    "Mud tubes on walls/foundation",
-                                                    "Hollow-sounding wood",
-                                                    "Discarded wings near windows",
-                                                    "Small holes in wood",
-                                                    "Sagging floors or ceilings",
+                                                    "Increased bee/wasp activity",
+                                                    "Visible nest or hive structure",
+                                                    "Bees entering/exiting wall voids",
+                                                    "Swarms on tree branches",
+                                                    "Holes in the ground with flying insects"
                                                 ].map((sign, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
                                                         <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
@@ -394,14 +358,14 @@ export default function TermiteTreatmentPage() {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Other Indicators</h3>
+                                            <h3 className="font-semibold text-gray-900 mb-3">Risk Indicators</h3>
                                             <ul className="space-y-2">
                                                 {[
-                                                    "Clicking sounds in walls",
-                                                    "Tight-fitting doors/windows",
-                                                    "Cracked paint on wood surfaces",
-                                                    "Frass (termite droppings)",
-                                                    "Swarms of flying insects",
+                                                    "Allergic family members",
+                                                    "Nest near entryways",
+                                                    "Aggressive insect behavior",
+                                                    "Children/pets play nearby",
+                                                    "Structural damage from hive"
                                                 ].map((indicator, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
                                                         <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
@@ -413,8 +377,8 @@ export default function TermiteTreatmentPage() {
                                     </div>
                                     <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                                         <p className="text-red-800 text-sm">
-                                            <strong>Early Detection is Key:</strong> The sooner termite infestation is detected and treated,
-                                            the less damage and lower the treatment cost.
+                                            <strong>Safety First:</strong> Never attempt to remove a beehive or wasp nest yourself.
+                                            Professional equipment and techniques are required for safe removal.
                                         </p>
                                     </div>
                                 </CardContent>
@@ -423,38 +387,44 @@ export default function TermiteTreatmentPage() {
                             {/* Treatment Process */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Our Treatment Process</CardTitle>
+                                    <CardTitle className="text-2xl">Our Bee Removal Process</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="space-y-6">
                                         {[
                                             {
                                                 step: "1",
-                                                title: "Detailed Inspection",
+                                                title: "Inspection & Assessment",
                                                 description:
-                                                    "Comprehensive property assessment to identify termite species, infestation extent, and damage evaluation.",
+                                                    "Detailed property examination to locate all hives/nests and identify species to determine appropriate removal method.",
                                             },
                                             {
                                                 step: "2",
-                                                title: "Treatment Plan",
+                                                title: "Safety Preparation",
                                                 description:
-                                                    "Customized treatment strategy based on property type, infestation level, and construction details.",
+                                                    "Securing area, using protective gear, and setting up containment to ensure safety during removal.",
                                             },
                                             {
                                                 step: "3",
-                                                title: "Chemical Application",
+                                                title: "Humane Extraction",
                                                 description:
-                                                    "Professional application of WHO-approved termiticides using drilling, injection, and barrier methods.",
+                                                    "Careful removal of bees using specialized equipment to preserve the colony's health for relocation.",
                                             },
                                             {
                                                 step: "4",
-                                                title: "Monitoring & Follow-up",
+                                                title: "Nest Removal & Cleanup",
                                                 description:
-                                                    "Regular monitoring visits and additional treatments if required during warranty period.",
+                                                    "Thorough removal of honeycombs, wax, and residue to prevent future infestations and secondary pests.",
                                             },
+                                            {
+                                                step: "5",
+                                                title: "Prevention & Follow-up",
+                                                description:
+                                                    "Sealing entry points and providing recommendations to reduce future bee/wasp attraction to your property.",
+                                            }
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
-                                                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                                <div className="bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                                                     {process.step}
                                                 </div>
                                                 <div>
@@ -467,25 +437,25 @@ export default function TermiteTreatmentPage() {
                                 </CardContent>
                             </Card>
 
-                            {/* Chemicals Used */}
+                            {/* Benefits */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Safe & Effective Chemicals</CardTitle>
+                                    <CardTitle className="text-2xl">Why Choose Our Bee Removal</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         {[
-                                            "WHO approved termiticides",
-                                            "Long-lasting protection (5-10 years)",
-                                            "Safe for humans and pets",
-                                            "Environmentally responsible",
-                                            "Odorless formulations",
-                                            "Government certified products",
-                                            "Non-staining chemicals",
-                                            "Proven effectiveness against all termite species",
+                                            "Certified beekeepers on staff",
+                                            "Pet-safe treatment options",
+                                            "Licensed & insured professionals",
+                                            "No harmful pesticides",
+                                            "100% bee relocation guarantee",
+                                            "5-star emergency response",
+                                            "Structural repair services",
+                                            "Prevention maintenance plans"
                                         ].map((feature, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <Shield className="h-5 w-5 text-green-600 flex-shrink-0" />
+                                                <Shield className="h-5 w-5 text-amber-600 flex-shrink-0" />
                                                 <span className="text-gray-700">{feature}</span>
                                             </div>
                                         ))}
@@ -496,33 +466,39 @@ export default function TermiteTreatmentPage() {
 
                         {/* Sidebar */}
                         <div className="space-y-6">
-
                             {/* Pricing Guide */}
                             <Card className="p-6">
                                 <CardHeader className="p-0 mb-4">
-                                    <CardTitle className="text-lg">Treatment Pricing</CardTitle>
+                                    <CardTitle className="text-lg">Service Pricing</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-4">
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">Pre-Construction</span>
-                                            <span className="text-sm text-green-600">₹8-12/sq ft</span>
+                                            <span className="text-sm font-medium">Bee Removal (Standard)</span>
+                                            <span className="text-sm text-amber-600">₹2,000-5,000</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">During construction phase</p>
+                                        <p className="text-xs text-gray-500">Depending on hive size/location</p>
                                     </div>
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">Post-Construction</span>
-                                            <span className="text-sm text-green-600">₹15-25/sq ft</span>
+                                            <span className="text-sm font-medium">Wasp/Hornet Nest</span>
+                                            <span className="text-sm text-amber-600">₹1,800-4,500</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Existing buildings</p>
+                                        <p className="text-xs text-gray-500">Based on nest size and accessibility</p>
+                                    </div>
+                                    <div className="border-b pb-3">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-sm font-medium">Beehive Relocation</span>
+                                            <span className="text-sm text-amber-600">₹3,000-7,500</span>
+                                        </div>
+                                        <p className="text-xs text-gray-500">With complete colony transfer</p>
                                     </div>
                                     <div>
                                         <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">Spot Treatment</span>
-                                            <span className="text-sm text-green-600">₹5,000+</span>
+                                            <span className="text-sm font-medium">Emergency Service</span>
+                                            <span className="text-sm text-amber-600">+₹1,000</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Localized treatment</p>
+                                        <p className="text-xs text-gray-500">Same-day or after-hours service</p>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -530,20 +506,43 @@ export default function TermiteTreatmentPage() {
                             {/* Warranty Info */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Warranty Coverage</h3>
+                                    <h3 className="font-semibold text-gray-900 mb-2">Service Guarantee</h3>
                                     <div className="space-y-2 text-sm">
                                         <div className="flex justify-between">
-                                            <span>Pre-Construction:</span>
-                                            <span className="font-semibold">5-10 years</span>
+                                            <span>Bee Removal:</span>
+                                            <span className="font-semibold">90 days warranty</span>
                                         </div>
                                         <div className="flex justify-between">
-                                            <span>Post-Construction:</span>
-                                            <span className="font-semibold">3-5 years</span>
+                                            <span>Wasp Removal:</span>
+                                            <span className="font-semibold">30 days warranty</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span>Relocation:</span>
+                                            <span className="font-semibold">Colony survival guarantee</span>
                                         </div>
                                     </div>
                                     <p className="text-xs text-blue-600 mt-3">
-                                        Free re-treatment if termites return during warranty period
+                                        Free return service if problem persists during warranty period
                                     </p>
+                                </CardContent>
+                            </Card>
+
+                            {/* Emergency Card */}
+                            <Card className="p-6 bg-amber-50 border-amber-200">
+                                <CardContent className="p-0 space-y-3">
+                                    <h3 className="font-semibold text-gray-900 mb-1">Emergency Bee/Wasp Removal</h3>
+                                    <p className="text-sm text-gray-700">
+                                        Available 24/7 for dangerous situations and allergic reactions.
+                                    </p>
+                                    <Button asChild className="w-full bg-amber-600 hover:bg-amber-700 text-white mt-2">
+                                        <a href="tel:8830495135">
+                                            <Phone className="mr-2 h-4 w-4" />
+                                            Call Now: 88304 95135
+                                        </a>
+                                    </Button>
+                                    <div className="bg-white p-2 mt-2 rounded text-xs text-amber-800 border border-amber-200">
+                                        <p><strong>For bee stings:</strong> Remove stinger, clean area, apply cold compress, monitor for allergic reaction.</p>
+                                    </div>
                                 </CardContent>
                             </Card>
                         </div>
@@ -552,14 +551,15 @@ export default function TermiteTreatmentPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-green-600">
+            <section className="py-16 bg-amber-600">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Property from Termites</h2>
-                    <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-                        Don't let termites destroy your valuable investment. Contact IKON for professional termite treatment today.
+                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Home & Save the Bees</h2>
+                    <p className="text-amber-100 mb-8 max-w-2xl mx-auto">
+                        Our professional services ensure safe removal while protecting these important pollinators.
+                        Contact us for humane solutions to your bee and wasp problems.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-green-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-amber-600 hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -569,10 +569,10 @@ export default function TermiteTreatmentPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white hover:bg-white hover:text-green-600 bg-transparent"
+                            className="border-white text-white hover:bg-white hover:text-amber-600 bg-transparent"
                         >
                             <a href="/contact">
-                                Get Free Quote
+                                Get Free Inspection
                             </a>
                         </Button>
                     </div>

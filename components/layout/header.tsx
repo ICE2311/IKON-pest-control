@@ -36,37 +36,57 @@ export default function Header() {
       href: "/services",
       submenu: [
         {
-          title: "General Pest Control",
-          description: "Complete pest elimination and prevention",
+          title: "General Disinfectant",
+          description: "Effective control for cockroaches, lizards, spiders, silverfish, and more.",
           href: "/services/general-pest-control",
           popular: true,
         },
         {
-          title: "Termite Treatment",
-          description: "Complete termite elimination and prevention",
+          title: "Termite Treatment (White Ant)",
+          description: "Complete termite elimination and prevention.",
           href: "/services/termite-treatment",
         },
         {
-          title: "Bed Bug Eradication",
-          description: "Effective bed bug elimination",
-          href: "/services/bed-bug-eradication",
+          title: "Bed Bugs Treatment",
+          description: "Specialized treatment for bed bug eradication.",
+          href: "/services/bed-bug-treatment",
         },
         {
-          title: "Rodent Management",
-          description: "Humane rodent removal & prevention",
+          title: "Wood Borer Treatment",
+          description: "Protection and eradication of wood borers and damage prevention.",
+          href: "/services/wood-borer-treatment",
+        },
+        {
+          title: "Rat Control",
+          description: "Includes trap, poison, RotaBox, and gum pad solutions for rat control.",
           href: "/services/rodent-management",
         },
         {
-          title: "Mosquito Control",
-          description: "Reduce mosquito populations outdoors",
-          href: "/services/mosquito-control",
+          title: "Ticks Treatment",
+          description: "Comprehensive treatment for tick infestations.",
+          href: "/services/ticks-treatment",
         },
         {
-          title: "Herbal Pest Control",
-          description: "Eco-friendly and non-toxic pest solutions",
-          href: "/services/herbal-pest-control",
+          title: "Honey Bee Removal",
+          description: "Humane removal of honey bee colonies.",
+          href: "/services/honey-bee-removal",
         },
-      ],
+        {
+          title: "Pre-Construction Termite Treatment",
+          description: "Preventative termite treatment before construction.",
+          href: "/services/termite-treatment",
+        },
+        {
+          title: "Post-Construction Termite Treatment",
+          description: "Termite control after construction to protect the building.",
+          href: "/services/termite-treatment",
+        },
+        {
+          title: "Mosquito Fogging",
+          description: "Mosquito control for commercial and residential areas.",
+          href: "/services/mosquito-control",
+        }
+      ]
     },
     { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },

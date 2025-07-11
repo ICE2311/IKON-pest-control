@@ -2,16 +2,16 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Shield, Phone, ArrowLeft, Home, Building } from "lucide-react"
+import { CheckCircle, Shield, Clock, Star, Phone, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { useMemo, useState } from "react"
 
 const pricing = {
     "One Time": {
-        "Termite Treatment": { RK: 2150, "1BHK": 2150, "2BHK": 2550, "3BHK": 2950, "4BHK": 2950 },
-        "General Disinfectant": { RK: 1850, "1BHK": 1850, "2BHK": 2250, "3BHK": 2650, "4BHK": 3250 },
-        "Bed Bug Treatment": { RK: 1950, "1BHK": 1950, "2BHK": 2350, "3BHK": 2750, "4BHK": 3350 },
         "Wood Borer Treatment": { RK: 1800, "1BHK": 1800, "2BHK": 2200, "3BHK": 2600, "4BHK": 3100 },
+        "General Disinfectant": { RK: 1850, "1BHK": 1850, "2BHK": 2250, "3BHK": 2650, "4BHK": 3250 },
+        "Termite Treatment": { RK: 2150, "1BHK": 2150, "2BHK": 2550, "3BHK": 2950, "4BHK": 2950 },
+        "Bed Bug Treatment": { RK: 1950, "1BHK": 1950, "2BHK": 2350, "3BHK": 2750, "4BHK": 3350 },
         "Rat Control": { RK: 1750, "1BHK": 1750, "2BHK": 2100, "3BHK": 2500, "4BHK": 3000 },
         "Ticks Treatment": { RK: 1900, "1BHK": 1900, "2BHK": 2300, "3BHK": 2700, "4BHK": 3200 },
         "Honey Bee Removal": { RK: 2000, "1BHK": 2000, "2BHK": 2400, "3BHK": 2800, "4BHK": 3300 },
@@ -43,8 +43,7 @@ type Freq = keyof typeof pricing;
 type ProductType = keyof typeof pricing["One Time"];
 type FlatType = keyof typeof pricing["One Time"]["General Disinfectant"];
 
-export default function TermiteTreatmentPage() {
-
+export default function WoodBorerTreatmentPage() {
     const productTypes = Object.keys(pricing["One Time"]) as ProductType[];
     const frequencies = Object.keys(pricing) as Freq[];
     const flatTypes = ["RK", "1BHK", "2BHK", "3BHK", "4BHK"] as FlatType[];
@@ -113,7 +112,7 @@ export default function TermiteTreatmentPage() {
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Termite Treatment</span>
+                        <span className="text-gray-900">Wood Borer Treatment</span>
                     </div>
                 </div>
             </section>
@@ -121,8 +120,8 @@ export default function TermiteTreatmentPage() {
             {/* Header */}
             <section className="bg-white lg:py-16 py-5">
                 <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-12">
-                        <div>
+                    <div className="grid lg:grid-cols-2 gap-12 ">
+                        <div className="mt-0">
                             <Link
                                 href="/services"
                                 className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
@@ -130,29 +129,33 @@ export default function TermiteTreatmentPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-red-100 text-red-800 mb-4">Critical Protection</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Termite Treatment</h1>
+                            <Badge className="bg-green-100 text-green-800 mb-4">Specialized Treatment</Badge>
+                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Wood Borer Treatment</h1>
                             <p className="text-xl text-gray-600 mb-6">
-                                Comprehensive termite control solutions for both pre-construction and post-construction properties.
-                                Protect your valuable investment from destructive termite damage with our proven treatment methods.
+                                Professional wood borer treatment to protect your wooden furniture, flooring, and structures from destructive borers. Our specialized treatment eliminates existing infestations and prevents future damage.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                                    <Phone className="mr-2 h-5 w-5" />
-                                    Call 84485 20507
-                                </Button>
-                                <Button size="lg" variant="outline">
-                                    Free Termite Inspection
-                                </Button>
+                                <a href="tel:8830495135" className="hover:text-green-600">
+                                    <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                                        <Phone className="mr-2 h-5 w-5" />
+                                        Call 8830495135
+                                    </Button>
+                                </a>
+                                <a href="/contact">
+                                    <Button size="lg" variant="outline">
+                                        Get Free Quote
+                                    </Button>
+                                </a>
                             </div>
                         </div>
+                        {/* Quick Contact */}
                         <Card className="p-6 bg-green-50 border-green-200">
                             <CardContent className="p-0 space-y-6">
                                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Treatment Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -165,14 +168,14 @@ export default function TermiteTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Area Size</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={flatType}
                                             onChange={(e) => setFlatType(e.target.value as FlatType)}
                                         >
-                                            {flatTypes.map((ft) => (
-                                                <option key={ft}>{ft}</option>
+                                            {flatTypes.map((at) => (
+                                                <option key={at}>{at}</option>
                                             ))}
                                         </select>
                                     </div>
@@ -210,7 +213,7 @@ export default function TermiteTreatmentPage() {
                                     <textarea
                                         className="w-full p-2 rounded border text-black"
                                         rows={3}
-                                        placeholder="Additional Comments"
+                                        placeholder="Additional Comments (e.g., specific furniture items affected)"
                                         value={comments}
                                         onChange={(e) => setComments(e.target.value)}
                                     />
@@ -242,180 +245,55 @@ export default function TermiteTreatmentPage() {
                 </div>
             </section>
 
-            {/* Treatment Types */}
-            <section className="py-16">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Termite Treatment Services</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            We offer both preventive and curative termite treatments using advanced methods and WHO-approved chemicals
-                        </p>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-8 mb-12">
-                        <Card className="p-8">
-                            <CardHeader className="p-0 mb-6">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <Building className="h-8 w-8 text-green-600" />
-                                    <CardTitle className="text-2xl">Pre-Construction Treatment</CardTitle>
-                                </div>
-                            </CardHeader>
-                            <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
-                                    Preventive termite treatment applied during construction phase to create a chemical barrier that
-                                    prevents termite infestation for years to come.
-                                </p>
-                                <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Treatment Areas:</h4>
-                                    {[
-                                        "Foundation soil treatment",
-                                        "Plinth level treatment",
-                                        "Backfill soil treatment",
-                                        "Masonry treatment",
-                                        "Wooden framework treatment",
-                                    ].map((area, index) => (
-                                        <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{area}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="bg-green-50 p-4 rounded-lg">
-                                    <p className="text-sm text-green-800">
-                                        <strong>Best Value:</strong> Most cost-effective when done during construction. Provides 5-10 years
-                                        of protection.
-                                    </p>
-                                </div>
-                                <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-green-600 text-white hover:bg-green-800">
-                                        <a href="tel:8830495135">
-                                            <Phone className="mr-2 h-5 w-5" />
-                                            Call 88304 95135
-                                        </a>
-                                    </Button>
-                                    <Button
-                                        size="lg"
-                                        asChild
-                                        variant="outline"
-                                        className="border-Green-600 text-green-600 hover:bg-gray-100 hover:text-green-600 bg-transparent"
-                                    >
-                                        <a href="/contact">
-                                            Get Free Quote
-                                        </a>
-                                    </Button>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="p-8">
-                            <CardHeader className="p-0 mb-6">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <Home className="h-8 w-8 text-green-600" />
-                                    <CardTitle className="text-2xl">Post-Construction Treatment</CardTitle>
-                                </div>
-                            </CardHeader>
-                            <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
-                                    Curative treatment for buildings showing signs of termite infestation. We eliminate current
-                                    termites and create protective barriers.
-                                </p>
-                                <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Treatment Methods:</h4>
-                                    {[
-                                        "Drilling & chemical injection",
-                                        "Soil treatment around foundation",
-                                        "Wood treatment for affected areas",
-                                        "Localized spot treatment",
-                                        "Monitoring & baiting systems",
-                                    ].map((method, index) => (
-                                        <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{method}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="bg-blue-50 p-4 rounded-lg">
-                                    <p className="text-sm text-blue-800">
-                                        <strong>Immediate Action:</strong> Quick response to active infestations. Includes damage assessment
-                                        and repair.
-                                    </p>
-                                </div>
-                                <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-green-600 text-white hover:bg-green-800">
-                                        <a href="tel:8830495135">
-                                            <Phone className="mr-2 h-5 w-5" />
-                                            Call 88304 95135
-                                        </a>
-                                    </Button>
-                                    <Button
-                                        size="lg"
-                                        asChild
-                                        variant="outline"
-                                        className="border-Green-600 text-green-600 hover:bg-gray-100 hover:text-green-600 bg-transparent"
-                                    >
-                                        <a href="/contact">
-                                            Get Free Quote
-                                        </a>
-                                    </Button>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </section>
-
             {/* Service Details */}
-            <section className="py-16 bg-white">
+            <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-8">
-                            {/* Signs of Termite Infestation */}
+                            {/* What We Treat */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Signs You Need Termite Treatment</CardTitle>
+                                    <CardTitle className="text-2xl">Wood Borers We Eliminate</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Visible Signs</h3>
+                                            <h3 className="font-semibold text-gray-900 mb-3">Common Wood Borers</h3>
                                             <ul className="space-y-2">
                                                 {[
-                                                    "Mud tubes on walls/foundation",
-                                                    "Hollow-sounding wood",
-                                                    "Discarded wings near windows",
-                                                    "Small holes in wood",
-                                                    "Sagging floors or ceilings",
-                                                ].map((sign, index) => (
+                                                    "Powderpost Beetles",
+                                                    "Deathwatch Beetles",
+                                                    "Old House Borers",
+                                                    "Furniture Beetles",
+                                                    "Wood Boring Weevils",
+                                                ].map((pest, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
-                                                        {sign}
+                                                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                        {pest}
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Other Indicators</h3>
+                                            <h3 className="font-semibold text-gray-900 mb-3">Signs of Infestation</h3>
                                             <ul className="space-y-2">
                                                 {[
-                                                    "Clicking sounds in walls",
-                                                    "Tight-fitting doors/windows",
-                                                    "Cracked paint on wood surfaces",
-                                                    "Frass (termite droppings)",
-                                                    "Swarms of flying insects",
-                                                ].map((indicator, index) => (
-                                                    <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
-                                                        {indicator}
-                                                    </li>
-                                                ))}
+                                                    "Small round exit holes (1-2mm diameter)",
+                                                    "Fine wood powder around furniture",
+                                                    "Crumbling wood edges",
+                                                    "Tunnels visible in wood cross-sections",
+                                                    "Adult beetles emerging from wood"
+                                                ].map(
+                                                    (sign, index) => (
+                                                        <li key={index} className="flex items-center gap-2 text-sm">
+                                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                            {sign}
+                                                        </li>
+                                                    ),
+                                                )}
                                             </ul>
                                         </div>
-                                    </div>
-                                    <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                                        <p className="text-red-800 text-sm">
-                                            <strong>Early Detection is Key:</strong> The sooner termite infestation is detected and treated,
-                                            the less damage and lower the treatment cost.
-                                        </p>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -423,34 +301,40 @@ export default function TermiteTreatmentPage() {
                             {/* Treatment Process */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Our Treatment Process</CardTitle>
+                                    <CardTitle className="text-2xl">Our Wood Borer Treatment Process</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="space-y-6">
                                         {[
                                             {
                                                 step: "1",
-                                                title: "Detailed Inspection",
+                                                title: "Detailed Wood Inspection",
                                                 description:
-                                                    "Comprehensive property assessment to identify termite species, infestation extent, and damage evaluation.",
+                                                    "Thorough examination of all wooden surfaces to identify infestation severity, borer type, and damage extent using specialized tools.",
                                             },
                                             {
                                                 step: "2",
-                                                title: "Treatment Plan",
+                                                title: "Drilling & Injection",
                                                 description:
-                                                    "Customized treatment strategy based on property type, infestation level, and construction details.",
+                                                    "Precision drilling into affected wood and injecting specialized chemicals that penetrate deep into borer tunnels and galleries.",
                                             },
                                             {
                                                 step: "3",
-                                                title: "Chemical Application",
+                                                title: "Surface Spray Treatment",
                                                 description:
-                                                    "Professional application of WHO-approved termiticides using drilling, injection, and barrier methods.",
+                                                    "Application of protective coating on wood surfaces to create a chemical barrier against future infestations.",
                                             },
                                             {
                                                 step: "4",
-                                                title: "Monitoring & Follow-up",
+                                                title: "Fumigation (if required)",
                                                 description:
-                                                    "Regular monitoring visits and additional treatments if required during warranty period.",
+                                                    "For severe infestations, we use targeted fumigation techniques to eliminate all life stages of wood borers.",
+                                            },
+                                            {
+                                                step: "5",
+                                                title: "Preventive Measures",
+                                                description:
+                                                    "Recommendations for wood preservation and preventive treatments to protect against future infestations.",
                                             },
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
@@ -467,26 +351,26 @@ export default function TermiteTreatmentPage() {
                                 </CardContent>
                             </Card>
 
-                            {/* Chemicals Used */}
+                            {/* Benefits */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Safe & Effective Chemicals</CardTitle>
+                                    <CardTitle className="text-2xl">Why Choose Our Wood Borer Treatment?</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         {[
-                                            "WHO approved termiticides",
-                                            "Long-lasting protection (5-10 years)",
-                                            "Safe for humans and pets",
-                                            "Environmentally responsible",
-                                            "Odorless formulations",
-                                            "Government certified products",
-                                            "Non-staining chemicals",
-                                            "Proven effectiveness against all termite species",
-                                        ].map((feature, index) => (
+                                            "Specialized wood-preservation chemicals",
+                                            "Non-staining and odorless treatment",
+                                            "5-7 years protection guarantee",
+                                            "Minimal drilling technique",
+                                            "Safe for polished and painted wood",
+                                            "Eco-friendly treatment options",
+                                            "Herbal treatment available",
+                                            "Free post-treatment inspection",
+                                        ].map((benefit, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <Shield className="h-5 w-5 text-green-600 flex-shrink-0" />
-                                                <span className="text-gray-700">{feature}</span>
+                                                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                                                <span className="text-gray-700">{benefit}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -496,56 +380,116 @@ export default function TermiteTreatmentPage() {
 
                         {/* Sidebar */}
                         <div className="space-y-6">
-
-                            {/* Pricing Guide */}
+                            {/* Service Features */}
                             <Card className="p-6">
                                 <CardHeader className="p-0 mb-4">
-                                    <CardTitle className="text-lg">Treatment Pricing</CardTitle>
+                                    <CardTitle className="text-lg">Treatment Highlights</CardTitle>
                                 </CardHeader>
-                                <CardContent className="p-0 space-y-4">
-                                    <div className="border-b pb-3">
-                                        <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">Pre-Construction</span>
-                                            <span className="text-sm text-green-600">₹8-12/sq ft</span>
-                                        </div>
-                                        <p className="text-xs text-gray-500">During construction phase</p>
+                                <CardContent className="p-0 space-y-3">
+                                    <div className="flex items-center gap-3">
+                                        <Shield className="h-5 w-5 text-green-600" />
+                                        <span className="text-sm">Deep Penetration Chemicals</span>
                                     </div>
-                                    <div className="border-b pb-3">
-                                        <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">Post-Construction</span>
-                                            <span className="text-sm text-green-600">₹15-25/sq ft</span>
-                                        </div>
-                                        <p className="text-xs text-gray-500">Existing buildings</p>
+                                    <div className="flex items-center gap-3">
+                                        <Clock className="h-5 w-5 text-green-600" />
+                                        <span className="text-sm">Same Day Service Available</span>
                                     </div>
-                                    <div>
-                                        <div className="flex justify-between items-center">
-                                            <span className="text-sm font-medium">Spot Treatment</span>
-                                            <span className="text-sm text-green-600">₹5,000+</span>
-                                        </div>
-                                        <p className="text-xs text-gray-500">Localized treatment</p>
+                                    <div className="flex items-center gap-3">
+                                        <Star className="h-5 w-5 text-green-600" />
+                                        <span className="text-sm">5-7 Years Protection</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <CheckCircle className="h-5 w-5 text-green-600" />
+                                        <span className="text-sm">Safe for All Wood Types</span>
                                     </div>
                                 </CardContent>
                             </Card>
 
-                            {/* Warranty Info */}
+                            {/* AMC Option */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Warranty Coverage</h3>
-                                    <div className="space-y-2 text-sm">
-                                        <div className="flex justify-between">
-                                            <span>Pre-Construction:</span>
-                                            <span className="font-semibold">5-10 years</span>
-                                        </div>
-                                        <div className="flex justify-between">
-                                            <span>Post-Construction:</span>
-                                            <span className="font-semibold">3-5 years</span>
-                                        </div>
-                                    </div>
-                                    <p className="text-xs text-blue-600 mt-3">
-                                        Free re-treatment if termites return during warranty period
+                                    <h3 className="font-semibold text-gray-900 mb-2">Wood Protection AMC</h3>
+                                    <p className="text-sm text-gray-600 mb-4">
+                                        Protect your wooden assets year-round with our comprehensive maintenance plans. Save up to 35% with AMC.
                                     </p>
+                                    <Button
+                                        variant="outline"
+                                        className="w-full bg-transparent border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                                    >
+                                        Learn About AMC
+                                    </Button>
                                 </CardContent>
                             </Card>
+
+                            {/* Prevention Tips */}
+                            <Card className="p-6 bg-amber-50 border-amber-200">
+                                <CardContent className="p-0">
+                                    <h3 className="font-semibold text-gray-900 mb-2">Wood Borer Prevention Tips</h3>
+                                    <ul className="text-sm text-gray-600 space-y-2">
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Keep wood dry and well-ventilated</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Regularly inspect wooden furniture</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Apply wood polish/preservatives annually</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span>•</span>
+                                            <span>Treat new wood before use</span>
+                                        </li>
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-3xl mx-auto">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                        <div className="space-y-6">
+                            {[
+                                {
+                                    question: "How long does wood borer treatment take to work?",
+                                    answer:
+                                        "Adult borers are eliminated immediately, while larvae inside wood may take 2-3 weeks to be completely eradicated as the chemicals take effect.",
+                                },
+                                {
+                                    question: "Will the treatment damage my furniture?",
+                                    answer:
+                                        "No, our specialized techniques use minimal drilling and non-staining chemicals that won't damage your furniture's finish or appearance.",
+                                },
+                                {
+                                    question: "How long does the protection last?",
+                                    answer:
+                                        "Our standard treatment provides 5-7 years of protection. With AMC plans, we provide regular inspections and touch-ups for continued protection.",
+                                },
+                                {
+                                    question: "Is the treatment safe for antique furniture?",
+                                    answer:
+                                        "Yes, we have special herbal and low-pressure treatment options specifically designed for delicate and antique wooden items.",
+                                },
+                                {
+                                    question: "Can I stay at home during treatment?",
+                                    answer:
+                                        "Yes, our treatments are safe for occupancy. We only recommend staying away for 2-3 hours post-treatment for the solution to dry completely.",
+                                },
+                            ].map((faq, index) => (
+                                <Card key={index} className="p-6">
+                                    <CardContent className="p-0">
+                                        <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </CardContent>
+                                </Card>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -554,9 +498,9 @@ export default function TermiteTreatmentPage() {
             {/* CTA Section */}
             <section className="py-16 bg-green-600">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Property from Termites</h2>
+                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Wooden Assets Today</h2>
                     <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-                        Don't let termites destroy your valuable investment. Contact IKON for professional termite treatment today.
+                        Don't let wood borers destroy your valuable furniture and structures. Contact IKON Pest Control for professional wood borer treatment.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg" asChild className="bg-white text-green-600 hover:bg-gray-100">

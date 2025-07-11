@@ -12,43 +12,61 @@ export default function PricingPage() {
 
   const oneTimeServices = [
     {
-      service: "General Pest Control",
+      service: "General Disinfectant",
       price: "Starting at ₹2000",
-      description: "Covers cockroaches, ants, lizards, and other common pests"
+      description: "Targets cockroaches, lizards, spiders, silverfish, and other common pests"
     },
     {
       service: "Termite Treatment",
       price: "On Inspection",
-      description: "Pre-Construction and Post-Construction termite protection"
+      description: "Effective treatment for white ants (termites)"
     },
     {
-      service: "Bed Bug Eradication",
+      service: "Bed Bugs Treatment",
       price: "Starting at ₹2000",
-      description: "Targeted treatment for complete bed bug removal"
+      description: "Specialized chemical treatment for bed bug infestations"
     },
     {
-      service: "Rodent Management",
-      price: "Starting at ₹2000",
-      description: "Trapping and baiting methods for effective rodent control"
+      service: "Wood Borer Treatment",
+      price: "On Inspection",
+      description: "Prevents and eliminates wood-boring insects from wooden structures"
     },
     {
-      service: "Mosquito Control",
+      service: "Rat Control",
       price: "Starting at ₹2000",
-      description: "Fogging and spraying to reduce mosquito populations"
+      description: "Trap, poison baiting, RotaBox units, and gum pad solutions for rodent control"
     },
     {
-      service: "Herbal / Non-toxic Pest Control",
+      service: "Ticks Treatment",
       price: "Starting at ₹2000",
-      description: "Eco-friendly, chemical-free pest control solutions"
+      description: "Targeted spray treatment to eliminate ticks in residential and pet areas"
+    },
+    {
+      service: "Honey Bee Removal",
+      price: "On Inspection",
+      description: "Safe and humane removal of honey bee hives from residential and commercial spaces"
+    },
+    {
+      service: "Pre-Construction Termite Treatment",
+      price: "On Inspection",
+      description: "Anti-termite chemical soil treatment during early construction phase"
+    },
+    {
+      service: "Post-Construction Termite Treatment",
+      price: "On Inspection",
+      description: "Termite control for existing buildings using drilling and chemical injection methods"
+    },
+    {
+      service: "Mosquito Fogging",
+      price: "Starting at ₹2000",
+      description: "Fogging services for mosquito control in residential and commercial areas"
     }
   ];
-
-
 
   const addOns = [
     {
       name: "Pigeon Netting and Bird Spikes Installation",
-      price: "Starting at $99",
+      price: "Starting at ₹200",
       description: "Prevents bird nesting and roosting on buildings and structures"
     },
     {
@@ -65,9 +83,33 @@ export default function PricingPage() {
       name: "Industrial & Commercial Pest Management",
       price: "On Inspection",
       description: "Large-scale pest control solutions tailored for commercial properties"
+    },
+    {
+      name: "Bird Netting",
+      price: "Quote",
+      description: "Protects open areas from birds with high-quality netting solutions"
+    },
+    {
+      name: "Rat Zali Installation",
+      price: "Starting at ₹500",
+      description: "Stainless steel mesh barriers to prevent rodent entry through openings"
+    },
+    {
+      name: "Rat Guard",
+      price: "Starting at ₹300",
+      description: "Protects pipes and wiring from rats using metal sleeves or barriers"
+    },
+    {
+      name: "Home Cleaning",
+      price: "Custom Plan",
+      description: "Professional deep cleaning services for residential spaces"
+    },
+    {
+      name: "Sanitization Services",
+      price: "Starting at ₹999",
+      description: "Disinfection treatment for germs, viruses, and bacteria in homes/offices"
     }
   ];
-
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -92,13 +134,18 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {oneTimeServices.map((service, index) => (
-              <Card key={index} className="p-6">
-                <CardContent className="p-0">
+              <Card key={index} className="p-6 flex flex-col h-full">
+                <CardContent className="p-0 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-semibold text-gray-900">{service.service}</h3>
                     <span className="text-green-600 font-bold">{service.price}</span>
                   </div>
+
                   <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+
+                  {/* Spacer pushes button to the bottom */}
+                  <div className="flex-grow" />
+
                   <a href="/contact">
                     <Button variant="outline" size="sm" className="w-full bg-transparent">
                       Get Quote
