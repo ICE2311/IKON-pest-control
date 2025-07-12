@@ -6,6 +6,7 @@ import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import Script from "next/script";
 import FacebookPixel from "@/components/facebookPixel";
+import { Suspense } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -46,7 +47,9 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <FacebookPixel />
+        <Suspense fallback={null}>
+          <FacebookPixel />
+        </Suspense>
         <Header />
         <noscript>
           <img
