@@ -21,8 +21,8 @@ export default function Footer() {
               HACCP approved treatments.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-              <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+              <a href="https://www.facebook.com/profile.php?id=61575939877393"><Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" /></a>
+              <a href="https://www.instagram.com/ikon_pest_control/"><Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" /></a>
             </div>
           </div>
 
