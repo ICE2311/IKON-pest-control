@@ -22,9 +22,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-              <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
               <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-              <Linkedin className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
             </div>
           </div>
 
