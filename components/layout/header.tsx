@@ -100,8 +100,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
-            <span className="text-xl font-bold text-gray-900 md:hidden lg:inline">IKON Pest Control</span>
+            <Image src="/logo.png" alt="Logo" width={78} height={28} />
+            <span className="text-xl font-bold pt-3 text-gray-900 md:hidden lg:inline">Pest Control</span>
           </Link>
 
           {/* Desktop Navigation */}

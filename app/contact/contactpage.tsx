@@ -78,7 +78,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                      <Input name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required />
+                      <Input name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number" pattern="[0-9]{10}"
+                        onInput={(e) => {
+                          const input = e.target as HTMLInputElement;
+                          input.value = input.value.replace(/\D/g, ''); // Only digits
+                        }}
+                        required />
                     </div>
                   </div>
 
