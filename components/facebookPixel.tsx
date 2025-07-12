@@ -14,7 +14,7 @@ const FacebookPixel = () => {
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        const url = pathname + (searchParams ? `?${searchParams.toString()}` : "");
+        const url = `${pathname}${searchParams?.toString() ? `?${searchParams.toString()}` : ""}`;
         if (typeof window.fbq === "function") {
             try {
                 window.fbq("track", "PageView");
