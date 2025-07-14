@@ -246,7 +246,7 @@ export default function ServicesPage() {
                   {/* Spacer pushes the buttons down */}
                   <div className="flex-grow" />
                   <div className="flex gap-2 mt-4">
-                    <Button className="flex-1 bg-ikongold hover:bg-ikongold" onClick={() => router.push("/contact")}>
+                    <Button className="flex-1 bg-ikongold text-ikontext hover:bg-ikongold" onClick={() => router.push("/contact")}>
                       Book Now
                     </Button>
                     <Button variant="outline" className="flex-1 bg-transparent" onClick={() => router.push(service.href)}>
@@ -338,7 +338,7 @@ export default function ServicesPage() {
             plan
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-ikongold text-xl hover:bg-gray-100">
+            <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
               <a href="/contact">
                 Schedule Free Inspection
               </a>
@@ -347,7 +347,7 @@ export default function ServicesPage() {
               size="lg"
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-ikongold text-xl bg-transparent"
+              className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
             >
               <a href="tel:8830495135">
                 Call 88304 95135

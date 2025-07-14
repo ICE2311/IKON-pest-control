@@ -206,7 +206,7 @@ export default function HomePage() {
                 ))}
               </div>
               <a href="tel:8830495135">
-                <Button className="bg-ikongold text-xl hover:bg-ikongold">Check Service Availability</Button>
+                <Button className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">Check Service Availability</Button>
               </a>
             </div>
             <div className="bg-gray-200 rounded-lg h-80 overflow-hidden">

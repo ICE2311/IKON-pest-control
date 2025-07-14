@@ -133,7 +133,7 @@ export default function WoodBorerTreatmentPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135" className="hover:text-ikongold">
-                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
@@ -500,20 +500,19 @@ export default function WoodBorerTreatmentPage() {
                         Don't let wood borers destroy your valuable furniture and structures. Contact IKON Pest Control for professional wood borer treatment.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-ikontext text-ikongold hover:bg-gray-100">
-                            <a href="tel:8830495135">
-                                <Phone className="mr-2 h-5 w-5" />
-                                Call 88304 95135
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                            <a href="/contact">
+                                Schedule Free Inspection
                             </a>
                         </Button>
                         <Button
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white hover:bg-white text-xl hover:text-ikongold bg-transparent"
+                            className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
                         >
-                            <a href="/contact">
-                                Get Free Quote
+                            <a href="tel:8830495135">
+                                Call 88304 95135
                             </a>
                         </Button>
                     </div>

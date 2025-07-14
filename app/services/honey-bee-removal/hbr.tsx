@@ -563,20 +563,19 @@ export default function HoneyBeeRemovalPage() {
                         Contact us for humane solutions to your bee and wasp problems.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
-                            <a href="tel:8830495135">
-                                <Phone className="mr-2 h-5 w-5" />
-                                Call 88304 95135
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                            <a href="/contact">
+                                Schedule Free Inspection
                             </a>
                         </Button>
                         <Button
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-xl text-white hover:bg-white hover:text-ikongold bg-transparent"
+                            className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
                         >
-                            <a href="/contact">
-                                Get Free Inspection
+                            <a href="tel:8830495135">
+                                Call 88304 95135
                             </a>
                         </Button>
                     </div>

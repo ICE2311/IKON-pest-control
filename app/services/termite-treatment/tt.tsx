@@ -560,20 +560,19 @@ export default function TermiteTreatmentPage() {
                         Don't let termites destroy your valuable investment. Contact IKON for professional termite treatment today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
-                            <a href="tel:8830495135">
-                                <Phone className="mr-2 h-5 w-5" />
-                                Call 88304 95135
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                            <a href="/contact">
+                                Schedule Free Inspection
                             </a>
                         </Button>
                         <Button
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white text-xl hover:bg-white hover:text-ikongold bg-transparent"
+                            className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
                         >
-                            <a href="/contact">
-                                Get Free Quote
+                            <a href="tel:8830495135">
+                                Call 88304 95135
                             </a>
                         </Button>
                     </div>

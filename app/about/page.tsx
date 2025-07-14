@@ -70,7 +70,7 @@ export default function AboutPage() {
                 from unwanted pests using safe, effective, and environmentally responsible methods.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 ">
-                <a href="/services"><Button className="bg-ikongold hover:bg-green-700">Learn About Our Services</Button></a>
+                <a href="/services"><Button className="bg-ikongold text-ikontext hover:bg-ikongold">Learn About Our Services</Button></a>
                 <a href="#team"><Button variant="outline">Meet Our Team</Button></a>
               </div>
             </div>
