@@ -135,7 +135,7 @@ export default function BedBugControlPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Emergency: 88304 95135
                                     </Button>
@@ -588,7 +588,7 @@ export default function BedBugControlPage() {
                         Get immediate relief with IKON's professional bed bug eradication services. Same-day treatment available.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white  text-xl text-ikongold hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135

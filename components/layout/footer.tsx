@@ -13,16 +13,15 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
-              <span className="text-xl font-bold text-white">IKON Pest Control</span>
+              <Image src="/logo.png" alt="Logo" width={78} height={28} className="lg:mr-48" />
             </Link>
             <p className="text-gray-400 mb-4 py-2">
               Professional pest management solutions since 2005. Serving Mira Road, Bhayandar, and Thane with WHO &
               HACCP approved treatments.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61575939877393"><Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" /></a>
-              <a href="https://www.instagram.com/ikon_pest_control/"><Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61575939877393"><Facebook className="h-5 w-5 text-gray-400 hover:text-ikongold cursor-pointer" /></a>
+              <a href="https://www.instagram.com/ikon_pest_control/"><Instagram className="h-5 w-5 text-gray-400 hover:text-ikongold cursor-pointer" /></a>
             </div>
           </div>
 
@@ -38,7 +37,7 @@ export default function Footer() {
                 { name: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link href={link.href} className="text-gray-400 hover:text-ikongold transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -61,7 +60,7 @@ export default function Footer() {
                 const url = `/services/${service.toLowerCase().replace(/\s+/g, "-")}`;
                 return (
                   <li key={service}>
-                    <a href={url} className="text-gray-400 hover:text-gray-700 transition-colors duration-200">
+                    <a href={url} className="text-gray-400 hover:text-ikongold transition-colors duration-200">
                       {service}
                     </a>
                   </li>
@@ -131,10 +130,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Roshan Singh. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-ikongold text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm">
+              <Link href="/terms" className="text-gray-400 hover:text-ikongold text-sm">
                 Terms of Service
               </Link>
             </div>

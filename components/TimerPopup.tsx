@@ -54,7 +54,7 @@ export default function PromoPopup() {
 
         <button
           onClick={() => window.location.href = '/contact'}
-          className="bg-ikongold text-white px-5 py-2 rounded hover:bg-ikongold transition"
+          className="bg-ikongold text-ikontext px-5 py-2 rounded hover:bg-ikongold transition"
         >
           Book Now
         </button>

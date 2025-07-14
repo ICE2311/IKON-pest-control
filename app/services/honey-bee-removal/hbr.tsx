@@ -118,7 +118,7 @@ export default function HoneyBeeRemovalPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-ikontext text-xl hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>

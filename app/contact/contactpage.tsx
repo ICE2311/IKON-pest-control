@@ -120,7 +120,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button className="w-full bg-ikongold text-xl hover:bg-ikongold" size="lg">
+                  <Button className="w-full bg-ikongold text-xl text-ikontext hover:bg-ikongold" size="lg">
                     <Phone className="mr-2 h-5 w-5" />
                     Book Free Inspection
                   </Button>

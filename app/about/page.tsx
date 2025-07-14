@@ -230,7 +230,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
+              <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
                 Schedule Free Inspection
               </Button>
             </Link>

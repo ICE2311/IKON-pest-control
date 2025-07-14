@@ -59,7 +59,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:8830495135">
-                  <Button size="lg" className="bg-ikongold hover:bg-green-700 text-white text-xl px-8 py-3">
+                  <Button size="lg" className="bg-ikongold hover:bg-ikongold text-ikontext text-xl px-8 py-3">
                     <Phone className="mr-2 h-5 w-5" />
                     Call 88304 95135
                   </Button>
@@ -206,7 +206,7 @@ export default function HomePage() {
                 ))}
               </div>
               <a href="tel:8830495135">
-                <Button className="bg-ikongold text-xl hover:bg-green-700">Check Service Availability</Button>
+                <Button className="bg-ikongold text-xl hover:bg-ikongold">Check Service Availability</Button>
               </a>
             </div>
             <div className="bg-gray-200 rounded-lg h-80 overflow-hidden">
@@ -284,8 +284,8 @@ export default function HomePage() {
       <section className="py-16 bg-ikongold">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-green-100 mb-8">
+            <h2 className="text-3xl font-bold text-ikontext mb-4">Ready to Get Started?</h2>
+            <p className="text-ikontext mb-8">
               Contact IKON Pest Control Services today for professional pest management solutions
             </p>
             <div className="bg-white rounded-lg p-8 max-w-2xl mx-auto">
@@ -309,7 +309,7 @@ export default function HomePage() {
                   <option value="commercial">Commercial Service</option>
                 </select>
                 <div className="md:col-span-2">
-                  <Button className="w-full bg-ikongold hover:bg-green-700" size="lg">
+                  <Button className="w-full bg-ikongold hover:bg-ikongold text-ikontext" size="lg">
                     Get Free Quote
                   </Button>
                 </div>
