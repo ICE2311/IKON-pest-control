@@ -1,97 +1,148 @@
 import React from 'react';
 
 export const metadata = {
-    title: 'Terms and Conditions - IKON',
-    description: 'Terms and conditions for IKON Pest Control Services. Read our terms and conditions for your peace of mind.',
+  title: 'Terms and Conditions - IKON',
+  description: 'Terms and conditions for IKON Pest Control Services. Read our terms and conditions for your peace of mind.',
 };
 
 const TermsAndConditions = () => {
-    return (
-        <div className="terms-container" style={{ padding: '2rem', maxWidth: '900px', margin: '0 auto', lineHeight: '1.6' }}>
-            <h1>Terms and Conditions</h1>
-            <p><strong>Last updated:</strong> July 07, 2025</p>
-            <p>Please read these terms and conditions carefully before using Our Service.</p>
+  return (
+    <main className="bg-white min-h-screen px-6 py-12 sm:px-8 md:px-12 lg:px-24 text-gray-800">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <header>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Terms and Conditions</h1>
+          <p className="text-sm text-gray-500">Last updated: July 07, 2025</p>
+        </header>
 
-            <h2>Interpretation and Definitions</h2>
-            <h3>Interpretation</h3>
-            <p>
-                The words of which the initial letter is capitalized have meanings defined under the following conditions.
-                The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
-            </p>
+        <section className="space-y-4">
+          <p>Please read these Terms and Conditions carefully before using our Service.</p>
+        </section>
 
-            <h3>Definitions</h3>
-            <p>For the purposes of these Terms and Conditions:</p>
-            <ul>
-                <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party...</li>
-                <li><strong>Country</strong> refers to: Maharashtra, India</li>
-                <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our") refers to Ikon Pest Control Services...</li>
-                <li><strong>Device</strong> means any device that can access the Service such as a computer, cellphone, or digital tablet.</li>
-                <li><strong>Service</strong> refers to the Website.</li>
-                <li><strong>Terms and Conditions</strong> (also referred to as "Terms") mean these Terms and Conditions...</li>
-                <li><strong>Third-party Social Media Service</strong> means any services or content provided by a third-party...</li>
-                <li><strong>Website</strong> refers to Ikon Pest Control, accessible from <a href="https://ikonpestcontrol.com/" target="_blank" rel="noopener noreferrer">ikonpestcontrol.com</a></li>
-                <li><strong>You</strong> means the individual or entity using the Service.</li>
-            </ul>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Interpretation and Definitions</h2>
 
-            <h2>Acknowledgment</h2>
-            <p>
-                These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company...
-            </p>
+          <h3 className="text-xl font-medium mb-2">Interpretation</h3>
+          <p>
+            Words with capitalized initial letters have defined meanings. These definitions apply regardless of singular or plural usage.
+          </p>
 
-            <h2>Links to Other Websites</h2>
-            <p>
-                Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company...
-            </p>
+          <h3 className="text-xl font-medium mb-2 mt-4">Definitions</h3>
+          <p>For the purposes of these Terms and Conditions:</p>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 mt-2">
+            <li><strong>Affiliate:</strong> Entity under common control with a party.</li>
+            <li><strong>Country:</strong> Refers to Maharashtra, India.</li>
+            <li><strong>Company:</strong> IKON Pest Control Services (referred to as "the Company", "We", "Us", or "Our").</li>
+            <li><strong>Device:</strong> Any device like a computer, cellphone, or tablet that accesses the Service.</li>
+            <li><strong>Service:</strong> Refers to the Website.</li>
+            <li><strong>Terms and Conditions:</strong> These Terms that govern your use of the Service.</li>
+            <li><strong>Third-party Social Media Service:</strong> Services or content provided by third parties.</li>
+            <li><strong>Website:</strong> IKON Pest Control, available at <a href="https://ikonpestcontrol.com/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">ikonpestcontrol.com</a></li>
+            <li><strong>You:</strong> The individual or legal entity using the Service.</li>
+          </ul>
+        </section>
 
-            <h2>Termination</h2>
-            <p>We may terminate or suspend Your access immediately, without prior notice or liability...</p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Acknowledgment</h2>
+          <p>
+            These Terms govern the use of the Service and form the agreement between You and the Company. Your access and use of the Service are conditional on your acceptance of and compliance with these Terms.
+          </p>
+        </section>
 
-            <h2>Limitation of Liability</h2>
-            <p>
-                Notwithstanding any damages that You might incur, the entire liability of the Company...
-            </p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Links to Other Websites</h2>
+          <p>
+            Our Service may contain links to third-party websites or services not owned or controlled by the Company. We are not responsible for the content, policies, or practices of any third-party sites.
+          </p>
+        </section>
 
-            <h2>"AS IS" and "AS AVAILABLE" Disclaimer</h2>
-            <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty...</p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Termination</h2>
+          <p>
+            We may suspend or terminate your access to the Service immediately, without notice, for any reason, including breach of these Terms.
+          </p>
+        </section>
 
-            <h2>Governing Law</h2>
-            <p>The laws of the Country, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service.</p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Limitation of Liability</h2>
+          <p>
+            The Company’s entire liability, regardless of damages you may incur, will be limited to the amount paid by you through the Service or 1000 INR if you haven’t purchased anything.
+          </p>
+        </section>
 
-            <h2>Disputes Resolution</h2>
-            <p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally...</p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+          <p>
+            The Service is provided to you “AS IS” and “AS AVAILABLE” with all faults and defects without warranty of any kind, express or implied.
+          </p>
+        </section>
 
-            <h2>For European Union (EU) Users</h2>
-            <p>
-                If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.
-            </p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Governing Law</h2>
+          <p>
+            These Terms shall be governed and interpreted in accordance with the laws of Maharashtra, India, excluding its conflict of law rules.
+          </p>
+        </section>
 
-            <h2>United States Legal Compliance</h2>
-            <p>
-                You represent and warrant that (i) You are not located in a country subject to U.S. government embargo...
-            </p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Disputes Resolution</h2>
+          <p>
+            If you have a dispute or concern, you agree to try to resolve it informally by contacting the Company before taking formal legal action.
+          </p>
+        </section>
 
-            <h2>Severability and Waiver</h2>
-            <h3>Severability</h3>
-            <p>If any provision of these Terms is held to be unenforceable or invalid...</p>
-            <h3>Waiver</h3>
-            <p>Failure to exercise a right or require performance does not constitute a waiver...</p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">For European Union (EU) Users</h2>
+          <p>
+            If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you reside.
+          </p>
+        </section>
 
-            <h2>Translation Interpretation</h2>
-            <p>You agree that the original English text shall prevail in case of a dispute.</p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">United States Legal Compliance</h2>
+          <p>
+            You represent and warrant that (i) You are not located in a country subject to a U.S. Government embargo, and (ii) You are not listed on any U.S. Government list of prohibited parties.
+          </p>
+        </section>
 
-            <h2>Changes to These Terms and Conditions</h2>
-            <p>
-                We reserve the right to modify or replace these Terms at any time...
-            </p>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Severability and Waiver</h2>
 
-            <h2>Contact Us</h2>
-            <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
-            <ul>
-                <li>By email: <a href="mailto:ikonpestcontrol@gmail.com">ikonpestcontrol@gmail.com</a></li>
-                <li>By visiting this page: <a href="/contact" rel="noopener noreferrer">Contact Page</a></li>
-            </ul>
-        </div>
-    );
+          <h3 className="text-xl font-medium mb-2">Severability</h3>
+          <p>
+            If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in effect.
+          </p>
+
+          <h3 className="text-xl font-medium mb-2 mt-4">Waiver</h3>
+          <p>
+            The failure to exercise a right or enforce a provision under these Terms does not constitute a waiver of those rights.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Translation Interpretation</h2>
+          <p>
+            These Terms may have been translated for your convenience. In case of a dispute, the original English version shall prevail.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Changes to These Terms and Conditions</h2>
+          <p>
+            We reserve the right to change or replace these Terms at any time. Any changes will be posted on this page with an updated “Last updated” date.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Contact Us</h2>
+          <p>If you have any questions about these Terms and Conditions, you can reach us:</p>
+          <ul className="list-disc list-inside space-y-1 mt-2 text-gray-700">
+            <li>Email: <a href="mailto:ikonpestcontrol@gmail.com" className="text-blue-600 hover:underline">ikonpestcontrol@gmail.com</a></li>
+            <li>Visit: <a href="/contact" className="text-blue-600 hover:underline" rel="noopener noreferrer">Contact Page</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  );
 };
 
 export default TermsAndConditions;

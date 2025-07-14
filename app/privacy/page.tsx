@@ -7,141 +7,158 @@ export const metadata = {
 
 const PrivacyPolicy = () => {
     return (
-        <div className="privacy-container" style={{ padding: '2rem', maxWidth: '900px', margin: '0 auto', lineHeight: '1.6' }}>
-            <h1>Privacy Policy</h1>
-            <p><strong>Last updated:</strong> July 07, 2025</p>
-            <p>
-                This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
-                information when You use the Service and tells You about Your privacy rights and how the law protects You.
-            </p>
-            <p>
-                We use Your Personal data to provide and improve the Service. By using the Service, you agree to the collection
-                and use of information in accordance with this Privacy Policy.
-            </p>
+        <main className="bg-white min-h-screen px-6 py-12 sm:px-8 md:px-12 lg:px-24 text-gray-800">
+            <div className="max-w-4xl mx-auto space-y-8">
+                <header>
+                    <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+                    <p className="text-sm text-gray-500">Last updated: July 07, 2025</p>
+                </header>
 
-            <h2>Interpretation and Definitions</h2>
-            <h3>Interpretation</h3>
-            <p>
-                The words of which the initial letter is capitalized have meanings defined under the following conditions. The
-                following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
-            </p>
+                <section className="space-y-4">
+                    <p>
+                        This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information
+                        when you use our service, and tells you about your privacy rights and how the law protects you.
+                    </p>
+                    <p>
+                        We use your personal data to provide and improve the service. By using the service, you agree to the collection
+                        and use of information in accordance with this policy.
+                    </p>
+                </section>
 
-            <h3>Definitions</h3>
-            <ul>
-                <li><strong>Account:</strong> A unique account created for You to access our Service.</li>
-                <li><strong>Affiliate:</strong> An entity under common control with a party.</li>
-                <li><strong>Company:</strong> Ikon Pest Control Services, Maharashtra, India.</li>
-                <li><strong>Cookies:</strong> Small data files stored on Your device.</li>
-                <li><strong>Country:</strong> Maharashtra, India.</li>
-                <li><strong>Device:</strong> Any device that can access the Service.</li>
-                <li><strong>Personal Data:</strong> Information related to an identifiable individual.</li>
-                <li><strong>Service:</strong> The Website at <a href="https://www.ikonpestcontrol.com" target="_blank" rel="noreferrer">ikonpestcontrol.com</a>.</li>
-                <li><strong>Service Provider:</strong> A third party who processes data on behalf of the Company.</li>
-                <li><strong>Usage Data:</strong> Data collected automatically while using the Service.</li>
-                <li><strong>You:</strong> The individual or entity accessing the Service.</li>
-            </ul>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Interpretation and Definitions</h2>
+                    <h3 className="text-xl font-medium mb-2">Interpretation</h3>
+                    <p className="mb-4">
+                        Words with capitalized first letters have defined meanings. These definitions apply regardless of singular or plural usage.
+                    </p>
 
-            <h2>Collecting and Using Your Personal Data</h2>
-            <h3>Types of Data Collected</h3>
-            <h4>Personal Data</h4>
-            <p>We may collect personally identifiable information including:</p>
-            <ul>
-                <li>Email address</li>
-                <li>First and last name</li>
-                <li>Phone number</li>
-                <li>Address, State, ZIP/Postal code, City</li>
-                <li>Usage Data</li>
-            </ul>
+                    <h3 className="text-xl font-medium mb-2">Definitions</h3>
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
+                        <li><strong>Account:</strong> A unique profile to access our service.</li>
+                        <li><strong>Affiliate:</strong> An entity under common control with a party.</li>
+                        <li><strong>Company:</strong> IKON Pest Control Services, Maharashtra, India.</li>
+                        <li><strong>Cookies:</strong> Small files stored on your device.</li>
+                        <li><strong>Country:</strong> Maharashtra, India.</li>
+                        <li><strong>Device:</strong> Any internet-enabled device.</li>
+                        <li><strong>Personal Data:</strong> Identifiable personal information.</li>
+                        <li><strong>Service:</strong> Our website at <a href="https://www.ikonpestcontrol.com" className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">ikonpestcontrol.com</a></li>
+                        <li><strong>Service Provider:</strong> A party processing data on our behalf.</li>
+                        <li><strong>Usage Data:</strong> Data collected automatically through service use.</li>
+                        <li><strong>You:</strong> The person or entity using our service.</li>
+                    </ul>
+                </section>
 
-            <h4>Usage Data</h4>
-            <p>Collected automatically and includes your IP address, browser type, pages visited, and device info.</p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Collecting and Using Your Personal Data</h2>
 
-            <h3>Tracking Technologies and Cookies</h3>
-            <p>We use Cookies and other tracking technologies to improve and analyze Our Service. Cookies may be:</p>
-            <ul>
-                <li><strong>Essential Cookies:</strong> Needed to operate the site.</li>
-                <li><strong>Notice Acceptance Cookies:</strong> Track cookie consent.</li>
-                <li><strong>Functionality Cookies:</strong> Remember your preferences.</li>
-            </ul>
+                    <h3 className="text-xl font-medium mb-2">Types of Data Collected</h3>
 
-            <h2>Use of Your Personal Data</h2>
-            <p>We use your data to:</p>
-            <ul>
-                <li>Provide and maintain our Service</li>
-                <li>Manage your Account</li>
-                <li>Contact you and send updates</li>
-                <li>Offer personalized services</li>
-                <li>Analyze and improve the Service</li>
-                <li>Comply with legal obligations</li>
-            </ul>
+                    <h4 className="text-lg font-semibold mt-4">Personal Data</h4>
+                    <p className="mb-2">We may collect personally identifiable information such as:</p>
+                    <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
+                        <li>Email address</li>
+                        <li>First and last name</li>
+                        <li>Phone number</li>
+                        <li>Address, State, ZIP/Postal code, City</li>
+                        <li>Usage Data</li>
+                    </ul>
 
-            <h3>Sharing Your Data</h3>
-            <ul>
-                <li>With Service Providers</li>
-                <li>For business transfers</li>
-                <li>With Affiliates and partners</li>
-                <li>With other users (public posts)</li>
-                <li>With your consent</li>
-            </ul>
+                    <h4 className="text-lg font-semibold mt-4">Usage Data</h4>
+                    <p className="mb-4">Includes IP address, browser type, visited pages, time spent, and device details.</p>
 
-            <h2>Retention of Your Personal Data</h2>
-            <p>
-                We retain your data only as long as necessary to fulfill the purposes outlined in this policy and comply with legal obligations.
-            </p>
+                    <h3 className="text-xl font-medium mb-2">Tracking Technologies and Cookies</h3>
+                    <p className="mb-2">We use cookies and tracking tech to enhance and analyze our service:</p>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+                        <li><strong>Essential Cookies:</strong> Required for core site functionality.</li>
+                        <li><strong>Notice Acceptance Cookies:</strong> Tracks cookie consent preferences.</li>
+                        <li><strong>Functionality Cookies:</strong> Remember your site preferences.</li>
+                    </ul>
+                </section>
 
-            <h2>Transfer of Your Personal Data</h2>
-            <p>
-                Your data may be transferred to and maintained on computers outside your jurisdiction. We ensure adequate safeguards are in place.
-            </p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Use of Your Personal Data</h2>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1 mb-4">
+                        <li>To provide and maintain the service</li>
+                        <li>To manage your account</li>
+                        <li>To communicate updates and offers</li>
+                        <li>To personalize your experience</li>
+                        <li>To monitor and analyze usage</li>
+                        <li>To comply with legal obligations</li>
+                    </ul>
 
-            <h2>Delete Your Personal Data</h2>
-            <p>
-                You can delete your data via your account settings or by contacting us. Some data may be retained if legally required.
-            </p>
+                    <h3 className="text-xl font-medium mb-2">Sharing Your Data</h3>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                        <li>With service providers</li>
+                        <li>In business transfers (merger/sale)</li>
+                        <li>With affiliates and partners</li>
+                        <li>With other users (e.g. public reviews)</li>
+                        <li>With your explicit consent</li>
+                    </ul>
+                </section>
 
-            <h2>Disclosure of Your Personal Data</h2>
-            <h3>Business Transactions</h3>
-            <p>In case of merger or sale, your data may be transferred.</p>
-            <h3>Law Enforcement</h3>
-            <p>We may disclose your data if required by law.</p>
-            <h3>Other Legal Requirements</h3>
-            <p>We may disclose data to protect rights, property, or safety.</p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Data Retention and Transfer</h2>
+                    <p className="mb-2">We retain data only as long as needed for the purposes described in this policy.</p>
+                    <p>Your data may be stored and processed outside your country. We use appropriate safeguards for such transfers.</p>
+                </section>
 
-            <h2>Security of Your Personal Data</h2>
-            <p>
-                While we strive to use secure methods, no method of transmission over the Internet is 100% secure.
-            </p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Your Data Rights</h2>
+                    <h3 className="text-xl font-medium mb-2">Delete Your Data</h3>
+                    <p>You may delete your data via your account or by contacting us. We may retain some information to comply with laws.</p>
+                </section>
 
-            <h2>Third-Party Processing</h2>
-            <p>Our Service Providers may process your data per their policies.</p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Disclosures</h2>
+                    <h3 className="text-xl font-medium mb-2">Business Transfers</h3>
+                    <p>If the company is involved in a merger, acquisition, or asset sale, your data may be transferred.</p>
 
-            <h3>Google Places</h3>
-            <p>
-                Used to gather location-based data. See Google’s policy: <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" rel="noreferrer">Google Privacy Policy</a>.
-            </p>
+                    <h3 className="text-xl font-medium mb-2 mt-4">Law Enforcement</h3>
+                    <p>We may disclose your data if required to do so by law or in response to valid requests.</p>
 
-            <h2>Children's Privacy</h2>
-            <p>
-                We do not knowingly collect data from anyone under 13. Contact us if you believe a child has shared data with us.
-            </p>
+                    <h3 className="text-xl font-medium mb-2 mt-4">Other Legal Requirements</h3>
+                    <p>We may disclose your data to protect rights, prevent fraud, or ensure safety.</p>
+                </section>
 
-            <h2>Links to Other Websites</h2>
-            <p>
-                We are not responsible for the privacy practices of third-party websites linked from our site.
-            </p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Security</h2>
+                    <p>We implement reasonable security practices, but no online method is 100% secure.</p>
+                </section>
 
-            <h2>Changes to This Privacy Policy</h2>
-            <p>
-                We may update this policy. We’ll notify you by posting a new version on this page and updating the "Last updated" date.
-            </p>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Third-Party Services</h2>
+                    <p className="mb-2">Some services may process your data under their own privacy policies.</p>
+                    <p>
+                        We use Google Places to gather location-based data. See
+                        <a href="https://www.google.com/intl/en/policies/privacy/" className="text-blue-600 ml-1 hover:underline" target="_blank" rel="noreferrer">Google's Privacy Policy</a>.
+                    </p>
+                </section>
 
-            <h2>Contact Us</h2>
-            <p>If you have any questions, contact us:</p>
-            <ul>
-                <li>By email: <a href="mailto:ikonpestcontrol@gmail.com">ikonpestcontrol@gmail.com</a></li>
-                <li>By visiting this page: <a href="/contact" rel="noopener noreferrer">Contact Page</a></li>
-            </ul>
-        </div>
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Children's Privacy</h2>
+                    <p>We do not knowingly collect information from children under 13. If you believe a child has provided data, please contact us.</p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">External Links</h2>
+                    <p>Our site may contain links to other websites. We are not responsible for their content or privacy policies.</p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Policy Updates</h2>
+                    <p>We may update this policy periodically. You will be notified by an updated “Last updated” date on this page.</p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-1">Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, reach out:</p>
+                    <ul className="list-disc list-inside space-y-1 text-gray-700 mt-2">
+                        <li>Email: <a href="mailto:ikonpestcontrol@gmail.com" className="text-blue-600 hover:underline">ikonpestcontrol@gmail.com</a></li>
+                        <li>Visit: <a href="/contact" className="text-blue-600 hover:underline" rel="noopener noreferrer">Contact Page</a></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
     );
 };
 
