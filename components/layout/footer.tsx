@@ -88,7 +88,7 @@ export default function Footer() {
                 <Mail className="h-5 w-5 text-green-600" />
                 <a href="mailto:OjHtT@example.com">
                   <div>
-                    <p className="text-white">ikonpestcontrol@gmail.com</p>
+                    <p className="text-white">ikonpestcontrolservice@gmail.com</p>
                   </div>
                 </a>
               </div>

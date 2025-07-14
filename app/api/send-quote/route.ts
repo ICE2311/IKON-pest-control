@@ -82,7 +82,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: `"Quote Request" <${process.env.SMTP_USER}>`,
-      to: "ikonpestcontrol@gmail.com",
+      to: "ikonpestcontrolservice@gmail.com",
       subject: "New Quote Request",
       html: `
         <h2>New Quote Request</h2>
