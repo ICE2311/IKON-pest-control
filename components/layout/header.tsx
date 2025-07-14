@@ -100,7 +100,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Logo" width={78} height={28} />
+            <Image src="/logo.png" alt="Logo" width={78} height={28} className="lg:mr-48" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -167,7 +167,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:8830495135" className="text-ikontext text-xl font-semibold md:hidden lg:inline">
+            <a href="tel:8830495135" className="text-ikontext text-xl font-semibold md:hidden lg:hidden xl:inline">
               88304 95135
             </a>
             <a href="tel:8830495135">
