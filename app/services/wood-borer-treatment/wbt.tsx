@@ -100,16 +100,16 @@ export default function WoodBorerTreatmentPage() {
             {/* Breadcrumb */}
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-green-600">
+                    <div className="flex items-center gap-2 text-sm text-ikontext">
+                        <Link href="/" className="hover:text-ikongold">
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-green-600">
+                        <Link href="/services" className="hover:text-ikongold">
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Wood Borer Treatment</span>
+                        <span className="text-ikontext">Wood Borer Treatment</span>
                     </div>
                 </div>
             </section>
@@ -121,38 +121,38 @@ export default function WoodBorerTreatmentPage() {
                         <div className="mt-0">
                             <Link
                                 href="/services"
-                                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
+                                className="inline-flex items-center gap-2 text-ikongold hover:text-ikongold mb-4"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-green-100 text-green-800 mb-4">Specialized Treatment</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Wood Borer Treatment</h1>
-                            <p className="text-xl text-gray-600 mb-6">
+                            <Badge className="bg-green-100 text-ikongold mb-4">Specialized Treatment</Badge>
+                            <h1 className="text-4xl font-bold text-ikontext mb-4">Wood Borer Treatment</h1>
+                            <p className="text-xl text-ikontext mb-6">
                                 Professional wood borer treatment to protect your wooden furniture, flooring, and structures from destructive borers. Our specialized treatment eliminates existing infestations and prevents future damage.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="tel:8830495135" className="hover:text-green-600">
-                                    <Button size="lg" className="bg-green-600 text-xl hover:bg-green-700">
+                                <a href="tel:8830495135" className="hover:text-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline" className="text-xl hover:bg-green-50">
+                                    <Button size="lg" variant="outline" className="text-xl text-ikontext hover:bg-green-50">
                                         Get Free Quote
                                     </Button>
                                 </a>
                             </div>
                         </div>
                         {/* Quick Contact */}
-                        <Card className="p-6 bg-green-50 border-green-200">
+                        <Card className="p-6 bg-amber-50 border-ikongold">
                             <CardContent className="p-0 space-y-6">
-                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
+                                <h3 className="font-semibold text-ikontext text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Treatment Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Treatment Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -165,7 +165,7 @@ export default function WoodBorerTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Area Size</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Area Size</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={flatType}
@@ -178,7 +178,7 @@ export default function WoodBorerTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Service Frequency</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={frequency}
@@ -191,7 +191,7 @@ export default function WoodBorerTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Phone Number</label>
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
@@ -203,8 +203,8 @@ export default function WoodBorerTreatmentPage() {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-                                        <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+                                        <p className="text-2xl font-bold text-ikongold">₹{cost.toLocaleString()}</p>
+                                        <p className="text-sm text-ikontext">{frequency} cost for {flatType}</p>
                                     </div>
 
                                     <textarea
@@ -218,7 +218,7 @@ export default function WoodBorerTreatmentPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-green-600 hover:bg-green-700 text-white"
+                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -231,7 +231,7 @@ export default function WoodBorerTreatmentPage() {
                                         </Button>
                                     </div>
 
-                                    <p className="text-xs text-gray-600 mt-2">
+                                    <p className="text-xs text-ikontext mt-2">
                                         18% GST will be applicable on total service charges. <br />
                                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
                                     </p>
@@ -256,7 +256,7 @@ export default function WoodBorerTreatmentPage() {
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Common Wood Borers</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Common Wood Borers</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Powderpost Beetles",
@@ -266,14 +266,14 @@ export default function WoodBorerTreatmentPage() {
                                                     "Wood Boring Weevils",
                                                 ].map((pest, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {pest}
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Signs of Infestation</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Signs of Infestation</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Small round exit holes (1-2mm diameter)",
@@ -284,7 +284,7 @@ export default function WoodBorerTreatmentPage() {
                                                 ].map(
                                                     (sign, index) => (
                                                         <li key={index} className="flex items-center gap-2 text-sm">
-                                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                             {sign}
                                                         </li>
                                                     ),
@@ -335,12 +335,12 @@ export default function WoodBorerTreatmentPage() {
                                             },
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
-                                                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                                <div className="bg-ikongold text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                                                     {process.step}
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 mb-2">{process.title}</h3>
-                                                    <p className="text-gray-600 text-sm">{process.description}</p>
+                                                    <h3 className="font-semibold text-ikontext mb-2">{process.title}</h3>
+                                                    <p className="text-ikontext text-sm">{process.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -366,8 +366,8 @@ export default function WoodBorerTreatmentPage() {
                                             "Free post-treatment inspection",
                                         ].map((benefit, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                                                <span className="text-gray-700">{benefit}</span>
+                                                <CheckCircle className="h-5 w-5 text-ikongold flex-shrink-0" />
+                                                <span className="text-ikontext">{benefit}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -384,19 +384,19 @@ export default function WoodBorerTreatmentPage() {
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-3">
                                     <div className="flex items-center gap-3">
-                                        <Shield className="h-5 w-5 text-green-600" />
+                                        <Shield className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Deep Penetration Chemicals</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <Clock className="h-5 w-5 text-green-600" />
+                                        <Clock className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Same Day Service Available</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <Star className="h-5 w-5 text-green-600" />
+                                        <Star className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">5-7 Years Protection</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <CheckCircle className="h-5 w-5 text-green-600" />
+                                        <CheckCircle className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Safe for All Wood Types</span>
                                     </div>
                                 </CardContent>
@@ -405,8 +405,8 @@ export default function WoodBorerTreatmentPage() {
                             {/* AMC Option */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Wood Protection AMC</h3>
-                                    <p className="text-sm text-gray-600 mb-4">
+                                    <h3 className="font-semibold text-ikontext mb-2">Wood Protection AMC</h3>
+                                    <p className="text-sm text-ikontext mb-4">
                                         Protect your wooden assets year-round with our comprehensive maintenance plans. Save up to 35% with AMC.
                                     </p>
                                     <Button
@@ -421,8 +421,8 @@ export default function WoodBorerTreatmentPage() {
                             {/* Prevention Tips */}
                             <Card className="p-6 bg-amber-50 border-amber-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Wood Borer Prevention Tips</h3>
-                                    <ul className="text-sm text-gray-600 space-y-2">
+                                    <h3 className="font-semibold text-ikontext mb-2">Wood Borer Prevention Tips</h3>
+                                    <ul className="text-sm text-ikontext space-y-2">
                                         <li className="flex items-start gap-2">
                                             <span>•</span>
                                             <span>Keep wood dry and well-ventilated</span>
@@ -451,7 +451,7 @@ export default function WoodBorerTreatmentPage() {
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                        <h2 className="text-3xl font-bold text-ikontext mb-8 text-center">Frequently Asked Questions</h2>
                         <div className="space-y-6">
                             {[
                                 {
@@ -482,8 +482,8 @@ export default function WoodBorerTreatmentPage() {
                             ].map((faq, index) => (
                                 <Card key={index} className="p-6">
                                     <CardContent className="p-0">
-                                        <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                                        <p className="text-gray-600">{faq.answer}</p>
+                                        <h3 className="font-semibold text-ikontext mb-2">{faq.question}</h3>
+                                        <p className="text-ikontext">{faq.answer}</p>
                                     </CardContent>
                                 </Card>
                             ))}
@@ -493,14 +493,14 @@ export default function WoodBorerTreatmentPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-green-600">
+            <section className="py-16 bg-ikongold">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Wooden Assets Today</h2>
-                    <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Protect Your Wooden Assets Today</h2>
+                    <p className="text-ikontext mb-8 max-w-2xl mx-auto">
                         Don't let wood borers destroy your valuable furniture and structures. Contact IKON Pest Control for professional wood borer treatment.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-green-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -510,7 +510,7 @@ export default function WoodBorerTreatmentPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white hover:bg-white text-xl hover:text-green-600 bg-transparent"
+                            className="border-white text-white hover:bg-white text-xl hover:text-ikongold bg-transparent"
                         >
                             <a href="/contact">
                                 Get Free Quote

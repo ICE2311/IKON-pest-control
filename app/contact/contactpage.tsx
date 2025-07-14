@@ -41,17 +41,17 @@ export default function ContactPage() {
       <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Get Your Free Pest Inspection</h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <h1 className="text-4xl font-bold text-ikontext mb-4">Get Your Free Pest Inspection</h1>
+            <p className="text-xl text-ikontext mb-8">
               Ready to solve your pest problem? Contact us today for a free inspection and customized treatment plan.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm text-gray-600 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm text-ikontext text-center sm:text-left">
               <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-green-600" />
+                <Phone className="h-5 w-5 text-ikongold" />
                 Fast Response Guaranteed
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-green-600" />
+                <Shield className="h-5 w-5 text-ikongold" />
                 Your Data is Safe With Us
               </div>
             </div>
@@ -67,17 +67,17 @@ export default function ContactPage() {
             <Card className="p-8">
               <CardHeader className="p-0 mb-6">
                 <CardTitle className="text-2xl">Book Your Free Inspection</CardTitle>
-                <p className="text-gray-600">Fill out the form below and we'll contact you within 24 hours</p>
+                <p className="text-ikontext">Fill out the form below and we'll contact you within 24 hours</p>
               </CardHeader>
               <CardContent className="p-0">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                      <label className="block text-sm font-medium text-ikontext mb-2">Full Name *</label>
                       <Input name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Enter your full name" required />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                      <label className="block text-sm font-medium text-ikontext mb-2">Phone Number *</label>
                       <Input name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number" pattern="[0-9]{10}"
                         onInput={(e) => {
                           const input = e.target as HTMLInputElement;
@@ -88,16 +88,16 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <label className="block text-sm font-medium text-ikontext mb-2">Email Address</label>
                     <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="email@example.com" />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Service Type *</label>
+                    <label className="block text-sm font-medium text-ikontext mb-2">Service Type *</label>
                     <select name="serviceType" value={formData.serviceType} onChange={(e) =>
                       setFormData((prev) => ({ ...prev, serviceType: e.target.value }))
                     }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full px-3 py-2 border border-ikontext rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                       required
                     >
                       <option value="">Select service type</option>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Describe Your Pest Problem</label>
+                    <label className="block text-sm font-medium text-ikontext mb-2">Describe Your Pest Problem</label>
                     <Textarea name="description" value={formData.description} onChange={(e) =>
                       setFormData((prev) => ({ ...prev, description: e.target.value }))
                     }
@@ -120,12 +120,12 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button className="w-full bg-green-600 text-xl hover:bg-green-700" size="lg">
+                  <Button className="w-full bg-ikongold text-xl hover:bg-ikongold" size="lg">
                     <Phone className="mr-2 h-5 w-5" />
                     Book Free Inspection
                   </Button>
 
-                  <p className="text-xs text-gray-500 text-center">
+                  <p className="text-xs text-ikontext text-center">
                     By submitting this form, you agree to receive communications from PestGuard. We respect your
                     privacy and will never share your information.
                   </p>
@@ -142,28 +142,28 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-green-600" />
+                    <Phone className="h-5 w-5 text-ikongold" />
                     <div>
-                      <p className="font-semibold text-gray-900">Call Us Now</p>
+                      <p className="font-semibold text-ikontext">Call Us Now</p>
                       <a href="tel:8830495135">
-                        <p className="text-green-600 font-bold text-lg">88304 95135</p>
+                        <p className="text-ikongold font-bold text-lg">88304 95135</p>
                       </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <MessageCircle className="h-5 w-5 text-green-600" />
+                    <MessageCircle className="h-5 w-5 text-ikongold" />
                     <div>
-                      <p className="font-semibold text-gray-900">WhatsApp</p>
+                      <p className="font-semibold text-ikontext">WhatsApp</p>
                       <a href="https://wa.me/+918830495135" target="_blank" rel="noopener noreferrer">
-                        <p className="text-gray-600">84485 20507</p>
+                        <p className="text-ikontext">84485 20507</p>
                       </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-green-600" />
+                    <Mail className="h-5 w-5 text-ikongold" />
                     <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <p className="text-gray-600">ikonpestcontrol@gmail.com</p>
+                      <p className="font-semibold text-ikontext">Email</p>
+                      <p className="text-ikontext">ikonpestcontrol@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>
@@ -173,17 +173,17 @@ export default function ContactPage() {
               <Card className="p-6">
                 <CardHeader className="p-0 mb-4">
                   <CardTitle className="text-xl flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-green-600" />
+                    <Clock className="h-5 w-5 text-ikongold" />
                     Operating Hours
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0 space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
+                    <span className="text-ikontext">Monday - Friday</span>
                     <span className="font-semibold">24/7</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday - Sunday</span>
+                    <span className="text-ikontext">Saturday - Sunday</span>
                     <span className="font-semibold">24/7</span>
                   </div>
                   <div className="pt-2 border-t">
@@ -196,21 +196,21 @@ export default function ContactPage() {
               <Card className="p-6">
                 <CardHeader className="p-0 mb-4">
                   <CardTitle className="text-xl flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-green-600" />
+                    <MapPin className="h-5 w-5 text-ikongold" />
                     Office Location
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
                   <div className="space-y-2 mb-4">
-                    <p className="font-semibold text-gray-900">PestGuard Headquarters</p>
-                    <p className="text-gray-600">
+                    <p className="font-semibold text-ikontext">PestGuard Headquarters</p>
+                    <p className="text-ikontext">
                       Bhairav Darshan, Shop no.7, opposite Pious buds School,
                       <br />
                       Pooja Nagar, Cabin Cross Rd, Bhayandar (E)
                       <br />
                       Thane, Maharashtra 401105
                     </p>
-                    <p className="text-sm text-gray-500">Free parking available</p>
+                    <p className="text-sm text-ikontext">Free parking available</p>
                   </div>
                   <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1882.7549671792858!2d72.85574086536325!3d19.303666452096408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1c271d1344f%3A0x93fbde5b42813f22!2sIKON%20Pest%20Control%20Services!5e0!3m2!1sen!2sin!4v1751455254568!5m2!1sen!2sin"
@@ -231,7 +231,7 @@ export default function ContactPage() {
                   <CardTitle className="text-xl">Service Area</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-ikontext mb-4">
                     We proudly serve the entire metropolitan area and surrounding communities:
                   </p>
                   <div className="grid grid-cols-2 gap-2 text-sm">
@@ -244,8 +244,8 @@ export default function ContactPage() {
                       "Industrial Areas",
                     ].map((area, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <MapPin className="h-3 w-3 text-green-600" />
-                        <span className="text-gray-700">{area}</span>
+                        <MapPin className="h-3 w-3 text-ikongold" />
+                        <span className="text-ikontext">{area}</span>
                       </div>
                     ))}
                   </div>
@@ -265,12 +265,12 @@ export default function ContactPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+            <h2 className="text-3xl font-bold text-ikontext mb-4">What Our Customers Say</h2>
             <div className="flex items-center justify-center gap-2">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="text-gray-600 ml-2">4.8/5 from 20+ reviews</span>
+              <span className="text-ikontext ml-2">4.8/5 from 20+ reviews</span>
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -281,11 +281,11 @@ export default function ContactPage() {
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-ikontext mb-4">
                   "Nicee work every thing was covered properly with proper technician experience"
                 </p>
-                <p className="font-semibold text-gray-900">Mitesh Roge</p>
-                <p className="text-sm text-gray-500">Residential Customer</p>
+                <p className="font-semibold text-ikontext">Mitesh Roge</p>
+                <p className="text-sm text-ikontext">Residential Customer</p>
               </CardContent>
             </Card>
             <Card className="p-6">
@@ -295,11 +295,11 @@ export default function ContactPage() {
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-ikontext mb-4">
                   "The best Services provider ikon technician mr.rajesh and pankaj Termite treatment save my furnicher  best.quality."
                 </p>
-                <p className="font-semibold text-gray-900">Divyanshi</p>
-                <p className="text-sm text-gray-500">Residential Customer</p>
+                <p className="font-semibold text-ikontext">Divyanshi</p>
+                <p className="text-sm text-ikontext">Residential Customer</p>
               </CardContent>
             </Card>
           </div>
@@ -310,8 +310,8 @@ export default function ContactPage() {
       <section className="py-12 bg-red-50 border-t border-red-200">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Emergency Pest Control?</h2>
-            <p className="text-gray-600 mb-6">We provide 24/7 emergency pest control services for urgent situations</p>
+            <h2 className="text-2xl font-bold text-ikontext mb-4">Need Emergency Pest Control?</h2>
+            <p className="text-ikontext mb-6">We provide 24/7 emergency pest control services for urgent situations</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:8830495135">
                 <Button size="lg" className="bg-red-600 text-xl hover:bg-red-700">

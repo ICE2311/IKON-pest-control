@@ -101,16 +101,16 @@ export default function RodentManagementPage() {
             {/* Breadcrumb */}
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-green-600">
+                    <div className="flex items-center gap-2 text-sm text-ikontext">
+                        <Link href="/" className="hover:text-ikongold">
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-green-600">
+                        <Link href="/services" className="hover:text-ikongold">
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Rodent Management</span>
+                        <span className="text-ikontext">Rodent Management</span>
                     </div>
                 </div>
             </section>
@@ -122,39 +122,39 @@ export default function RodentManagementPage() {
                         <div>
                             <Link
                                 href="/services"
-                                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
+                                className="inline-flex items-center gap-2 text-ikongold hover:text-ikongold mb-4"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
                             <Badge className="bg-orange-100 text-orange-800 mb-4">Health & Safety Priority</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Rodent Management</h1>
-                            <p className="text-xl text-gray-600 mb-6">
+                            <h1 className="text-4xl font-bold text-ikontext mb-4">Rodent Management</h1>
+                            <p className="text-xl text-ikontext mb-6">
                                 Professional rodent control using humane trapping methods and strategic baiting systems. Protect your
                                 property from rats and mice with our comprehensive rodent management solutions.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-green-600 text-xl hover:bg-green-700">
+                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline" className="text-xl">
+                                    <Button size="lg" variant="outline" className="text-ikontext text-xl">
                                         Free Rodent Inspection
                                     </Button>
                                 </a>
                             </div>
                         </div>
                         {/* Quick Contact */}
-                        <Card className="p-6 bg-green-50 border-green-200">
+                        <Card className="p-6 bg-amber-50 border-ikongold">
                             <CardContent className="p-0 space-y-6">
-                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
+                                <h3 className="font-semibold text-ikontext text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Product Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -167,7 +167,7 @@ export default function RodentManagementPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Flat Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={flatType}
@@ -180,7 +180,7 @@ export default function RodentManagementPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Service Frequency</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={frequency}
@@ -193,7 +193,7 @@ export default function RodentManagementPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Phone Number</label>
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
@@ -205,8 +205,8 @@ export default function RodentManagementPage() {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-                                        <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+                                        <p className="text-2xl font-bold text-ikongold">₹{cost.toLocaleString()}</p>
+                                        <p className="text-sm text-ikontext">{frequency} cost for {flatType}</p>
                                     </div>
 
                                     <textarea
@@ -220,7 +220,7 @@ export default function RodentManagementPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-green-600 hover:bg-green-700 text-white"
+                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -233,7 +233,7 @@ export default function RodentManagementPage() {
                                         </Button>
                                     </div>
 
-                                    <p className="text-xs text-gray-600 mt-2">
+                                    <p className="text-xs text-ikontext mt-2">
                                         18% GST will be applicable on total service charges. <br />
                                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
                                     </p>
@@ -248,8 +248,8 @@ export default function RodentManagementPage() {
             <section className="pt-8">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Rodent Control Methods</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-bold text-ikontext mb-4">Our Rodent Control Methods</h2>
+                        <p className="text-ikontext max-w-2xl mx-auto">
                             We use integrated pest management approaches combining multiple methods for effective rodent control
                         </p>
                     </div>
@@ -257,17 +257,17 @@ export default function RodentManagementPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Target className="h-8 w-8 text-green-600" />
+                                    <Target className="h-8 w-8 text-ikongold" />
                                     <CardTitle className="text-2xl">Strategic Trapping</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-ikontext mb-6">
                                     Humane and effective trapping systems strategically placed in high-activity areas to capture rodents
                                     without using harmful chemicals.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Trap Types:</h4>
+                                    <h4 className="font-semibold text-ikontext">Trap Types:</h4>
                                     {[
                                         "Snap traps for quick elimination",
                                         "Live traps for humane capture",
@@ -276,13 +276,13 @@ export default function RodentManagementPage() {
                                         "Electronic traps for sensitive areas",
                                     ].map((trap, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{trap}</span>
+                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
+                                            <span className="text-sm text-ikontext">{trap}</span>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="bg-green-50 p-4 rounded-lg">
-                                    <p className="text-sm text-green-800">
+                                    <p className="text-sm text-ikongold">
                                         <strong>Safe & Effective:</strong> No chemicals required. Safe for children, pets, and food
                                         preparation areas.
                                     </p>
@@ -298,12 +298,12 @@ export default function RodentManagementPage() {
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-ikontext mb-6">
                                     Professional-grade rodenticides in tamper-resistant bait stations for ongoing population control and
                                     prevention of re-infestation.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Features:</h4>
+                                    <h4 className="font-semibold text-ikontext">Features:</h4>
                                     {[
                                         "Tamper-resistant bait stations",
                                         "WHO-approved rodenticides",
@@ -312,8 +312,8 @@ export default function RodentManagementPage() {
                                         "Regular monitoring & refilling",
                                     ].map((feature, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{feature}</span>
+                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
+                                            <span className="text-sm text-ikontext">{feature}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -343,7 +343,7 @@ export default function RodentManagementPage() {
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Common Rats</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Common Rats</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Norway rats (Brown rats)",
@@ -353,18 +353,18 @@ export default function RodentManagementPage() {
                                                     "Field rats",
                                                 ].map((rat, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {rat}
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Mice Species</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Mice Species</h3>
                                             <ul className="space-y-2">
                                                 {["House mice", "Field mice", "Deer mice", "Harvest mice", "Wood mice"].map((mouse, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {mouse}
                                                     </li>
                                                 ))}
@@ -382,7 +382,7 @@ export default function RodentManagementPage() {
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Physical Evidence</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Physical Evidence</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Droppings near food sources",
@@ -399,7 +399,7 @@ export default function RodentManagementPage() {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Behavioral Signs</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Behavioral Signs</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Scratching sounds in walls",
@@ -459,12 +459,12 @@ export default function RodentManagementPage() {
                                             },
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
-                                                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                                <div className="bg-ikongold text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                                                     {process.step}
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 mb-2">{process.title}</h3>
-                                                    <p className="text-gray-600 text-sm">{process.description}</p>
+                                                    <h3 className="font-semibold text-ikontext mb-2">{process.title}</h3>
+                                                    <p className="text-ikontext text-sm">{process.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -490,8 +490,8 @@ export default function RodentManagementPage() {
                                             "Install door sweeps and screens",
                                         ].map((tip, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                                                <span className="text-gray-700">{tip}</span>
+                                                <CheckCircle className="h-5 w-5 text-ikongold flex-shrink-0" />
+                                                <span className="text-ikontext">{tip}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -509,19 +509,19 @@ export default function RodentManagementPage() {
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-3">
                                     <div className="flex items-center gap-3">
-                                        <Shield className="h-5 w-5 text-green-600" />
+                                        <Shield className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Safe for Family & Pets</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <Clock className="h-5 w-5 text-green-600" />
+                                        <Clock className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Quick Response Time</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <Star className="h-5 w-5 text-green-600" />
+                                        <Star className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Humane Methods</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <CheckCircle className="h-5 w-5 text-green-600" />
+                                        <CheckCircle className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Ongoing Monitoring</span>
                                     </div>
                                 </CardContent>
@@ -530,8 +530,8 @@ export default function RodentManagementPage() {
                             {/* AMC Option */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Annual Maintenance</h3>
-                                    <p className="text-sm text-gray-600 mb-4">
+                                    <h3 className="font-semibold text-ikontext mb-2">Annual Maintenance</h3>
+                                    <p className="text-sm text-ikontext mb-4">
                                         Regular monitoring and maintenance visits to ensure long-term rodent control.
                                     </p>
                                     <Button
@@ -548,15 +548,15 @@ export default function RodentManagementPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-green-600">
+            <section className="py-16 bg-ikongold">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Property from Rodents</h2>
-                    <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Protect Your Property from Rodents</h2>
+                    <p className="text-ikontext mb-8 max-w-2xl mx-auto">
                         Don't let rodents damage your property or threaten your family's health. Contact IKON for professional
                         rodent management.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-green-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -566,7 +566,7 @@ export default function RodentManagementPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white text-xl hover:bg-white hover:text-green-600 bg-transparent"
+                            className="border-white text-white text-xl hover:bg-white hover:text-ikongold bg-transparent"
                         >
                             <a href="/contact">
                                 Get Free Quote

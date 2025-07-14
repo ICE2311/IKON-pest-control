@@ -101,16 +101,16 @@ export default function TermiteTreatmentPage() {
             {/* Breadcrumb */}
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-green-600">
+                    <div className="flex items-center gap-2 text-sm text-ikontext">
+                        <Link href="/" className="hover:text-ikongold">
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-green-600">
+                        <Link href="/services" className="hover:text-ikongold">
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Termite Treatment</span>
+                        <span className="text-ikontext">Termite Treatment</span>
                     </div>
                 </div>
             </section>
@@ -122,38 +122,38 @@ export default function TermiteTreatmentPage() {
                         <div>
                             <Link
                                 href="/services"
-                                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
+                                className="inline-flex items-center gap-2 text-ikongold hover:text-ikongold mb-4"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
                             <Badge className="bg-red-100 text-red-800 mb-4">Critical Protection</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Termite Treatment</h1>
-                            <p className="text-xl text-gray-600 mb-6">
+                            <h1 className="text-4xl font-bold text-ikontext mb-4">Termite Treatment</h1>
+                            <p className="text-xl text-ikontext mb-6">
                                 Comprehensive termite control solutions for both pre-construction and post-construction properties.
                                 Protect your valuable investment from destructive termite damage with our proven treatment methods.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-green-600 text-xl hover:bg-green-700">
+                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline" className="text-xl hover:bg-green-50">
+                                    <Button size="lg" variant="outline" className="text-xl text-ikontext hover:bg-green-50">
                                         Free Termite Inspection
                                     </Button>
                                 </a>
                             </div>
                         </div>
-                        <Card className="p-6 bg-green-50 border-green-200">
+                        <Card className="p-6 bg-amber-50 border-ikongold">
                             <CardContent className="p-0 space-y-6">
-                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
+                                <h3 className="font-semibold text-ikontext text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Product Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -166,7 +166,7 @@ export default function TermiteTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Flat Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={flatType}
@@ -179,7 +179,7 @@ export default function TermiteTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Service Frequency</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={frequency}
@@ -192,7 +192,7 @@ export default function TermiteTreatmentPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Phone Number</label>
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
@@ -204,8 +204,8 @@ export default function TermiteTreatmentPage() {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-                                        <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+                                        <p className="text-2xl font-bold text-ikongold">₹{cost.toLocaleString()}</p>
+                                        <p className="text-sm text-ikontext">{frequency} cost for {flatType}</p>
                                     </div>
 
                                     <textarea
@@ -219,7 +219,7 @@ export default function TermiteTreatmentPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-green-600 hover:bg-green-700 text-white"
+                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -232,7 +232,7 @@ export default function TermiteTreatmentPage() {
                                         </Button>
                                     </div>
 
-                                    <p className="text-xs text-gray-600 mt-2">
+                                    <p className="text-xs text-ikontext mt-2">
                                         18% GST will be applicable on total service charges. <br />
                                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
                                     </p>
@@ -247,8 +247,8 @@ export default function TermiteTreatmentPage() {
             <section className="pt-8">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Termite Treatment Services</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-bold text-ikontext mb-4">Our Termite Treatment Services</h2>
+                        <p className="text-ikontext max-w-2xl mx-auto">
                             We offer both preventive and curative termite treatments using advanced methods and WHO-approved chemicals
                         </p>
                     </div>
@@ -256,17 +256,17 @@ export default function TermiteTreatmentPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Building className="h-8 w-8 text-green-600" />
+                                    <Building className="h-8 w-8 text-ikongold" />
                                     <CardTitle className="text-2xl">Pre-Construction Treatment</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-ikontext mb-6">
                                     Preventive termite treatment applied during construction phase to create a chemical barrier that
                                     prevents termite infestation for years to come.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Treatment Areas:</h4>
+                                    <h4 className="font-semibold text-ikontext">Treatment Areas:</h4>
                                     {[
                                         "Foundation soil treatment",
                                         "Plinth level treatment",
@@ -275,19 +275,19 @@ export default function TermiteTreatmentPage() {
                                         "Wooden framework treatment",
                                     ].map((area, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{area}</span>
+                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
+                                            <span className="text-sm text-ikontext">{area}</span>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="bg-green-50 p-4 rounded-lg">
-                                    <p className="text-sm text-green-800">
+                                    <p className="text-sm text-ikongold">
                                         <strong>Best Value:</strong> Most cost-effective when done during construction. Provides 5-10 years
                                         of protection.
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-green-600 text-white text-xl hover:bg-green-800">
+                                    <Button size="lg" asChild className="bg-ikongold text-white text-xl hover:bg-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -297,7 +297,7 @@ export default function TermiteTreatmentPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-Green-600 text-green-600 hover:bg-gray-100 text-xl hover:text-green-600 bg-transparent"
+                                        className="border-ikongold text-ikongold hover:bg-gray-100 text-xl hover:text-ikongold bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -310,17 +310,17 @@ export default function TermiteTreatmentPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Home className="h-8 w-8 text-green-600" />
+                                    <Home className="h-8 w-8 text-ikongold" />
                                     <CardTitle className="text-2xl">Post-Construction Treatment</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-ikontext mb-6">
                                     Curative treatment for buildings showing signs of termite infestation. We eliminate current
                                     termites and create protective barriers.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Treatment Methods:</h4>
+                                    <h4 className="font-semibold text-ikontext">Treatment Methods:</h4>
                                     {[
                                         "Drilling & chemical injection",
                                         "Soil treatment around foundation",
@@ -329,8 +329,8 @@ export default function TermiteTreatmentPage() {
                                         "Monitoring & baiting systems",
                                     ].map((method, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{method}</span>
+                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
+                                            <span className="text-sm text-ikontext">{method}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -341,7 +341,7 @@ export default function TermiteTreatmentPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-green-600 text-xl text-white hover:bg-green-800">
+                                    <Button size="lg" asChild className="bg-ikongold text-xl text-white hover:bg-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -351,7 +351,7 @@ export default function TermiteTreatmentPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-Green-600 text-green-600 text-xl hover:bg-gray-100 hover:text-green-600 bg-transparent"
+                                        className="border-ikongold text-ikongold text-xl hover:bg-gray-100 hover:text-ikongold bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -378,7 +378,7 @@ export default function TermiteTreatmentPage() {
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Visible Signs</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Visible Signs</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Mud tubes on walls/foundation",
@@ -395,7 +395,7 @@ export default function TermiteTreatmentPage() {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Other Indicators</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Other Indicators</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Clicking sounds in walls",
@@ -455,12 +455,12 @@ export default function TermiteTreatmentPage() {
                                             },
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
-                                                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                                <div className="bg-ikongold text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                                                     {process.step}
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 mb-2">{process.title}</h3>
-                                                    <p className="text-gray-600 text-sm">{process.description}</p>
+                                                    <h3 className="font-semibold text-ikontext mb-2">{process.title}</h3>
+                                                    <p className="text-ikontext text-sm">{process.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -486,8 +486,8 @@ export default function TermiteTreatmentPage() {
                                             "Proven effectiveness against all termite species",
                                         ].map((feature, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <Shield className="h-5 w-5 text-green-600 flex-shrink-0" />
-                                                <span className="text-gray-700">{feature}</span>
+                                                <Shield className="h-5 w-5 text-ikongold flex-shrink-0" />
+                                                <span className="text-ikontext">{feature}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -507,23 +507,23 @@ export default function TermiteTreatmentPage() {
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Pre-Construction</span>
-                                            <span className="text-sm text-green-600">₹8-12/sq ft</span>
+                                            <span className="text-sm text-ikongold">₹8-12/sq ft</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">During construction phase</p>
+                                        <p className="text-xs text-ikontext">During construction phase</p>
                                     </div>
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Post-Construction</span>
-                                            <span className="text-sm text-green-600">₹15-25/sq ft</span>
+                                            <span className="text-sm text-ikongold">₹15-25/sq ft</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Existing buildings</p>
+                                        <p className="text-xs text-ikontext">Existing buildings</p>
                                     </div>
                                     <div>
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Spot Treatment</span>
-                                            <span className="text-sm text-green-600">₹5,000+</span>
+                                            <span className="text-sm text-ikongold">₹5,000+</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Localized treatment</p>
+                                        <p className="text-xs text-ikontext">Localized treatment</p>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -531,7 +531,7 @@ export default function TermiteTreatmentPage() {
                             {/* Warranty Info */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Warranty Coverage</h3>
+                                    <h3 className="font-semibold text-ikontext mb-2">Warranty Coverage</h3>
                                     <div className="space-y-2 text-sm">
                                         <div className="flex justify-between">
                                             <span>Pre-Construction:</span>
@@ -553,14 +553,14 @@ export default function TermiteTreatmentPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-green-600">
+            <section className="py-16 bg-ikongold">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Property from Termites</h2>
-                    <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Protect Your Property from Termites</h2>
+                    <p className="text-ikontext mb-8 max-w-2xl mx-auto">
                         Don't let termites destroy your valuable investment. Contact IKON for professional termite treatment today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-green-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -570,7 +570,7 @@ export default function TermiteTreatmentPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white text-xl hover:bg-white hover:text-green-600 bg-transparent"
+                            className="border-white text-white text-xl hover:bg-white hover:text-ikongold bg-transparent"
                         >
                             <a href="/contact">
                                 Get Free Quote

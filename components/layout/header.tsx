@@ -101,7 +101,6 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo.png" alt="Logo" width={78} height={28} />
-            <span className="text-xl font-bold pt-3 text-gray-900 md:hidden lg:inline">Pest Control</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -118,8 +117,8 @@ export default function Header() {
                       <Link
                         href="/services"
                         className={`flex items-center font-medium transition-colors ${pathname.startsWith("/services")
-                          ? "text-green-600 font-semibold"
-                          : "text-gray-600 hover:text-green-600"
+                          ? "text-ikongold font-semibold"
+                          : "text-ikontext hover:text-ikongold"
                           }`}
                       >
                         Services
@@ -135,15 +134,15 @@ export default function Header() {
                               className="block px-4 py-3 hover:bg-gray-50 transition"
                               onClick={() => setIsDropdownOpen(false)}
                             >
-                              <div className="font-semibold text-sm text-gray-800 flex justify-between items-center">
+                              <div className="font-semibold text-sm text-ikontext flex justify-between items-center">
                                 {subItem.title}
                                 {subItem.popular && (
-                                  <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">
+                                  <span className="text-xs bg-ikongold text-ikontext px-2 py-0.5 rounded">
                                     Popular
                                   </span>
                                 )}
                               </div>
-                              <p className="text-xs text-gray-500">{subItem.description}</p>
+                              <p className="text-xs text-ikontext0">{subItem.description}</p>
                             </Link>
                           ))}
                         </div>
@@ -154,8 +153,8 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={`font-medium transition-colors ${pathname === item.href
-                      ? "text-green-600 font-semibold"
-                      : "text-gray-600 hover:text-green-600"
+                      ? "text-ikongold font-semibold"
+                      : "text-ikontext hover:text-ikongold"
                       }`}
                   >
                     {item.name}
@@ -168,11 +167,11 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:8830495135" className="text-green-600 text-xl font-semibold md:hidden lg:inline">
+            <a href="tel:8830495135" className="text-ikontext text-xl font-semibold md:hidden lg:inline">
               88304 95135
             </a>
             <a href="tel:8830495135">
-              <Button className="bg-green-600 text-xl hover:bg-green-700">
+              <Button className="bg-ikongold text-xl hover:bg-ikongold text-ikontext">
                 <Phone className="mr-2 h-4 w-4" />
                 Free Inspection
               </Button>
@@ -181,7 +180,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6 text-gray-600" /> : <Menu className="h-6 w-6 text-gray-600" />}
+            {isMenuOpen ? <X className="h-6 w-6 text-ikontext" /> : <Menu className="h-6 w-6 text-ikontext" />}
           </button>
         </div>
 
@@ -197,8 +196,8 @@ export default function Header() {
                         href={item.href}
                         onClick={() => setIsMenuOpen(false)}
                         className={`font-medium transition-colors ${pathname.startsWith(item.href)
-                          ? "text-green-600 font-semibold"
-                          : "text-gray-600 hover:text-green-600"
+                          ? "text-ikongold font-semibold"
+                          : "text-ikontext hover:text-ikongold"
                           }`}
                       >
                         {item.name}
@@ -209,8 +208,8 @@ export default function Header() {
                             key={subItem.title}
                             href={subItem.href}
                             className={`flex items-center font-medium transition-colors ${pathname === subItem.href
-                              ? "text-green-600 font-semibold"
-                              : "text-gray-600 hover:text-green-600"
+                              ? "text-ikongold font-semibold"
+                              : "text-ikontext hover:text-ikongold"
                               }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -224,8 +223,8 @@ export default function Header() {
                       key={item.name}
                       href={item.href}
                       className={`font-medium transition-colors ${pathname === item.href
-                        ? "text-green-600 font-semibold"
-                        : "text-gray-600 hover:text-green-600"
+                        ? "text-ikongold font-semibold"
+                        : "text-ikontext hover:text-ikongold"
                         }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -234,10 +233,10 @@ export default function Header() {
                   )
                 )}
                 <div className="pt-4 border-t">
-                  <a href="tel:8830495135" className="block text-green-600 font-semibold mb-3">
+                  <a href="tel:8830495135" className="block text-ikongold font-semibold mb-3">
                     88304 95135
                   </a>
-                  <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => { window.location.href = "tel:8448520507" }} >
+                  <Button className="w-full bg-ikongold hover:bg-ikongold" onClick={() => { window.location.href = "tel:8448520507" }} >
                     <Phone className="mr-2 h-4 w-4" />
                     Free Inspection
                   </Button>

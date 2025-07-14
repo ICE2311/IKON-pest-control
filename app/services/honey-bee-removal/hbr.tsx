@@ -83,16 +83,16 @@ export default function HoneyBeeRemovalPage() {
             {/* Breadcrumb */}
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-amber-600">
+                    <div className="flex items-center gap-2 text-sm text-ikontext">
+                        <Link href="/" className="hover:text-ikongold">
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-amber-600">
+                        <Link href="/services" className="hover:text-ikongold">
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">Honey Bee Removal</span>
+                        <span className="text-ikontext">Honey Bee Removal</span>
                     </div>
                 </div>
             </section>
@@ -104,39 +104,39 @@ export default function HoneyBeeRemovalPage() {
                         <div>
                             <Link
                                 href="/services"
-                                className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 mb-4"
+                                className="inline-flex items-center gap-2 text-ikongold hover:text-ikongold mb-4"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-amber-100 text-amber-800 mb-4">Eco-Friendly Service</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">Honey Bee Removal</h1>
-                            <p className="text-xl text-gray-600 mb-6">
+                            <Badge className="bg-amber-100 text-ikongold mb-4">Eco-Friendly Service</Badge>
+                            <h1 className="text-4xl font-bold text-ikontext mb-4">Honey Bee Removal</h1>
+                            <p className="text-xl text-ikontext mb-6">
                                 Professional and humane bee removal services that prioritize both your safety and bee
                                 conservation. We relocate beehives to safe environments rather than exterminating
                                 these vital pollinators.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-amber-600 text-xl hover:bg-amber-700">
+                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline" className="text-xl">
+                                    <Button size="lg" variant="outline" className="text-ikontext text-xl">
                                         Free Inspection
                                     </Button>
                                 </a>
                             </div>
                         </div>
-                        <Card className="p-6 bg-amber-50 border-amber-200">
+                        <Card className="p-6 bg-amber-50 border-ikongold">
                             <CardContent className="p-0 space-y-6">
-                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
+                                <h3 className="font-semibold text-ikontext text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Service Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -150,7 +150,7 @@ export default function HoneyBeeRemovalPage() {
 
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Phone Number</label>
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
@@ -162,8 +162,8 @@ export default function HoneyBeeRemovalPage() {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-amber-600">₹{cost.toLocaleString()}</p>
-                                        <p className="text-sm text-gray-600">{frequency} cost</p>
+                                        <p className="text-2xl font-bold text-ikongold">₹{cost.toLocaleString()}</p>
+                                        <p className="text-sm text-ikontext">{frequency} cost</p>
                                     </div>
 
                                     <textarea
@@ -177,7 +177,7 @@ export default function HoneyBeeRemovalPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -196,7 +196,7 @@ export default function HoneyBeeRemovalPage() {
                                         </p>
                                     )}
 
-                                    <p className="text-xs text-gray-600 mt-2">
+                                    <p className="text-xs text-ikontext mt-2">
                                         18% GST will be applicable on total service charges. <br />
                                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
                                     </p>
@@ -211,8 +211,8 @@ export default function HoneyBeeRemovalPage() {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Bee & Wasp Services</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-bold text-ikontext mb-4">Our Bee & Wasp Services</h2>
+                        <p className="text-ikontext max-w-2xl mx-auto">
                             We offer comprehensive solutions for dealing with stinging insects while prioritizing
                             ecological balance and human safety.
                         </p>
@@ -221,17 +221,17 @@ export default function HoneyBeeRemovalPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Icon iconNode={bee} className="h-8 w-8 text-amber-600" />
+                                    <Icon iconNode={bee} className="h-8 w-8 text-ikongold" />
                                     <CardTitle className="text-2xl">Honey Bee Removal</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-ikontext mb-6">
                                     Humane relocation of honey bee colonies to apiaries or protected environments,
                                     preserving these important pollinators while removing them from your property.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Our Approach:</h4>
+                                    <h4 className="font-semibold text-ikontext">Our Approach:</h4>
                                     {[
                                         "Smoke-free bee removal techniques",
                                         "Queen bee extraction",
@@ -241,19 +241,19 @@ export default function HoneyBeeRemovalPage() {
                                         "Relocation to approved apiaries"
                                     ].map((area, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-amber-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{area}</span>
+                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
+                                            <span className="text-sm text-ikontext">{area}</span>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="bg-amber-50 p-4 rounded-lg">
-                                    <p className="text-sm text-amber-800">
+                                    <p className="text-sm text-ikongold">
                                         <strong>Eco-Friendly:</strong> 100% of rescued bees are relocated to safe environments
                                         where they can continue pollinating.
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-amber-600 text-white text-xl hover:bg-amber-800">
+                                    <Button size="lg" asChild className="bg-ikongold text-white text-xl hover:bg-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -263,7 +263,7 @@ export default function HoneyBeeRemovalPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-amber-600 text-xl text-amber-600 hover:bg-gray-100 hover:text-amber-600 bg-transparent"
+                                        className="border-ikongold text-xl text-ikongold hover:bg-gray-100 hover:text-ikongold bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -276,17 +276,17 @@ export default function HoneyBeeRemovalPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Shield className="h-8 w-8 text-amber-600" />
+                                    <Shield className="h-8 w-8 text-ikongold" />
                                     <CardTitle className="text-2xl">Wasp & Hornet Control</CardTitle>
                                 </div>
                             </CardHeader>
                             <CardContent className="p-0">
-                                <p className="text-gray-600 mb-6">
+                                <p className="text-ikontext mb-6">
                                     Safe removal of aggressive wasp and hornet nests with eco-sensitive methods that
                                     minimize environmental impact while ensuring your family's safety.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <h4 className="font-semibold text-gray-900">Treatment Methods:</h4>
+                                    <h4 className="font-semibold text-ikontext">Treatment Methods:</h4>
                                     {[
                                         "Low-toxicity aerosol applications",
                                         "Ground nest treatments",
@@ -296,8 +296,8 @@ export default function HoneyBeeRemovalPage() {
                                         "Night-time removal for safety"
                                     ].map((method, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <CheckCircle className="h-4 w-4 text-amber-600 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">{method}</span>
+                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
+                                            <span className="text-sm text-ikontext">{method}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -308,7 +308,7 @@ export default function HoneyBeeRemovalPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-amber-600 text-xl text-white hover:bg-amber-800">
+                                    <Button size="lg" asChild className="bg-ikongold text-xl text-white hover:bg-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -318,7 +318,7 @@ export default function HoneyBeeRemovalPage() {
                                         size="lg"
                                         asChild
                                         variant="outline"
-                                        className="border-amber-600 text-amber-600 text-xl hover:bg-gray-100 hover:text-amber-600 bg-transparent"
+                                        className="border-ikongold text-ikongold text-xl hover:bg-gray-100 hover:text-ikongold bg-transparent"
                                     >
                                         <a href="/contact">
                                             Get Free Quote
@@ -340,12 +340,12 @@ export default function HoneyBeeRemovalPage() {
                             {/* Signs of Bee Infestation */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Signs You Need Bee/Wasp Removal</CardTitle>
+                                    <CardTitle className="text-ikontext text-2xl">Signs You Need Bee/Wasp Removal</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Visible Signs</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Visible Signs</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Increased bee/wasp activity",
@@ -354,7 +354,7 @@ export default function HoneyBeeRemovalPage() {
                                                     "Swarms on tree branches",
                                                     "Holes in the ground with flying insects"
                                                 ].map((sign, index) => (
-                                                    <li key={index} className="flex items-center gap-2 text-sm">
+                                                    <li key={index} className="flex items-center text-ikontext gap-2 text-sm">
                                                         <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
                                                         {sign}
                                                     </li>
@@ -362,7 +362,7 @@ export default function HoneyBeeRemovalPage() {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Risk Indicators</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Risk Indicators</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Allergic family members",
@@ -371,7 +371,7 @@ export default function HoneyBeeRemovalPage() {
                                                     "Children/pets play nearby",
                                                     "Structural damage from hive"
                                                 ].map((indicator, index) => (
-                                                    <li key={index} className="flex items-center gap-2 text-sm">
+                                                    <li key={index} className="flex items-center text-ikontext gap-2 text-sm">
                                                         <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
                                                         {indicator}
                                                     </li>
@@ -391,7 +391,7 @@ export default function HoneyBeeRemovalPage() {
                             {/* Treatment Process */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Our Bee Removal Process</CardTitle>
+                                    <CardTitle className="text-ikontext text-2xl">Our Bee Removal Process</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="space-y-6">
@@ -428,12 +428,12 @@ export default function HoneyBeeRemovalPage() {
                                             }
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
-                                                <div className="bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                                <div className="bg-ikongold text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                                                     {process.step}
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 mb-2">{process.title}</h3>
-                                                    <p className="text-gray-600 text-sm">{process.description}</p>
+                                                    <h3 className="font-semibold text-ikontext mb-2">{process.title}</h3>
+                                                    <p className="text-ikontext text-sm">{process.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -444,7 +444,7 @@ export default function HoneyBeeRemovalPage() {
                             {/* Benefits */}
                             <Card className="p-8">
                                 <CardHeader className="p-0 mb-6">
-                                    <CardTitle className="text-2xl">Why Choose Our Bee Removal</CardTitle>
+                                    <CardTitle className="text-ikontext text-2xl">Why Choose Our Bee Removal</CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
@@ -459,8 +459,8 @@ export default function HoneyBeeRemovalPage() {
                                             "Prevention maintenance plans"
                                         ].map((feature, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <Shield className="h-5 w-5 text-amber-600 flex-shrink-0" />
-                                                <span className="text-gray-700">{feature}</span>
+                                                <Shield className="h-5 w-5 text-ikongold flex-shrink-0" />
+                                                <span className="text-ikontext">{feature}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -479,30 +479,30 @@ export default function HoneyBeeRemovalPage() {
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Bee Removal (Standard)</span>
-                                            <span className="text-sm text-amber-600">₹2,000-5,000</span>
+                                            <span className="text-sm text-ikongold">₹2,000-5,000</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Depending on hive size/location</p>
+                                        <p className="text-xs text-ikontext">Depending on hive size/location</p>
                                     </div>
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Wasp/Hornet Nest</span>
-                                            <span className="text-sm text-amber-600">₹1,800-4,500</span>
+                                            <span className="text-sm text-ikongold">₹1,800-4,500</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Based on nest size and accessibility</p>
+                                        <p className="text-xs text-ikontext">Based on nest size and accessibility</p>
                                     </div>
                                     <div className="border-b pb-3">
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Beehive Relocation</span>
-                                            <span className="text-sm text-amber-600">₹3,000-7,500</span>
+                                            <span className="text-sm text-ikongold">₹3,000-7,500</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">With complete colony transfer</p>
+                                        <p className="text-xs text-ikontext">With complete colony transfer</p>
                                     </div>
                                     <div>
                                         <div className="flex justify-between items-center">
                                             <span className="text-sm font-medium">Emergency Service</span>
-                                            <span className="text-sm text-amber-600">+₹1,000</span>
+                                            <span className="text-sm text-ikongold">+₹1,000</span>
                                         </div>
-                                        <p className="text-xs text-gray-500">Same-day or after-hours service</p>
+                                        <p className="text-xs text-ikontext">Same-day or after-hours service</p>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -510,7 +510,7 @@ export default function HoneyBeeRemovalPage() {
                             {/* Warranty Info */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Service Guarantee</h3>
+                                    <h3 className="font-semibold text-ikontext mb-2">Service Guarantee</h3>
                                     <div className="space-y-2 text-sm">
                                         <div className="flex justify-between">
                                             <span>Bee Removal:</span>
@@ -532,19 +532,19 @@ export default function HoneyBeeRemovalPage() {
                             </Card>
 
                             {/* Emergency Card */}
-                            <Card className="p-6 bg-amber-50 border-amber-200">
+                            <Card className="p-6 bg-amber-50 border-ikongold">
                                 <CardContent className="p-0 space-y-3">
-                                    <h3 className="font-semibold text-gray-900 mb-1">Emergency Bee/Wasp Removal</h3>
-                                    <p className="text-sm text-gray-700">
+                                    <h3 className="font-semibold text-ikontext mb-1">Emergency Bee/Wasp Removal</h3>
+                                    <p className="text-sm text-ikontext">
                                         Available 24/7 for dangerous situations and allergic reactions.
                                     </p>
-                                    <Button asChild className="w-full bg-amber-600 text-xl hover:bg-amber-700 text-white mt-2">
+                                    <Button asChild className="w-full bg-ikongold text-xl hover:bg-ikongold text-white mt-2">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-4 w-4" />
                                             Call Now: 88304 95135
                                         </a>
                                     </Button>
-                                    <div className="bg-white p-2 mt-2 rounded text-xs text-amber-800 border border-amber-200">
+                                    <div className="bg-white p-2 mt-2 rounded text-xs text-ikongold border border-ikongold">
                                         <p><strong>For bee stings:</strong> Remove stinger, clean area, apply cold compress, monitor for allergic reaction.</p>
                                     </div>
                                 </CardContent>
@@ -555,15 +555,15 @@ export default function HoneyBeeRemovalPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-amber-600">
+            <section className="py-16 bg-ikongold">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Protect Your Home & Save the Bees</h2>
-                    <p className="text-amber-100 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Protect Your Home & Save the Bees</h2>
+                    <p className="text-ikontext mb-8 max-w-2xl mx-auto">
                         Our professional services ensure safe removal while protecting these important pollinators.
                         Contact us for humane solutions to your bee and wasp problems.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-amber-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -573,7 +573,7 @@ export default function HoneyBeeRemovalPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-xl text-white hover:bg-white hover:text-amber-600 bg-transparent"
+                            className="border-white text-xl text-white hover:bg-white hover:text-ikongold bg-transparent"
                         >
                             <a href="/contact">
                                 Get Free Inspection

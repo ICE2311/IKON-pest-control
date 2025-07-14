@@ -41,20 +41,20 @@ export default function PromoPopup() {
         className="relative bg-white rounded-lg shadow-lg p-6 max-w-md w-11/12 text-center"
       >
         <button
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
+          className="absolute top-3 right-3 text-ikontext hover:text-ikontext text-2xl"
           onClick={() => setVisible(false)}
         >
           &times;
         </button>
 
-        <h2 className="text-2xl font-bold text-green-700 mb-2">🛑 Got Pests?</h2>
-        <p className="text-gray-700 mb-4">
-          Book a <strong>Free Pest Inspection</strong> today and get upto <span className="text-green-600 font-semibold">10% off</span> your first treatment!
+        <h2 className="text-2xl font-bold text-ikongold mb-2">🛑 Got Pests?</h2>
+        <p className="text-ikontext mb-4">
+          Book a <strong>Free Pest Inspection</strong> today and get upto <span className="text-ikongold font-semibold">10% off</span> your first treatment!
         </p>
 
         <button
           onClick={() => window.location.href = '/contact'}
-          className="bg-green-700 text-white px-5 py-2 rounded hover:bg-green-800 transition"
+          className="bg-ikongold text-white px-5 py-2 rounded hover:bg-ikongold transition"
         >
           Book Now
         </button>

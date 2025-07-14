@@ -50,16 +50,16 @@ export default function HomePage() {
                   Serving Mira Road, Bhayandar & Thane Since 2005
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Professional Pest Control –<span className="text-green-600"> 24/7 Service</span> Available!
+                  Professional Pest Control –<span className="text-ikongold"> 24/7 Service</span> Available!
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-xl text-ikontext leading-relaxed">
                   IKON Pest Control Services offers comprehensive pest management solutions using WHO & HACCP approved
                   chemicals. Trusted by 500+ customers with 4.8★ Google rating.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:8830495135">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-xl px-8 py-3">
+                  <Button size="lg" className="bg-ikongold hover:bg-green-700 text-white text-xl px-8 py-3">
                     <Phone className="mr-2 h-5 w-5" />
                     Call 88304 95135
                   </Button>
@@ -70,13 +70,13 @@ export default function HomePage() {
                   </Button>
                 </a>
               </div>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-600">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-ikontext">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <CheckCircle className="h-5 w-5 text-ikongold" />
                   WHO Approved Chemicals
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <CheckCircle className="h-5 w-5 text-ikongold" />
                   Child & Pet Safe
                 </div>
                 <div className="flex items-center gap-2">
@@ -103,7 +103,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Pest Control Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-ikontext max-w-2xl mx-auto">
               Comprehensive pest management solutions for residential, commercial, and industrial spaces
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose IKON Pest Control?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-ikontext max-w-2xl mx-auto">
               Over 15+ years of experience serving Mira Road, Bhayandar, and Thane with professional pest management
             </p>
           </div>
@@ -170,9 +170,9 @@ export default function HomePage() {
             ].map((feature, index) => (
               <Card key={index} className="text-center p-6">
                 <CardContent className="p-0">
-                  <feature.icon className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                  <feature.icon className="h-12 w-12 text-ikongold mx-auto mb-4" />
                   <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm">{feature.description}</p>
+                  <p className="text-ikontext text-sm">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -186,7 +186,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Serving Your Local Area</h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-ikontext mb-6">
                 IKON Pest Control Services proudly serves the Mira Road, Bhayandar, and Thane regions with professional
                 pest management solutions for homes, offices, and industrial facilities.
               </p>
@@ -200,13 +200,13 @@ export default function HomePage() {
                   "Industrial Areas",
                 ].map((area, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
+                    <MapPin className="h-4 w-4 text-ikongold" />
                     <span className="text-gray-700">{area}</span>
                   </div>
                 ))}
               </div>
               <a href="tel:8830495135">
-                <Button className="bg-green-600 text-xl hover:bg-green-700">Check Service Availability</Button>
+                <Button className="bg-ikongold text-xl hover:bg-green-700">Check Service Availability</Button>
               </a>
             </div>
             <div className="bg-gray-200 rounded-lg h-80 overflow-hidden">
@@ -235,7 +235,7 @@ export default function HomePage() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="text-gray-600 ml-2">4.8/5 from 20+ Google reviews</span>
+              <span className="text-ikontext ml-2">4.8/5 from 20+ Google reviews</span>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -268,7 +268,7 @@ export default function HomePage() {
                       <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4">"{testimonial.review}"</p>
+                  <p className="text-ikontext mb-4">"{testimonial.review}"</p>
                   <div>
                     <p className="font-semibold text-gray-900">{testimonial.name}</p>
                     <p className="text-sm text-gray-500">{testimonial.location}</p>
@@ -281,7 +281,7 @@ export default function HomePage() {
       </section>
 
       {/* Quick Booking Form */}
-      <section className="py-16 bg-green-600">
+      <section className="py-16 bg-ikongold">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -309,7 +309,7 @@ export default function HomePage() {
                   <option value="commercial">Commercial Service</option>
                 </select>
                 <div className="md:col-span-2">
-                  <Button className="w-full bg-green-600 hover:bg-green-700" size="lg">
+                  <Button className="w-full bg-ikongold hover:bg-green-700" size="lg">
                     Get Free Quote
                   </Button>
                 </div>
@@ -324,24 +324,24 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <Users className="h-8 w-8 text-green-600 mx-auto mb-2" />
+              <Users className="h-8 w-8 text-ikongold mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">500+</p>
-              <p className="text-gray-600">Happy Customers</p>
+              <p className="text-ikontext">Happy Customers</p>
             </div>
             <div>
-              <Star className="h-8 w-8 text-green-600 mx-auto mb-2" />
+              <Star className="h-8 w-8 text-ikongold mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">4.8★</p>
-              <p className="text-gray-600">Google Rating</p>
+              <p className="text-ikontext">Google Rating</p>
             </div>
             <div>
-              <Clock className="h-8 w-8 text-green-600 mx-auto mb-2" />
+              <Clock className="h-8 w-8 text-ikongold mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">20+</p>
-              <p className="text-gray-600">Years Experience</p>
+              <p className="text-ikontext">Years Experience</p>
             </div>
             <div>
-              <Shield className="h-8 w-8 text-green-600 mx-auto mb-2" />
+              <Shield className="h-8 w-8 text-ikongold mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">24/7</p>
-              <p className="text-gray-600">Service Available</p>
+              <p className="text-ikontext">Service Available</p>
             </div>
           </div>
         </div>

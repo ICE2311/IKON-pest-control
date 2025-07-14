@@ -102,16 +102,16 @@ export default function GeneralPestControlPage() {
             {/* Breadcrumb */}
             <section className="bg-white py-4 border-b">
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/" className="hover:text-green-600">
+                    <div className="flex items-center gap-2 text-sm text-ikontext">
+                        <Link href="/" className="hover:text-ikongold">
                             Home
                         </Link>
                         <span>/</span>
-                        <Link href="/services" className="hover:text-green-600">
+                        <Link href="/services" className="hover:text-ikongold">
                             Services
                         </Link>
                         <span>/</span>
-                        <span className="text-gray-900">General Pest Control</span>
+                        <span className="text-ikontext">General Pest Control</span>
                     </div>
                 </div>
             </section>
@@ -123,39 +123,39 @@ export default function GeneralPestControlPage() {
                         <div className="mt-0">
                             <Link
                                 href="/services"
-                                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 mb-4"
+                                className="inline-flex items-center gap-2 text-ikongold hover:text-ikongold mb-4"
                             >
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
                             <Badge className="bg-green-100 text-green-800 mb-4">Most Popular Service</Badge>
-                            <h1 className="text-4xl font-bold text-gray-900 mb-4">General Pest Control</h1>
-                            <p className="text-xl text-gray-600 mb-6">
+                            <h1 className="text-4xl font-bold text-ikontext mb-4">General Pest Control</h1>
+                            <p className="text-xl text-ikontext mb-6">
                                 Comprehensive pest control solution for common household pests including cockroaches, ants, lizards,
                                 spiders, and other crawling insects. Safe, effective, and long-lasting protection for your home.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="tel:8830495135" className="hover:text-green-600">
-                                    <Button size="lg" className="bg-green-600 text-xl hover:bg-green-700">
+                                <a href="tel:8830495135" className="hover:text-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl hover:bg-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline" className="text-xl">
+                                    <Button size="lg" variant="outline" className="text-ikontext text-xl">
                                         Get Free Quote
                                     </Button>
                                 </a>
                             </div>
                         </div>
                         {/* Quick Contact */}
-                        <Card className="p-6 bg-green-50 border-green-200">
+                        <Card className="p-6 bg-amber-50 border-ikongold">
                             <CardContent className="p-0 space-y-6">
-                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
+                                <h3 className="font-semibold text-ikontext text-lg mb-2">Get Instant Quote</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Product Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={productType}
@@ -168,7 +168,7 @@ export default function GeneralPestControlPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Flat Type</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={flatType}
@@ -181,7 +181,7 @@ export default function GeneralPestControlPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Service Frequency</label>
                                         <select
                                             className="w-full p-2 rounded border text-black"
                                             value={frequency}
@@ -194,7 +194,7 @@ export default function GeneralPestControlPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                        <label className="block text-sm font-medium text-ikontext mb-1">Phone Number</label>
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
@@ -206,8 +206,8 @@ export default function GeneralPestControlPage() {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-                                        <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+                                        <p className="text-2xl font-bold text-ikongold">₹{cost.toLocaleString()}</p>
+                                        <p className="text-sm text-ikontext">{frequency} cost for {flatType}</p>
                                     </div>
 
                                     <textarea
@@ -221,7 +221,7 @@ export default function GeneralPestControlPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-green-600 hover:bg-green-700 text-white"
+                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -234,7 +234,7 @@ export default function GeneralPestControlPage() {
                                         </Button>
                                     </div>
 
-                                    <p className="text-xs text-gray-600 mt-2">
+                                    <p className="text-xs text-ikontext mt-2">
                                         18% GST will be applicable on total service charges. <br />
                                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
                                     </p>
@@ -259,7 +259,7 @@ export default function GeneralPestControlPage() {
                                 <CardContent className="p-0">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Crawling Insects</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Crawling Insects</h3>
                                             <ul className="space-y-2">
                                                 {[
                                                     "Cockroaches (German & American)",
@@ -269,19 +269,19 @@ export default function GeneralPestControlPage() {
                                                     "Centipedes & Millipedes",
                                                 ].map((pest, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {pest}
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-3">Other Pests</h3>
+                                            <h3 className="font-semibold text-ikontext mb-3">Other Pests</h3>
                                             <ul className="space-y-2">
                                                 {["Lizards (Geckos)", "Beetles & Weevils", "Earwigs", "Carpet beetles", "Book lice"].map(
                                                     (pest, index) => (
                                                         <li key={index} className="flex items-center gap-2 text-sm">
-                                                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                                                            <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                             {pest}
                                                         </li>
                                                     ),
@@ -326,12 +326,12 @@ export default function GeneralPestControlPage() {
                                             },
                                         ].map((process, index) => (
                                             <div key={index} className="flex gap-4">
-                                                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                                                <div className="bg-ikongold text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
                                                     {process.step}
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 mb-2">{process.title}</h3>
-                                                    <p className="text-gray-600 text-sm">{process.description}</p>
+                                                    <h3 className="font-semibold text-ikontext mb-2">{process.title}</h3>
+                                                    <p className="text-ikontext text-sm">{process.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -357,8 +357,8 @@ export default function GeneralPestControlPage() {
                                             "Competitive pricing with AMC options",
                                         ].map((benefit, index) => (
                                             <div key={index} className="flex items-center gap-2">
-                                                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                                                <span className="text-gray-700">{benefit}</span>
+                                                <CheckCircle className="h-5 w-5 text-ikongold flex-shrink-0" />
+                                                <span className="text-ikontext">{benefit}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -376,19 +376,19 @@ export default function GeneralPestControlPage() {
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-3">
                                     <div className="flex items-center gap-3">
-                                        <Shield className="h-5 w-5 text-green-600" />
+                                        <Shield className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">WHO Approved Chemicals</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <Clock className="h-5 w-5 text-green-600" />
+                                        <Clock className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">Same Day Service</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <Star className="h-5 w-5 text-green-600" />
+                                        <Star className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">3-6 Months Protection</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <CheckCircle className="h-5 w-5 text-green-600" />
+                                        <CheckCircle className="h-5 w-5 text-ikongold" />
                                         <span className="text-sm">100% Safe for Family</span>
                                     </div>
                                 </CardContent>
@@ -397,8 +397,8 @@ export default function GeneralPestControlPage() {
                             {/* AMC Option */}
                             <Card className="p-6 bg-blue-50 border-blue-200">
                                 <CardContent className="p-0">
-                                    <h3 className="font-semibold text-gray-900 mb-2">Annual Maintenance Contract</h3>
-                                    <p className="text-sm text-gray-600 mb-4">
+                                    <h3 className="font-semibold text-ikontext mb-2">Annual Maintenance Contract</h3>
+                                    <p className="text-sm text-ikontext mb-4">
                                         Save up to 30% with our AMC plans. Regular treatments ensure year-round protection.
                                     </p>
                                     <Button
@@ -418,7 +418,7 @@ export default function GeneralPestControlPage() {
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                        <h2 className="text-3xl font-bold text-ikontext mb-8 text-center">Frequently Asked Questions</h2>
                         <div className="space-y-6">
                             {[
                                 {
@@ -444,8 +444,8 @@ export default function GeneralPestControlPage() {
                             ].map((faq, index) => (
                                 <Card key={index} className="p-6">
                                     <CardContent className="p-0">
-                                        <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                                        <p className="text-gray-600">{faq.answer}</p>
+                                        <h3 className="font-semibold text-ikontext mb-2">{faq.question}</h3>
+                                        <p className="text-ikontext">{faq.answer}</p>
                                     </CardContent>
                                 </Card>
                             ))}
@@ -455,14 +455,14 @@ export default function GeneralPestControlPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-green-600">
+            <section className="py-16 bg-ikongold">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Rid of Pests?</h2>
-                    <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Ready to Get Rid of Pests?</h2>
+                    <p className="text-ikontext mb-8 max-w-2xl mx-auto">
                         Contact IKON Pest Control Services today for professional general pest control treatment
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-xl text-green-600 hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-xl text-ikongold hover:bg-gray-100">
                             <a href="tel:8830495135">
                                 <Phone className="mr-2 h-5 w-5" />
                                 Call 88304 95135
@@ -472,7 +472,7 @@ export default function GeneralPestControlPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-white text-xl hover:bg-white hover:text-green-600 bg-transparent"
+                            className="border-white text-white text-xl hover:bg-white hover:text-ikongold bg-transparent"
                         >
                             <a href="/contact">
                                 Get Free Quote

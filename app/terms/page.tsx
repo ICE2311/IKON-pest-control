@@ -7,11 +7,11 @@ export const metadata = {
 
 const TermsAndConditions = () => {
   return (
-    <main className="bg-white min-h-screen px-6 py-12 sm:px-8 md:px-12 lg:px-24 text-gray-800">
+    <main className="bg-white min-h-screen px-6 py-12 sm:px-8 md:px-12 lg:px-24 text-ikontext">
       <div className="max-w-4xl mx-auto space-y-8">
         <header>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Terms and Conditions</h1>
-          <p className="text-sm text-gray-500">Last updated: July 07, 2025</p>
+          <h1 className="text-4xl font-bold text-ikontext mb-2">Terms and Conditions</h1>
+          <p className="text-sm text-ikontext">Last updated: July 07, 2025</p>
         </header>
 
         <section className="space-y-4">

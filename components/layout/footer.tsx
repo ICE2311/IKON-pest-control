@@ -76,7 +76,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-green-600" />
+                <Phone className="h-5 w-5 text-ikongold" />
                 <a href="tel:8830495135">
                   <div>
                     <p className="text-white text-xl font-semibold">88304 95135</p>
@@ -85,7 +85,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-green-600" />
+                <Mail className="h-5 w-5 text-ikongold" />
                 <a href="mailto:OjHtT@example.com">
                   <div>
                     <p className="text-white">ikonpestcontrolservice@gmail.com</p>
@@ -93,7 +93,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-green-600" />
+                <MapPin className="h-5 w-5 text-ikongold" />
                 <a href="https://maps.app.goo.gl/Hsh5sENoLLKVgaSb7">
                   <div>
                     <p className="text-white">Shop No. 7, E Wing, Bhairav Darshan</p>

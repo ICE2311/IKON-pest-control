@@ -196,21 +196,21 @@ export default function ServicesPage() {
       <section className="bg-white lg:py-16 py-5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Pest Control Services</h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <h1 className="text-4xl font-bold text-ikontext mb-4">Our Pest Control Services</h1>
+            <p className="text-xl text-ikontext mb-8">
               Tailored solutions for every infestation, delivered by licensed professionals with guaranteed results
             </p>
-            <div className="flex justify-center flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-600">
+            <div className="flex justify-center flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-ikontext">
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-green-600" />
+                <Shield className="h-5 w-5 text-ikongold" />
                 Licensed & Insured
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-green-600" />
+                <Clock className="h-5 w-5 text-ikongold" />
                 24/7 Emergency Service
               </div>
               <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-green-600" />
+                <Star className="h-5 w-5 text-ikongold" />
                 100% Satisfaction Guarantee
               </div>
             </div>
@@ -225,20 +225,20 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <Card key={index} className="relative flex flex-col overflow-hidden hover:shadow-lg transition-shadow">
                 {service.popular && (
-                  <Badge className="absolute top-4 right-4 bg-green-600 text-white">Most Popular</Badge>
+                  <Badge className="absolute top-4 right-4 bg-ikongold text-white">Most Popular</Badge>
                 )}
                 <div className="relative h-48 md:h-64">
                   <Image src={service.image ?? "/placeholder.svg"} alt={service.title} fill className="object-cover" />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <p className="text-gray-600">{service.description}</p>
+                  <p className="text-ikontext">{service.description}</p>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-grow">
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -246,7 +246,7 @@ export default function ServicesPage() {
                   {/* Spacer pushes the buttons down */}
                   <div className="flex-grow" />
                   <div className="flex gap-2 mt-4">
-                    <Button className="flex-1 bg-green-600 hover:bg-green-700" onClick={() => router.push("/contact")}>
+                    <Button className="flex-1 bg-ikongold hover:bg-ikongold" onClick={() => router.push("/contact")}>
                       Book Now
                     </Button>
                     <Button variant="outline" className="flex-1 bg-transparent" onClick={() => router.push(service.href)}>
@@ -279,7 +279,7 @@ export default function ServicesPage() {
                   />
                 </div>
                 <a href="/contact">
-                  <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">Get Residential Quote</Button>
+                  <Button className="w-full mt-6 bg-ikongold hover:bg-ikongold">Get Residential Quote</Button>
                 </a>
               </CardContent>
             </Card>
@@ -299,7 +299,7 @@ export default function ServicesPage() {
                   />
                 </div>
                 <a href="/contact">
-                  <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">Get Commercial Quote</Button>
+                  <Button className="w-full mt-6 bg-ikongold hover:bg-ikongold">Get Commercial Quote</Button>
                 </a>
               </CardContent>
             </Card>
@@ -310,8 +310,8 @@ export default function ServicesPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Add-On Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-ikontext mb-4">Add-On Services</h2>
+            <p className="text-ikontext max-w-2xl mx-auto">
               Enhance your pest control service with these additional options
             </p>
           </div>
@@ -319,9 +319,9 @@ export default function ServicesPage() {
             {addOns.map((addon, index) => (
               <Card key={index} className="p-6 text-center">
                 <CardContent className="p-0">
-                  <h3 className="font-semibold text-gray-900 mb-2">{addon.name}</h3>
-                  <p className="text-2xl font-bold text-green-600 mb-2">{addon.price}</p>
-                  <p className="text-gray-600 text-sm">{addon.description}</p>
+                  <h3 className="font-semibold text-ikontext mb-2">{addon.name}</h3>
+                  <p className="text-2xl font-bold text-ikongold mb-2">{addon.price}</p>
+                  <p className="text-ikontext text-sm">{addon.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -330,15 +330,15 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600">
+      <section className="py-16 bg-ikongold">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Not Sure What You Need?</h2>
-          <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-ikontext mb-4">Not Sure What You Need?</h2>
+          <p className="text-ikontext mb-8 max-w-2xl mx-auto">
             Schedule a free inspection and our experts will identify your pest problems and recommend the best treatment
             plan
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-green-600 text-xl hover:bg-gray-100">
+            <Button size="lg" asChild className="bg-white text-ikongold text-xl hover:bg-gray-100">
               <a href="/contact">
                 Schedule Free Inspection
               </a>
@@ -347,7 +347,7 @@ export default function ServicesPage() {
               size="lg"
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-green-600 text-xl bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-ikongold text-xl bg-transparent"
             >
               <a href="tel:8830495135">
                 Call 88304 95135
