@@ -97,10 +97,9 @@ export default function ContactPage() {
                     <select name="serviceType" value={formData.serviceType} onChange={(e) =>
                       setFormData((prev) => ({ ...prev, serviceType: e.target.value }))
                     }
-                      className="w-full px-3 py-2 border border-ikontext rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full px-3 py-2 border border-ikontext rounded-md focus:outline-none focus:ring-2 focus:ring-ikongold"
                       required
                     >
-                      <option value="">Select service type</option>
                       <option value="general">General Pest Control</option>
                       <option value="termites">Termite Control</option>
                       <option value="bedbugs">Bed Bug Treatment</option>
@@ -108,6 +107,9 @@ export default function ContactPage() {
                       <option value="mosquitoes">Mosquito Control</option>
                       <option value="emergency">Emergency Service</option>
                       <option value="commercial">Commercial Service</option>
+                      <option value="commercial">Corperate Office Service</option>
+                      <option value="commercial">Hotels</option>
+                      <option value="commercial">Godowns</option>
                     </select>
                   </div>
 
