@@ -128,7 +128,9 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Roshan Singh. All rights reserved.</p>
+            <a href="http://elfoxisdigital.com">
+              <p className="text-gray-400 text-sm">© {new Date().getFullYear()}Developed by Elfoxis Digital.</p>
+            </a>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-ikongold text-sm">
                 Privacy Policy
