@@ -126,7 +126,7 @@ export default function WoodBorerTreatmentPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-green-100 text-ikongold mb-4">Specialized Treatment</Badge>
+
                             <h1 className="text-4xl font-bold text-ikontext mb-4">Wood Borer Treatment</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Professional wood borer treatment to protect your wooden furniture, flooring, and structures from destructive borers. Our specialized treatment eliminates existing infestations and prevents future damage.

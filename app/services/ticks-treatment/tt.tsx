@@ -128,7 +128,6 @@ export default function TickTreatmentPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-red-100 text-red-800 mb-4">Health Hazard</Badge>
                             <h1 className="text-4xl font-bold text-ikontext mb-4">Professional Tick Treatment</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Comprehensive tick elimination service to protect your family and pets from these dangerous parasites. Our treatment eradicates ticks at all life stages and prevents reinfestation.

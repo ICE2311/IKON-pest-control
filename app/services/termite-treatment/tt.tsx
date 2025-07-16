@@ -280,8 +280,8 @@ export default function TermiteTreatmentPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-green-50 p-4 rounded-lg">
-                                    <p className="text-sm text-ikongold">
+                                <div className="bg-red-50 p-4 rounded-lg">
+                                    <p className="text-sm text-ikontext">
                                         <strong>Best Value:</strong> Most cost-effective when done during construction. Provides 5-10 years
                                         of protection.
                                     </p>
@@ -334,8 +334,8 @@ export default function TermiteTreatmentPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-blue-50 p-4 rounded-lg">
-                                    <p className="text-sm text-blue-800">
+                                <div className="bg-red-50 p-4 rounded-lg">
+                                    <p className="text-sm text-ikontext">
                                         <strong>Immediate Action:</strong> Quick response to active infestations. Includes damage assessment
                                         and repair.
                                     </p>

@@ -127,7 +127,6 @@ export default function RodentManagementPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-orange-100 text-orange-800 mb-4">Health & Safety Priority</Badge>
                             <h1 className="text-4xl font-bold text-ikontext mb-4">Rodent Management</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Professional rodent control using humane trapping methods and strategic baiting systems. Protect your
@@ -281,8 +280,8 @@ export default function RodentManagementPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-green-50 p-4 rounded-lg">
-                                    <p className="text-sm text-ikongold">
+                                <div className="bg-red-50 p-4 rounded-lg">
+                                    <p className="text-sm text-ikontext">
                                         <strong>Safe & Effective:</strong> No chemicals required. Safe for children, pets, and food
                                         preparation areas.
                                     </p>
@@ -293,7 +292,7 @@ export default function RodentManagementPage() {
                         <Card className="p-8">
                             <CardHeader className="p-0 mb-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Zap className="h-8 w-8 text-blue-600" />
+                                    <Zap className="h-8 w-8 text-ikongold" />
                                     <CardTitle className="text-2xl">Baiting Systems</CardTitle>
                                 </div>
                             </CardHeader>
@@ -317,8 +316,8 @@ export default function RodentManagementPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-blue-50 p-4 rounded-lg">
-                                    <p className="text-sm text-blue-800">
+                                <div className="bg-red-50 p-4 rounded-lg">
+                                    <p className="text-sm text-ikontext">
                                         <strong>Long-term Control:</strong> Provides ongoing protection with regular monitoring and
                                         maintenance visits.
                                     </p>
@@ -392,7 +391,7 @@ export default function RodentManagementPage() {
                                                     "Footprints in dusty areas",
                                                 ].map((evidence, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {evidence}
                                                     </li>
                                                 ))}
@@ -409,7 +408,7 @@ export default function RodentManagementPage() {
                                                     "Strong ammonia-like odor",
                                                 ].map((behavior, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {behavior}
                                                     </li>
                                                 ))}

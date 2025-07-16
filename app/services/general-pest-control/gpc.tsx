@@ -128,7 +128,7 @@ export default function GeneralPestControlPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-green-100 text-green-800 mb-4">Most Popular Service</Badge>
+                            <Badge className="bg-ikongold text-ikontext mb-4">Most Popular Service</Badge>
                             <h1 className="text-4xl font-bold text-ikontext mb-4">General Pest Control</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Comprehensive pest control solution for common household pests including cockroaches, ants, lizards,

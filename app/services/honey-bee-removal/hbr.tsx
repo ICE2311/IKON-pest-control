@@ -109,7 +109,6 @@ export default function HoneyBeeRemovalPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-amber-100 text-ikongold mb-4">Eco-Friendly Service</Badge>
                             <h1 className="text-4xl font-bold text-ikontext mb-4">Honey Bee Removal</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Professional and humane bee removal services that prioritize both your safety and bee
@@ -246,14 +245,12 @@ export default function HoneyBeeRemovalPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-amber-50 p-4 rounded-lg">
-                                    <p className="text-sm text-ikongold">
-                                        <strong>Eco-Friendly:</strong> 100% of rescued bees are relocated to safe environments
-                                        where they can continue pollinating.
-                                    </p>
+                                <div className="bg-red-50 p-4 rounded-lg">
+                                    <p className="text-sm text-ikontext">
+                                        <strong>Eco-Friendly:</strong> 100% of rescued bees are relocated to safe environments.</p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-ikongold text-white text-xl hover:bg-ikontext hover:text-ikongold">
+                                    <Button size="lg" asChild className="bg-ikongold text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -301,14 +298,14 @@ export default function HoneyBeeRemovalPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="bg-blue-50 p-4 rounded-lg">
-                                    <p className="text-sm text-blue-800">
+                                <div className="bg-red-50 p-4 rounded-lg">
+                                    <p className="text-sm text-ikontext">
                                         <strong>24/7 Emergency Service:</strong> Available for immediate response to
                                         dangerous nest locations.
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-ikongold text-xl text-white hover:bg-ikontext hover:text-ikongold">
+                                    <Button size="lg" asChild className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -355,7 +352,7 @@ export default function HoneyBeeRemovalPage() {
                                                     "Holes in the ground with flying insects"
                                                 ].map((sign, index) => (
                                                     <li key={index} className="flex items-center text-ikontext gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {sign}
                                                     </li>
                                                 ))}
@@ -372,7 +369,7 @@ export default function HoneyBeeRemovalPage() {
                                                     "Structural damage from hive"
                                                 ].map((indicator, index) => (
                                                     <li key={index} className="flex items-center text-ikontext gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {indicator}
                                                     </li>
                                                 ))}
@@ -538,13 +535,13 @@ export default function HoneyBeeRemovalPage() {
                                     <p className="text-sm text-ikontext">
                                         Available 24/7 for dangerous situations and allergic reactions.
                                     </p>
-                                    <Button asChild className="w-full bg-ikongold text-xl hover:bg-ikontext hover:text-ikongold text-white mt-2">
+                                    <Button asChild className="w-full bg-ikongold text-xl hover:bg-ikontext hover:text-ikongold text-ikontext mt-2">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-4 w-4" />
                                             Call Now: 88304 95135
                                         </a>
                                     </Button>
-                                    <div className="bg-white p-2 mt-2 rounded text-xs text-ikongold border border-ikongold">
+                                    <div className="bg-white p-2 mt-2 rounded text-xs text-ikontext border border-ikongold">
                                         <p><strong>For bee stings:</strong> Remove stinger, clean area, apply cold compress, monitor for allergic reaction.</p>
                                     </div>
                                 </CardContent>

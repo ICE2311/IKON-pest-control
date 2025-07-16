@@ -128,7 +128,6 @@ export default function MosquitoControlPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-red-100 text-red-800 mb-4">Essential Health Service</Badge>
                             <h1 className="text-4xl font-bold text-ikontext mb-4">Mosquito Control</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Effective mosquito control solution to protect your family from dengue, malaria, and other
