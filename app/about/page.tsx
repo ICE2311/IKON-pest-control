@@ -70,7 +70,7 @@ export default function AboutPage() {
                 from unwanted pests using safe, effective, and environmentally responsible methods.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 ">
-                <a href="/services"><Button className="bg-ikongold text-ikontext hover:bg-ikongold">Learn About Our Services</Button></a>
+                <a href="/services"><Button className="bg-ikongold text-ikontext hover:bg-ikontext hover:text-ikongold">Learn About Our Services</Button></a>
                 <a href="#team"><Button variant="outline">Meet Our Team</Button></a>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-ikontext mb-6">Our Mission</h2>
@@ -230,7 +230,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
+              <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">
                 Schedule Free Inspection
               </Button>
             </Link>

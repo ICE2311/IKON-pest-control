@@ -136,7 +136,7 @@ const TermsAndConditions = () => {
           <h2 className="text-2xl font-semibold mb-4 border-b pb-1">Contact Us</h2>
           <p>If you have any questions about these Terms and Conditions, you can reach us:</p>
           <ul className="list-disc list-inside space-y-1 mt-2 text-gray-700">
-            <li>Email: <a href="mailto:ikonpestcontrol@gmail.com" className="text-blue-600 hover:underline">ikonpestcontrol@gmail.com</a></li>
+            <li>Email: <a href="mailto:ikonpestcontrolservice@gmail.com" className="text-blue-600 hover:underline">ikonpestcontrolservice@gmail.com</a></li>
             <li>Visit: <a href="/contact" className="text-blue-600 hover:underline" rel="noopener noreferrer">Contact Page</a></li>
           </ul>
         </section>

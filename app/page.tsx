@@ -41,7 +41,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <TimerPopup />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-5 lg:py-32">
+      <section className="relative bg-gradient-to-br from-gray-50 to-blue-50 py-5 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -49,7 +49,7 @@ export default function HomePage() {
                 <Badge className="bg-green-100 text-green-800 hover:bg-green-100">
                   Serving Mira Road, Bhayandar & Thane Since 2005
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-bold text-ikontext leading-tight">
                   Professional Pest Control –<span className="text-ikongold"> 24/7 Service</span> Available!
                 </h1>
                 <p className="text-xl text-ikontext leading-relaxed">
@@ -59,7 +59,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:8830495135">
-                  <Button size="lg" className="bg-ikongold hover:bg-ikongold text-ikontext text-xl px-8 py-3">
+                  <Button size="lg" className="bg-ikongold hover:bg-ikontext hover:text-ikongold text-ikontext text-xl px-8 py-3">
                     <Phone className="mr-2 h-5 w-5" />
                     Call 88304 95135
                   </Button>
@@ -102,25 +102,25 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Pest Control Services</h2>
+            <h2 className="text-3xl font-bold text-ikontext mb-4">Our Pest Control Services</h2>
             <p className="text-ikontext max-w-2xl mx-auto">
               Comprehensive pest management solutions for residential, commercial, and industrial spaces
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { name: "General Pest Control", icon: "🐜", href: "/services/general-pest-control" },
+              { name: "General Disinfectant", icon: "🪳", href: "/services/general-pest-control" },
               { name: "Termite Treatment", icon: "🏠", href: "/services/termite-treatment" },
-              { name: "Bed Bug Eradication", icon: "🛏️", href: "/services/bed-bug-eradication" },
-              { name: "Rodent Management", icon: "🐭", href: "/services/rodent-management" },
+              { name: "Bed Bug Treatment", icon: "🛏️", href: "/services/bed-bug-eradication" },
+              { name: "Rat Control", icon: "🐭", href: "/services/rodent-management" },
               { name: "Mosquito Control", icon: "🦟", href: "/services/mosquito-control" },
-              { name: "Herbal Pest Control", icon: "🍀", href: "/services/herbal-pest-control" },
+              { name: "Wood Borer Treatment", icon: "🪵", href: "/services/wood-borer-treatment" },
             ].map((service, index) => (
               <Link key={index} href={service.href}>
                 <Card className="text-center p-6 hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="p-0">
                     <div className="text-4xl mb-3">{service.icon}</div>
-                    <h3 className="font-semibold text-gray-900 text-sm">{service.name}</h3>
+                    <h3 className="font-semibold text-ikontext text-sm">{service.name}</h3>
                   </CardContent>
                 </Card>
               </Link>
@@ -140,7 +140,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose IKON Pest Control?</h2>
+            <h2 className="text-3xl font-bold text-ikontext mb-4">Why Choose IKON Pest Control?</h2>
             <p className="text-ikontext max-w-2xl mx-auto">
               Over 15+ years of experience serving Mira Road, Bhayandar, and Thane with professional pest management
             </p>
@@ -171,7 +171,7 @@ export default function HomePage() {
               <Card key={index} className="text-center p-6">
                 <CardContent className="p-0">
                   <feature.icon className="h-12 w-12 text-ikongold mx-auto mb-4" />
-                  <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <h3 className="font-semibold text-ikontext mb-2">{feature.title}</h3>
                   <p className="text-ikontext text-sm">{feature.description}</p>
                 </CardContent>
               </Card>
@@ -185,7 +185,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Serving Your Local Area</h2>
+              <h2 className="text-3xl font-bold text-ikontext mb-4">Serving Your Local Area</h2>
               <p className="text-ikontext mb-6">
                 IKON Pest Control Services proudly serves the Mira Road, Bhayandar, and Thane regions with professional
                 pest management solutions for homes, offices, and industrial facilities.
@@ -201,12 +201,12 @@ export default function HomePage() {
                 ].map((area, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-ikongold" />
-                    <span className="text-gray-700">{area}</span>
+                    <span className="text-ikontext">{area}</span>
                   </div>
                 ))}
               </div>
               <a href="tel:8830495135">
-                <Button className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">Check Service Availability</Button>
+                <Button className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">Check Service Availability</Button>
               </a>
             </div>
             <div className="bg-gray-200 rounded-lg h-80 overflow-hidden">
@@ -230,7 +230,7 @@ export default function HomePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+            <h2 className="text-3xl font-bold text-ikontext mb-4">What Our Customers Say</h2>
             <div className="flex items-center justify-center gap-2 mb-4">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -270,8 +270,8 @@ export default function HomePage() {
                   </div>
                   <p className="text-ikontext mb-4">"{testimonial.review}"</p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    <p className="font-semibold text-ikontext">{testimonial.name}</p>
+                    <p className="text-sm text-ikontext">{testimonial.location}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -309,7 +309,7 @@ export default function HomePage() {
                   <option value="commercial">Commercial Service</option>
                 </select>
                 <div className="md:col-span-2">
-                  <Button className="w-full bg-ikongold hover:bg-ikongold text-ikontext" size="lg">
+                  <Button className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-ikontext" size="lg">
                     Get Free Quote
                   </Button>
                 </div>
@@ -325,22 +325,22 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <Users className="h-8 w-8 text-ikongold mx-auto mb-2" />
-              <p className="text-2xl font-bold text-gray-900">500+</p>
+              <p className="text-2xl font-bold text-ikontext">500+</p>
               <p className="text-ikontext">Happy Customers</p>
             </div>
             <div>
               <Star className="h-8 w-8 text-ikongold mx-auto mb-2" />
-              <p className="text-2xl font-bold text-gray-900">4.8★</p>
+              <p className="text-2xl font-bold text-ikontext">4.8★</p>
               <p className="text-ikontext">Google Rating</p>
             </div>
             <div>
               <Clock className="h-8 w-8 text-ikongold mx-auto mb-2" />
-              <p className="text-2xl font-bold text-gray-900">20+</p>
+              <p className="text-2xl font-bold text-ikontext">20+</p>
               <p className="text-ikontext">Years Experience</p>
             </div>
             <div>
               <Shield className="h-8 w-8 text-ikongold mx-auto mb-2" />
-              <p className="text-2xl font-bold text-gray-900">24/7</p>
+              <p className="text-2xl font-bold text-ikontext">24/7</p>
               <p className="text-ikontext">Service Available</p>
             </div>
           </div>

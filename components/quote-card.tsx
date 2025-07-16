@@ -94,13 +94,13 @@ export default function QuoteCard() {
     };
 
     return (
-        <Card className="p-6 bg-green-50 border-green-200">
+        <Card className="p-6 bg-amber-50 border-ikongold">
             <CardContent className="p-0 space-y-6">
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">Get Instant Quote</h3>
+                <h3 className="font-semibold text-ikontext text-lg mb-2">Get Instant Quote</h3>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Product Type</label>
+                        <label className="block text-sm font-medium text-ikontext mb-1">Product Type</label>
                         <select
                             className="w-full p-2 rounded border text-black"
                             value={productType}
@@ -113,7 +113,7 @@ export default function QuoteCard() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Flat Type</label>
+                        <label className="block text-sm font-medium text-ikontext mb-1">Flat Type</label>
                         <select
                             className="w-full p-2 rounded border text-black"
                             value={flatType}
@@ -126,7 +126,7 @@ export default function QuoteCard() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Frequency</label>
+                        <label className="block text-sm font-medium text-ikontext mb-1">Service Frequency</label>
                         <select
                             className="w-full p-2 rounded border text-black"
                             value={frequency}
@@ -139,7 +139,7 @@ export default function QuoteCard() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <label className="block text-sm font-medium text-ikontext mb-1">Phone Number</label>
                         <input
                             type="tel"
                             placeholder="Phone Number"
@@ -151,8 +151,8 @@ export default function QuoteCard() {
                     </div>
 
                     <div className="text-center">
-                        <p className="text-2xl font-bold text-green-600">₹{cost.toLocaleString()}</p>
-                        <p className="text-sm text-gray-600">{frequency} cost for {flatType}</p>
+                        <p className="text-2xl font-bold text-ikongold">₹{cost.toLocaleString()}</p>
+                        <p className="text-sm text-ikontext">{frequency} cost for {flatType}</p>
                     </div>
 
                     <textarea
@@ -166,7 +166,7 @@ export default function QuoteCard() {
                     <div className="flex flex-col gap-2">
                         <Button
                             type="submit"
-                            className="w-full bg-green-600 hover:bg-green-700 text-white"
+                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
                             disabled={loading}
                         >
                             {loading ? "Sending..." : "Get Quote"}
@@ -179,7 +179,7 @@ export default function QuoteCard() {
                         </Button>
                     </div>
 
-                    <p className="text-xs text-gray-600 mt-2">
+                    <p className="text-xs text-ikontext mt-2">
                         18% GST will be applicable on total service charges. <br />
                         <span className="underline cursor-pointer">*Terms & Conditions apply</span>
                     </p>

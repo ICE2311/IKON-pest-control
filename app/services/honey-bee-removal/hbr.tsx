@@ -116,9 +116,9 @@ export default function HoneyBeeRemovalPage() {
                                 conservation. We relocate beehives to safe environments rather than exterminating
                                 these vital pollinators.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col xl:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-ikongold text-ikontext text-xl hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
@@ -177,7 +177,7 @@ export default function HoneyBeeRemovalPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
+                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -253,7 +253,7 @@ export default function HoneyBeeRemovalPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-ikongold text-white text-xl hover:bg-ikongold">
+                                    <Button size="lg" asChild className="bg-ikongold text-white text-xl hover:bg-ikontext hover:text-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -308,7 +308,7 @@ export default function HoneyBeeRemovalPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-ikongold text-xl text-white hover:bg-ikongold">
+                                    <Button size="lg" asChild className="bg-ikongold text-xl text-white hover:bg-ikontext hover:text-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -538,7 +538,7 @@ export default function HoneyBeeRemovalPage() {
                                     <p className="text-sm text-ikontext">
                                         Available 24/7 for dangerous situations and allergic reactions.
                                     </p>
-                                    <Button asChild className="w-full bg-ikongold text-xl hover:bg-ikongold text-white mt-2">
+                                    <Button asChild className="w-full bg-ikongold text-xl hover:bg-ikontext hover:text-ikongold text-white mt-2">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-4 w-4" />
                                             Call Now: 88304 95135
@@ -563,7 +563,7 @@ export default function HoneyBeeRemovalPage() {
                         Contact us for humane solutions to your bee and wasp problems.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                             <a href="/contact">
                                 Schedule Free Inspection
                             </a>

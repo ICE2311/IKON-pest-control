@@ -133,9 +133,9 @@ export default function BedBugControlPage() {
                                 Complete bed bug elimination using advanced heat treatment and safe chemical methods. Get rid of bed
                                 bugs permanently with our proven treatment protocols and follow-up services.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col xl:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Emergency: 88304 95135
                                     </Button>
@@ -219,7 +219,7 @@ export default function BedBugControlPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
+                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -588,7 +588,7 @@ export default function BedBugControlPage() {
                         Get immediate relief with IKON's professional bed bug eradication services. Same-day treatment available.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                             <a href="/contact">
                                 Schedule Free Inspection
                             </a>

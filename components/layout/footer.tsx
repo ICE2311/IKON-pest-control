@@ -6,14 +6,14 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-ikontext text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo.png" alt="Logo" width={78} height={28} className="lg:mr-48" />
+              <Image src="/logo.png" alt="Logo" width={157} height={55} />
             </Link>
             <p className="text-gray-400 mb-4 py-2">
               Professional pest management solutions since 2005. Serving Mira Road, Bhayandar, and Thane with WHO &
@@ -83,10 +83,10 @@ export default function Footer() {
                   </div>
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center break-all space-x-3">
                 <Mail className="h-5 w-5 text-ikongold" />
                 <a href="mailto:OjHtT@example.com">
-                  <div>
+                  <div >
                     <p className="text-white">ikonpestcontrolservice@gmail.com</p>
                   </div>
                 </a>
@@ -95,7 +95,7 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 text-ikongold" />
                 <a href="https://maps.app.goo.gl/Hsh5sENoLLKVgaSb7">
                   <div>
-                    <p className="text-white">Shop No. 7, E Wing, Bhairav Darshan</p>
+                    <p className="text-white">Shop No. 7, B Wing, Bhairav Darshan</p>
                     <p className="text-gray-400 text-sm">Bhayandar (E), Thane - 401105</p>
                   </div>
                 </a>

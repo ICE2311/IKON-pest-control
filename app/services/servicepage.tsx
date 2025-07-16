@@ -264,7 +264,7 @@ export default function ServicesPage() {
                   {/* Spacer pushes the buttons down */}
                   <div className="flex-grow" />
                   <div className="flex gap-2 mt-4">
-                    <Button className="flex-1 bg-ikongold text-ikontext hover:bg-ikongold" onClick={() => router.push("/contact")}>
+                    <Button className="flex-1 bg-ikongold text-ikontext hover:bg-ikontext hover:text-ikongold" onClick={() => router.push("/contact")}>
                       Book Now
                     </Button>
                     <Button variant="outline" className="flex-1 bg-transparent" onClick={() => router.push(service.href)}>
@@ -297,7 +297,7 @@ export default function ServicesPage() {
                   />
                 </div>
                 <a href="/contact">
-                  <Button className="w-full mt-6 bg-ikongold hover:bg-ikongold">Get Residential Quote</Button>
+                  <Button className="w-full mt-6 bg-ikongold text-ikontext hover:bg-ikontext hover:text-ikongold">Get Residential Quote</Button>
                 </a>
               </CardContent>
             </Card>
@@ -317,7 +317,7 @@ export default function ServicesPage() {
                   />
                 </div>
                 <a href="/contact">
-                  <Button className="w-full mt-6 bg-ikongold hover:bg-ikongold">Get Commercial Quote</Button>
+                  <Button className="w-full mt-6 text-ikontext bg-ikongold hover:bg-ikontext hover:text-ikongold">Get Commercial Quote</Button>
                 </a>
               </CardContent>
             </Card>
@@ -377,7 +377,7 @@ export default function ServicesPage() {
             plan
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+            <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
               <a href="/contact">
                 Schedule Free Inspection
               </a>

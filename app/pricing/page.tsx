@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, X, Phone, MessageCircle, Link } from "lucide-react"
+import QuoteCard from "@/components/quote-card";
 
 export const metadata = {
   title: 'Pricing - IKON',
@@ -132,30 +133,39 @@ export default function PricingPage() {
       {/* One-Time Services */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {oneTimeServices.map((service, index) => (
-              <Card key={index} className="p-6 flex flex-col h-full">
-                <CardContent className="p-0 flex flex-col flex-grow">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-semibold text-ikontext">{service.service}</h3>
-                    <span className="text-ikongold font-bold">{service.price}</span>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div id="quote">
+              <QuoteCard />
+            </div>
+            {/* Left: Service cards grid */}
+            <div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {oneTimeServices.map((service, index) => (
+                  <Card key={index} className="p-6 flex flex-col h-full">
+                    <CardContent className="p-0 flex flex-col flex-grow">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="font-semibold text-ikontext">{service.service}</h3>
+                        <span className="text-ikongold font-bold">{service.price}</span>
+                      </div>
+                      <p className="text-ikontext text-sm mb-4">{service.description}</p>
+                      <div className="flex-grow" />
+                      <a href="#quote">
+                        <Button variant="outline" size="sm" className="w-full bg-transparent">
+                          Get Quote
+                        </Button>
+                      </a>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
 
-                  <p className="text-ikontext text-sm mb-4">{service.description}</p>
+            {/* Right: Quote form */}
 
-                  {/* Spacer pushes button to the bottom */}
-                  <div className="flex-grow" />
-                  <a href="/contact">
-                    <Button variant="outline" size="sm" className="w-full bg-transparent ">
-                      Get Quote
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
+
 
       {/* Add-ons */}
       <section className="py-16 bg-gray-50">
@@ -228,7 +238,7 @@ export default function PricingPage() {
             Book a free inspection to get an accurate quote for your specific pest control needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+            <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
               <a href="/contact">
                 Schedule Free Inspection
               </a>

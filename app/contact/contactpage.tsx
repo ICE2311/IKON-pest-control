@@ -122,7 +122,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button className="w-full bg-ikongold text-xl text-ikontext hover:bg-ikongold" size="lg">
+                  <Button className="w-full bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold" size="lg">
                     <Phone className="mr-2 h-5 w-5" />
                     Book Free Inspection
                   </Button>
@@ -165,7 +165,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-ikongold" />
                     <div>
                       <p className="font-semibold text-ikontext">Email</p>
-                      <p className="text-ikontext">ikonpestcontrol@gmail.com</p>
+                      <p className="text-ikontext">ikonpestcontrolservice@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>

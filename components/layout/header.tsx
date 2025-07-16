@@ -100,7 +100,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Logo" width={78} height={28} className="lg:mr-48" />
+            <Image src="/logo.png" alt="Logo" width={157} height={55} className="lg:mr-28" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -126,7 +126,7 @@ export default function Header() {
                       </Link>
 
                       {isDropdownOpen && (
-                        <div className="absolute left-0 mt-2 w-72 bg-white shadow-lg border rounded-md z-50">
+                        <div className="absolute left-0 mt-2 w-72 bg-white h-80 overflow-auto  shadow-lg border rounded-md z-50">
                           {navigation.find((item) => item.name === "Services")?.submenu?.map((subItem) => (
                             <Link
                               key={subItem.title}
@@ -171,7 +171,7 @@ export default function Header() {
               88304 95135
             </a>
             <a href="tel:8830495135">
-              <Button className="bg-ikongold text-xl hover:bg-ikongold text-ikontext">
+              <Button className="bg-ikongold text-xl hover:bg-ikontext hover:text-ikongold text-ikontext">
                 <Phone className="mr-2 h-4 w-4" />
                 Free Inspection
               </Button>
@@ -236,7 +236,7 @@ export default function Header() {
                   <a href="tel:8830495135" className="block text-ikongold font-semibold mb-3">
                     88304 95135
                   </a>
-                  <Button className="w-full bg-ikongold hover:bg-ikongold" onClick={() => { window.location.href = "tel:8448520507" }} >
+                  <Button className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold" onClick={() => { window.location.href = "tel:8448520507" }} >
                     <Phone className="mr-2 h-4 w-4" />
                     Free Inspection
                   </Button>

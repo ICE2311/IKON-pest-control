@@ -133,9 +133,9 @@ export default function RodentManagementPage() {
                                 Professional rodent control using humane trapping methods and strategic baiting systems. Protect your
                                 property from rats and mice with our comprehensive rodent management solutions.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col xl:flex-row gap-4">
                                 <a href="tel:8830495135">
-                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
@@ -220,7 +220,7 @@ export default function RodentManagementPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
+                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -534,12 +534,14 @@ export default function RodentManagementPage() {
                                     <p className="text-sm text-ikontext mb-4">
                                         Regular monitoring and maintenance visits to ensure long-term rodent control.
                                     </p>
-                                    <Button
-                                        variant="outline"
-                                        className="w-full bg-transparent border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-                                    >
-                                        Learn About AMC
-                                    </Button>
+                                    <a href="tel:8830495135">
+                                        <Button
+                                            variant="outline"
+                                            className="w-full bg-transparent border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                                        >
+                                            Learn About AMC
+                                        </Button>
+                                    </a>
                                 </CardContent>
                             </Card>
                         </div>
@@ -556,7 +558,7 @@ export default function RodentManagementPage() {
                         rodent management.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                             <a href="/contact">
                                 Schedule Free Inspection
                             </a>

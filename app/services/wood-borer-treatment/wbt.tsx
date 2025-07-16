@@ -131,9 +131,9 @@ export default function WoodBorerTreatmentPage() {
                             <p className="text-xl text-ikontext mb-6">
                                 Professional wood borer treatment to protect your wooden furniture, flooring, and structures from destructive borers. Our specialized treatment eliminates existing infestations and prevents future damage.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <div className="flex flex-col xl:flex-row gap-4">
                                 <a href="tel:8830495135" className="hover:text-ikongold">
-                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikongold">
+                                    <Button size="lg" className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Call 88304 95135
                                     </Button>
@@ -218,7 +218,7 @@ export default function WoodBorerTreatmentPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-ikongold hover:bg-ikongold text-white"
+                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -409,12 +409,14 @@ export default function WoodBorerTreatmentPage() {
                                     <p className="text-sm text-ikontext mb-4">
                                         Protect your wooden assets year-round with our comprehensive maintenance plans. Save up to 35% with AMC.
                                     </p>
-                                    <Button
-                                        variant="outline"
-                                        className="w-full bg-transparent border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-                                    >
-                                        Learn About AMC
-                                    </Button>
+                                    <a href="tel:8830495135">
+                                        <Button
+                                            variant="outline"
+                                            className="w-full bg-transparent border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                                        >
+                                            Learn About AMC
+                                        </Button>
+                                    </a>
                                 </CardContent>
                             </Card>
 
@@ -500,7 +502,7 @@ export default function WoodBorerTreatmentPage() {
                         Don't let wood borers destroy your valuable furniture and structures. Contact IKON Pest Control for professional wood borer treatment.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-gray-100">
+                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                             <a href="/contact">
                                 Schedule Free Inspection
                             </a>
