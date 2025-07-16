@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo.png" alt="Logo" width={157} height={55} />
+              <Image src="/logo.jpg" alt="Logo" width={50} height={50} className="rounded-full" />
             </Link>
             <p className="text-gray-400 mb-4 py-2">
               Professional pest management solutions since 2005. Serving Mira Road, Bhayandar, and Thane with WHO &

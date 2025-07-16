@@ -141,7 +141,7 @@ export default function TermiteTreatmentPage() {
                                     </Button>
                                 </a>
                                 <a href="/contact">
-                                    <Button size="lg" variant="outline" className="text-xl text-ikontext hover:bg-green-50">
+                                    <Button size="lg" variant="outline" className="text-xl text-ikontext hover:bg-gray-50">
                                         Free Termite Inspection
                                     </Button>
                                 </a>
@@ -216,10 +216,10 @@ export default function TermiteTreatmentPage() {
                                         onChange={(e) => setComments(e.target.value)}
                                     />
 
-                                    <div className="flex flex-col gap-2">
+                                    <div className="flex flex-col gap-2 text-ikontext">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
+                                            className="w-full text-ikontext bg-ikongold hover:bg-ikontext hover:text-ikongold "
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -287,7 +287,7 @@ export default function TermiteTreatmentPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-ikongold text-white text-xl hover:bg-ikontext hover:text-ikongold">
+                                    <Button size="lg" asChild className="bg-ikongold text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -341,7 +341,7 @@ export default function TermiteTreatmentPage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 justify-center mt-4">
-                                    <Button size="lg" asChild className="bg-ikongold text-xl text-white hover:bg-ikontext hover:text-ikongold">
+                                    <Button size="lg" asChild className="bg-ikongold text-xl text-ikontext hover:bg-ikontext hover:text-ikongold">
                                         <a href="tel:8830495135">
                                             <Phone className="mr-2 h-5 w-5" />
                                             Call 88304 95135
@@ -388,7 +388,7 @@ export default function TermiteTreatmentPage() {
                                                     "Sagging floors or ceilings",
                                                 ].map((sign, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {sign}
                                                     </li>
                                                 ))}
@@ -405,7 +405,7 @@ export default function TermiteTreatmentPage() {
                                                     "Swarms of flying insects",
                                                 ].map((indicator, index) => (
                                                     <li key={index} className="flex items-center gap-2 text-sm">
-                                                        <CheckCircle className="h-4 w-4 text-red-600 flex-shrink-0" />
+                                                        <CheckCircle className="h-4 w-4 text-ikongold flex-shrink-0" />
                                                         {indicator}
                                                     </li>
                                                 ))}
@@ -553,14 +553,15 @@ export default function TermiteTreatmentPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-ikongold">
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-ikontext mb-4">Protect Your Property from Termites</h2>
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Not Sure What You Need?</h2>
                     <p className="text-ikontext mb-8 max-w-2xl mx-auto">
-                        Don't let termites destroy your valuable investment. Contact IKON for professional termite treatment today.
+                        Schedule a free inspection and our experts will identify your pest problems and recommend the best treatment
+                        plan
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
+                        <Button size="lg" asChild className="bg-ikongold text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                             <a href="/contact">
                                 Schedule Free Inspection
                             </a>
@@ -569,7 +570,7 @@ export default function TermiteTreatmentPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
+                            className="border-white text-ikontext hover:bg-gray-50 hover:text-ikongold text-xl bg-transparent"
                         >
                             <a href="tel:8830495135">
                                 Call 88304 95135

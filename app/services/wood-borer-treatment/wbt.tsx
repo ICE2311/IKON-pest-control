@@ -218,7 +218,7 @@ export default function WoodBorerTreatmentPage() {
                                     <div className="flex flex-col gap-2">
                                         <Button
                                             type="submit"
-                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-white"
+                                            className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold text-ikontext"
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Get Quote"}
@@ -495,14 +495,15 @@ export default function WoodBorerTreatmentPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-ikongold">
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold text-ikontext mb-4">Protect Your Wooden Assets Today</h2>
+                    <h2 className="text-3xl font-bold text-ikontext mb-4">Not Sure What You Need?</h2>
                     <p className="text-ikontext mb-8 max-w-2xl mx-auto">
-                        Don't let wood borers destroy your valuable furniture and structures. Contact IKON Pest Control for professional wood borer treatment.
+                        Schedule a free inspection and our experts will identify your pest problems and recommend the best treatment
+                        plan
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
+                        <Button size="lg" asChild className="bg-ikongold text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
                             <a href="/contact">
                                 Schedule Free Inspection
                             </a>
@@ -511,7 +512,7 @@ export default function WoodBorerTreatmentPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
+                            className="border-white text-ikontext hover:bg-gray-50 hover:text-ikongold text-xl bg-transparent"
                         >
                             <a href="tel:8830495135">
                                 Call 88304 95135

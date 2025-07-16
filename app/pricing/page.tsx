@@ -122,7 +122,7 @@ export default function PricingPage() {
             <p className="text-xl text-ikontext mb-8">
               No hidden fees, no surprises. Choose the plan that works best for your home and budget.
             </p>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-800">
               <strong>Important:</strong> Final pricing may vary based on property size and infestation severity. Free
               inspection included with every service.
             </div>
@@ -131,7 +131,7 @@ export default function PricingPage() {
       </section>
 
       {/* One-Time Services */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div id="quote">
@@ -159,7 +159,6 @@ export default function PricingPage() {
                 ))}
               </div>
             </div>
-
             {/* Right: Quote form */}
 
           </div>
@@ -231,14 +230,15 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-ikongold">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-ikontext mb-4">Ready to Get Started?</h2>
+          <h2 className="text-3xl font-bold text-ikontext mb-4">Not Sure What You Need?</h2>
           <p className="text-ikontext mb-8 max-w-2xl mx-auto">
-            Book a free inspection to get an accurate quote for your specific pest control needs
+            Schedule a free inspection and our experts will identify your pest problems and recommend the best treatment
+            plan
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
+            <Button size="lg" asChild className="bg-ikongold text-ikontext text-xl hover:bg-ikontext hover:text-ikongold">
               <a href="/contact">
                 Schedule Free Inspection
               </a>
@@ -247,7 +247,7 @@ export default function PricingPage() {
               size="lg"
               asChild
               variant="outline"
-              className="border-white text-ikontext hover:bg-white hover:text-ikongold text-xl bg-transparent"
+              className="border-white text-ikontext hover:bg-gray-50 hover:text-ikongold text-xl bg-transparent"
             >
               <a href="tel:8830495135">
                 Call 88304 95135

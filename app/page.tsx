@@ -159,7 +159,7 @@ export default function HomePage() {
               },
               {
                 icon: Clock,
-                title: "24/7 Service Available",
+                title: "24 hours Service Available",
                 description: "Round-the-clock availability for all your pest control needs",
               },
               {
@@ -335,7 +335,7 @@ export default function HomePage() {
             </div>
             <div>
               <Clock className="h-8 w-8 text-ikongold mx-auto mb-2" />
-              <p className="text-2xl font-bold text-ikontext">20+</p>
+              <p className="text-2xl font-bold text-ikontext">15+</p>
               <p className="text-ikontext">Years Experience</p>
             </div>
             <div>

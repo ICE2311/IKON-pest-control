@@ -76,7 +76,7 @@ export default function AboutPage() {
             </div>
             <div className="relative md:flex justify-center">
               <Image
-                src="/team.webp"
+                src="/team.jpg"
                 alt="PestGuard Pro team"
                 width={500}
                 height={400}
@@ -209,7 +209,7 @@ export default function AboutPage() {
             </div>
             <div>
               <Clock className="h-12 w-12 mx-auto mb-4" />
-              <p className="text-3xl font-bold mb-2">20+</p>
+              <p className="text-3xl font-bold mb-2">15+</p>
               <p className="ikontext">Years Experience</p>
             </div>
             <div>

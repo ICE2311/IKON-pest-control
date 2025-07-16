@@ -47,7 +47,7 @@ export default function PromoPopup() {
           &times;
         </button>
 
-        <h2 className="text-2xl font-bold text-ikongold mb-2">🛑 Got Pests?</h2>
+        <h2 className="text-2xl font-bold text-ikontext mb-2">🛑 Got Pests?</h2>
         <p className="text-ikontext mb-4">
           Book a <strong>Free Pest Inspection</strong> today and get upto <span className="text-ikongold font-semibold">10% off</span> your first treatment!
         </p>

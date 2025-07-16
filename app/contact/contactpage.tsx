@@ -182,11 +182,11 @@ export default function ContactPage() {
                 <CardContent className="p-0 space-y-2">
                   <div className="flex justify-between">
                     <span className="text-ikontext">Monday - Friday</span>
-                    <span className="font-semibold">24/7</span>
+                    <span className="font-semibold">24 hours</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-ikontext">Saturday - Sunday</span>
-                    <span className="font-semibold">24/7</span>
+                    <span className="font-semibold">24 hours</span>
                   </div>
                   <div className="pt-2 border-t">
                     <Badge className="bg-red-100 text-red-800">24/7 Emergency Service Available</Badge>
@@ -199,12 +199,11 @@ export default function ContactPage() {
                 <CardHeader className="p-0 mb-4">
                   <CardTitle className="text-xl flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-ikongold" />
-                    Office Location
+                    Ikon Pest Control
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
                   <div className="space-y-2 mb-4">
-                    <p className="font-semibold text-ikontext">PestGuard Headquarters</p>
                     <p className="text-ikontext">
                       Bhairav Darshan, Shop no.7, opposite Pious buds School,
                       <br />
