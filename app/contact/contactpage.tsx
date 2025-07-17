@@ -157,7 +157,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-semibold text-ikontext">WhatsApp</p>
                       <a href="https://wa.me/+918830495135" target="_blank" rel="noopener noreferrer">
-                        <p className="text-ikontext">84485 20507</p>
+                        <p className="text-ikontext">88304 95135</p>
                       </a>
                     </div>
                   </div>
