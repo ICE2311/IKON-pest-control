@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Link } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Pacifico } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { easeInOut } from 'framer-motion';
+import { CardCarousel } from "@/components/card-carousel"
 
 const pacifico = Pacifico({
     subsets: ['latin'],
@@ -103,10 +104,15 @@ export default function HeroGeometric({
         }),
     };
 
-    return (
-        <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-background dark:bg-black">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-rose-500/20 blur-3xl dark:from-primary/30 dark:to-rose-500/30" />
+    const images = [
+        { src: "/1.png", alt: "Image 1" },
+        { src: "/2.png", alt: "Image 2" },
+        { src: "/3.png", alt: "Image 3" },
+    ]
 
+    return (
+        <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-background dark:bg-black pb-24">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-purple-500/20 to-rose-500/30 blur-3xl dark:from-primary/30 dark:to-rose-500/30" />
             <div className="absolute inset-0 overflow-hidden">
                 <ElegantShape
                     delay={0.3}
@@ -156,18 +162,14 @@ export default function HeroGeometric({
 
             <div className="container relative z-10 mx-auto max-w-6xl px-4 md:px-6">
                 <div className="mx-auto max-w-3xl text-center">
-                    <motion.div
-                        custom={0}
-                        variants={fadeUpVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-card/50 px-4 py-1.5 shadow-sm backdrop-blur-sm md:mb-12"
-                    >
-                        <img src="/snowflake.png" alt="logo" className="h-6 w-6" />
-                        <span className="text-sm font-medium tracking-wide text-foreground">
-                            {badge}
-                        </span>
-                    </motion.div>
+                    <div className="pt-8">
+                        <CardCarousel
+                            images={images}
+                            autoplayDelay={2000}
+                            showPagination={true}
+                            showNavigation={true}
+                        />
+                    </div>
 
                     <motion.div
                         custom={1}
@@ -182,7 +184,7 @@ export default function HeroGeometric({
                             <br />
                             <span
                                 className={cn(
-                                    'bg-gradient-to-r from-primary via-primary/90 to-rose-500 bg-clip-text p-4 text-transparent',
+                                    'bg-gradient-to-r from-rose-500 to-rose-500 bg-clip-text p-4 text-transparent',
                                     pacifico.className,
                                     'font-bold',
                                 )}
@@ -199,7 +201,7 @@ export default function HeroGeometric({
                         animate="visible"
                     >
                         <p className="mx-auto mb-10 max-w-xl px-4 text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
-                            Accelerate your development with me.
+                            This website was Developed by {badge} for elfoxisdigital.
                         </p>
                     </motion.div>
 
