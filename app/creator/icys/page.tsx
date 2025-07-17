@@ -201,7 +201,7 @@ export default function HeroGeometric({
                         animate="visible"
                     >
                         <p className="mx-auto mb-10 max-w-xl px-4 text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
-                            This website was Developed by {badge} for elfoxisdigital.
+                            This website was Designed and Developed by {badge} for elfoxisdigital.
                         </p>
                     </motion.div>
 
