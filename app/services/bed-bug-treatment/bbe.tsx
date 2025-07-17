@@ -127,7 +127,7 @@ export default function BedBugControlPage() {
                                 <ArrowLeft className="h-4 w-4" />
                                 Back to Services
                             </Link>
-                            <Badge className="bg-red-100 text-red-800 mb-4">Urgent Treatment Required</Badge>
+                            <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4">Urgent Treatment Required</Badge>
                             <h1 className="text-4xl font-bold text-ikontext mb-4">Bed Bug Treatment</h1>
                             <p className="text-xl text-ikontext mb-6">
                                 Complete bed bug elimination using advanced heat treatment and safe chemical methods. Get rid of bed

@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="bg-green-100 text-green-800 mb-4">Established 2005</Badge>
+              <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4">Established 2005</Badge>
               <h1 className="text-4xl font-bold text-ikontext mb-6">Your Trusted Local Pest Control Experts</h1>
               <p className="text-xl text-ikontext mb-6">
                 Founded in 2005, PestGuard Pro is a family-owned business dedicated to protecting homes and businesses

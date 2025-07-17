@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo.jpg" alt="Logo" width={50} height={50} className="rounded-full" />
+              <Image src="/logo.jpg" alt="Logo" width={80} height={80} className="rounded-full" />
             </Link>
             <p className="text-gray-400 mb-4 py-2">
               Professional pest management solutions since 2005. Serving Mira Road, Bhayandar, and Thane with WHO &
@@ -128,9 +128,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <a href="http://elfoxisdigital.com">
-              <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Developed by Elfoxis Digital.</p>
-            </a>
+            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Ikon pest control All rights reserved, Developed by <a href="https://elfoxisdigital.com" target="_blank">Elfoxis Digital</a>.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-ikongold text-sm">
                 Privacy Policy
