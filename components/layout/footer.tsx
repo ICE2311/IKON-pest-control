@@ -128,7 +128,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Ikon pest control All rights reserved, Developed by <a href="https://elfoxisdigital.com" target="_blank">Elfoxis Digital</a>.</p>
+            <p className="text-gray-400 text-sm text-center">© {new Date().getFullYear()} Ikon pest control All rights reserved, Developed by <a href="https://elfoxisdigital.com" target="_blank">Elfoxis Digital</a>.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-ikongold text-sm">
                 Privacy Policy

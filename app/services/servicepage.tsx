@@ -369,7 +369,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-ikontext mb-4">Not Sure What You Need?</h2>
           <p className="text-ikontext mb-8 max-w-2xl mx-auto">
@@ -386,7 +386,7 @@ export default function ServicesPage() {
               size="lg"
               asChild
               variant="outline"
-              className="border-white text-ikontext hover:bg-gray-50 hover:text-ikongold text-xl bg-transparent"
+              className=" text-xl"
             >
               <a href="tel:8830495135">
                 Call 88304 95135

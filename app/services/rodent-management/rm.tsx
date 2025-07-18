@@ -566,7 +566,7 @@ export default function RodentManagementPage() {
                             size="lg"
                             asChild
                             variant="outline"
-                            className="border-white text-ikontext hover:bg-gray-50 hover:text-ikongold text-xl bg-transparent"
+                            className=" text-xl"
                         >
                             <a href="tel:8830495135">
                                 Call 88304 95135
@@ -578,3 +578,4 @@ export default function RodentManagementPage() {
         </div>
     )
 }
+

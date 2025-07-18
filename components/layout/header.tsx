@@ -236,7 +236,7 @@ export default function Header() {
                   <a href="tel:8830495135" className="block text-ikongold font-semibold mb-3">
                     88304 95135
                   </a>
-                  <Button className="w-full bg-ikongold hover:bg-ikontext hover:text-ikongold" onClick={() => { window.location.href = "tel:8448520507" }} >
+                  <Button className="w-full bg-ikongold text-ikontext hover:bg-ikontext hover:text-ikongold" onClick={() => { window.location.href = "tel:8448520507" }} >
                     <Phone className="mr-2 h-4 w-4" />
                     Free Inspection
                   </Button>

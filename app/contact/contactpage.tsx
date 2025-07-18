@@ -189,7 +189,7 @@ export default function ContactPage() {
                     <span className="font-semibold">24 hours</span>
                   </div>
                   <div className="pt-2 border-t">
-                    <Badge className="bg-red-100 text-red-800">24/7 Emergency Service Available</Badge>
+                    <Badge className="bg-red-100 text-red-800 hover:bg-red-100">24/7 Emergency Service Available</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -205,11 +205,7 @@ export default function ContactPage() {
                 <CardContent className="p-0">
                   <div className="space-y-2 mb-4">
                     <p className="text-ikontext">
-                      Bhairav Darshan, Shop no.7, opposite Pious buds School,
-                      <br />
-                      Pooja Nagar, Cabin Cross Rd, Bhayandar (E)
-                      <br />
-                      Thane, Maharashtra 401105
+                      Bhairav Darshan, Shop no.7, opposite Pious buds School, Pooja Nagar, Cabin Cross Rd, Bhayandar (E) Thane, Maharashtra 401105
                     </p>
                     <p className="text-sm text-ikontext">Free parking available</p>
                   </div>

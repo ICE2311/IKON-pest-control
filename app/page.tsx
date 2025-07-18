@@ -211,7 +211,7 @@ export default function HomePage() {
             </div>
             <div className="bg-gray-200 rounded-lg h-80 overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60257.36049870116!2d72.81722136203126!3d19.27866810307839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b05931cfcaf1%3A0x747d46e84f49bcf1!2sMira%20Bhayandar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1751460712209!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.504606875278!2d72.85380497521109!3d19.303897881948217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1c271d1344f%3A0x93fbde5b42813f22!2sIKon%20Pest%20Control%20Services!5e0!3m2!1sen!2sin!4v1752754729052!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

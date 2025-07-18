@@ -13,11 +13,11 @@ export const metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Roshan Singh",
+      name: "Bhirgunath Prajapati",
       role: "Founder & Lead Technician",
       experience: "15+ years",
       certifications: ["Licensed Pest Control Operator", "Termite Specialist"],
-      image: "/placeholder-user.jpg",
+      image: "/owner.jpg",
     }
   ]
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
               <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4">Established 2005</Badge>
               <h1 className="text-4xl font-bold text-ikontext mb-6">Your Trusted Local Pest Control Experts</h1>
               <p className="text-xl text-ikontext mb-6">
-                Founded in 2005, PestGuard Pro is a family-owned business dedicated to protecting homes and businesses
+                Founded in 2005, Ikon Pest Control is dedicated to protecting homes and businesses
                 from unwanted pests using safe, effective, and environmentally responsible methods.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 ">
@@ -106,7 +106,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-ikontext mb-4">Meet Our Founder</h2>
             <p className="text-ikontext max-w-2xl mx-auto">
-              Roshan Singh is the founder and lead technician at Ikon Pest Control. With over 15 years of experience in pest control, he is passionate about protecting homes and businesses from unwanted pests.
+              Bhirgunath Prajapati is the founder and owner at Ikon Pest Control. With over 15 years of experience in pest control, he is passionate about protecting homes and businesses from unwanted pests.
             </p>
           </div>
           <div className="flex justify-center max-w-3xl mx-auto">
@@ -115,14 +115,14 @@ export default function AboutPage() {
                 <CardContent className="p-0">
                   <div className="relative w-32 h-32 mx-auto mb-4">
                     <Image
-                      src={member.image || "/placeholder.svg"}
+                      src={member.image}
                       alt={member.name}
                       fill
                       className="rounded-full object-cover"
                     />
                   </div>
                   <h3 className="text-xl font-semibold text-ikontext mb-1">{member.name}</h3>
-                  <p className="text-ikongold font-medium mb-2">{member.role}</p>
+                  <p className="text-ikontext font-medium mb-2">{member.role}</p>
                   <p className="text-ikontext text-sm mb-4">{member.experience} experience</p>
                   <div className="space-y-1">
                     {member.certifications.map((cert, idx) => (
@@ -224,7 +224,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-ikontext mb-4">Ready to Experience the PestGuard Pro Difference?</h2>
+          <h2 className="text-3xl font-bold text-ikontext mb-4">Ready to Experience the Ikon Pest Control Difference?</h2>
           <p className="text-ikontext mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied customers who trust us to keep their homes and businesses pest-free
           </p>
